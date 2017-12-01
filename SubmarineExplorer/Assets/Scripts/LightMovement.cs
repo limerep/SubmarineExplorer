@@ -14,6 +14,7 @@ public class LightMovement : MonoBehaviour
 
     public bool rotateAroundY;
     bool rotate;
+    [SerializeField]
     float rotSpeed = 0.001f;
 
     void Start()
@@ -27,7 +28,6 @@ public class LightMovement : MonoBehaviour
         lt.color = Color.Lerp(color0, color1, t);
 
         lt.intensity = Mathf.Lerp(minIntense, maxIntense, t);
-        Debug.Log(t);
 
         if(rotateAroundY)
         {

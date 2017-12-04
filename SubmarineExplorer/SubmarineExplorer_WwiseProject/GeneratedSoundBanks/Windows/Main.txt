@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1443575244	Whale_Song			\Default Work Unit\Whale_Song	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	890765266	Whake	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whake		31309888
+

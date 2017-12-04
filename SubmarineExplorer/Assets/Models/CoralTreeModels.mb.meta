@@ -1,0 +1,180 @@
+fileFormatVersion: 2
+guid: 24250fc8b4bca49478bb2cfc1c3bdb6a
+timeCreated: 1511874640
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: collision
+    100002: cryExportNode_rosebayRhododendron_01_bigBush
+    100004: cryExportNode_rosebayRhododendron_01_bigBushB
+    100006: cryExportNode_rosebayRhododendron_01_bigBushC
+    100008: pCube1
+    100010: pCube2
+    100012: pCube3
+    100014: rosebayRhododendron_01_bigBush:bushFlower021
+    100016: rosebayRhododendron_01_bigBush:smallTwig004
+    100018: rosebayRhododendron_01_bigBush_group
+    100020: rosebayRhododendron_01_bigBushB:smallTwig008
+    100022: rosebayRhododendron_01_bigBushB:twig090
+    100024: rosebayRhododendron_01_bigBushB_group
+    100026: rosebayRhododendron_01_bigBushC:Plane148
+    100028: rosebayRhododendron_01_bigBushC:smallTwig007
+    100030: rosebayRhododendron_01_bigBushC_group
+    100032: rosebayRhododendron_01_tree:Plane074
+    100034: rosebayRhododendron_01_tree:treeTrunkbase_01_UVready
+    100036: //RootNode
+    400000: collision
+    400002: cryExportNode_rosebayRhododendron_01_bigBush
+    400004: cryExportNode_rosebayRhododendron_01_bigBushB
+    400006: cryExportNode_rosebayRhododendron_01_bigBushC
+    400008: pCube1
+    400010: pCube2
+    400012: pCube3
+    400014: rosebayRhododendron_01_bigBush:bushFlower021
+    400016: rosebayRhododendron_01_bigBush:smallTwig004
+    400018: rosebayRhododendron_01_bigBush_group
+    400020: rosebayRhododendron_01_bigBushB:smallTwig008
+    400022: rosebayRhododendron_01_bigBushB:twig090
+    400024: rosebayRhododendron_01_bigBushB_group
+    400026: rosebayRhododendron_01_bigBushC:Plane148
+    400028: rosebayRhododendron_01_bigBushC:smallTwig007
+    400030: rosebayRhododendron_01_bigBushC_group
+    400032: rosebayRhododendron_01_tree:Plane074
+    400034: rosebayRhododendron_01_tree:treeTrunkbase_01_UVready
+    400036: //RootNode
+    2300000: collision
+    2300002: pCube1
+    2300004: pCube2
+    2300006: pCube3
+    2300008: rosebayRhododendron_01_bigBush:bushFlower021
+    2300010: rosebayRhododendron_01_bigBush:smallTwig004
+    2300012: rosebayRhododendron_01_bigBushB:smallTwig008
+    2300014: rosebayRhododendron_01_bigBushB:twig090
+    2300016: rosebayRhododendron_01_bigBushC:Plane148
+    2300018: rosebayRhododendron_01_bigBushC:smallTwig007
+    2300020: rosebayRhododendron_01_tree:Plane074
+    2300022: rosebayRhododendron_01_tree:treeTrunkbase_01_UVready
+    3300000: collision
+    3300002: pCube1
+    3300004: pCube2
+    3300006: pCube3
+    3300008: rosebayRhododendron_01_bigBush:bushFlower021
+    3300010: rosebayRhododendron_01_bigBush:smallTwig004
+    3300012: rosebayRhododendron_01_bigBushB:smallTwig008
+    3300014: rosebayRhododendron_01_bigBushB:twig090
+    3300016: rosebayRhododendron_01_bigBushC:Plane148
+    3300018: rosebayRhododendron_01_bigBushC:smallTwig007
+    3300020: rosebayRhododendron_01_tree:Plane074
+    3300022: rosebayRhododendron_01_tree:treeTrunkbase_01_UVready
+    4300000: rosebayRhododendron_01_bigBush:bushFlower021
+    4300002: rosebayRhododendron_01_bigBush:smallTwig004
+    4300004: collision
+    4300006: rosebayRhododendron_01_bigBushB:smallTwig008
+    4300008: rosebayRhododendron_01_bigBushB:twig090
+    4300010: pCube1
+    4300012: rosebayRhododendron_01_bigBushC:smallTwig007
+    4300014: rosebayRhododendron_01_bigBushC:Plane148
+    4300016: pCube2
+    4300018: rosebayRhododendron_01_tree:treeTrunkbase_01_UVready
+    4300020: rosebayRhododendron_01_tree:Plane074
+    4300022: pCube3
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: collision_mat
+    second: {fileID: 2100000, guid: fcc3790412673cd4a87f84a9d821ef3a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 65bda9e3722f59740932019a7eb330cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rosebayRhododendronBark_mat
+    second: {fileID: 2100000, guid: 2f94ae06b2fdd234194c62f014950eb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rosebayRhododendronBranch_mat
+    second: {fileID: 2100000, guid: eb220ec49785ebc46b549aeff0d4a865, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

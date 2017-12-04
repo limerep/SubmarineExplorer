@@ -523,7 +523,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &232678685
 Transform:
   m_ObjectHideFlags: 0
@@ -588,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &309405120
 Transform:
   m_ObjectHideFlags: 0
@@ -1374,7 +1374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &689494180
 Transform:
   m_ObjectHideFlags: 0
@@ -2512,7 +2512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1465395961
 Transform:
   m_ObjectHideFlags: 0
@@ -2601,7 +2601,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1492128287
 Transform:
   m_ObjectHideFlags: 0
@@ -3384,7 +3384,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1986518585
 Transform:
   m_ObjectHideFlags: 0
@@ -3602,6 +3602,7 @@ GameObject:
   - component: {fileID: 2099803025}
   - component: {fileID: 2099803024}
   - component: {fileID: 2099803028}
+  - component: {fileID: 2099803029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3683,6 +3684,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EffectMaterial: {fileID: 2100000, guid: f57d598d67b29f34eb779819c6381360, type: 2}
+--- !u!114 &2099803029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099803023}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 8dcf1cac57f1e674198e7b7bae703d8d, type: 2}
 --- !u!4 &2129596159 stripped
 Transform:
   m_PrefabParentObject: {fileID: 431714, guid: 57d7e4b170ab03a438111c237f00b984, type: 2}

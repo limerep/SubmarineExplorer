@@ -11,13 +11,13 @@ public class PhotoManager : MonoBehaviour {
     public class Photo 
     {
         
-        public Photo(string path, GameObject creature)
+        public Photo(Texture2D file, GameObject creature)
         {
-            filePath = path;
-            fish = creature; 
+           picture = file;
+           fish = creature; 
         }
 
-        private string filePath;
+        private Texture2D picture;
         private GameObject fish; 
     };
 
@@ -31,8 +31,10 @@ public class PhotoManager : MonoBehaviour {
 		
 	}
 
-    public void CreatePhoto( string path, GameObject creature)
+    public void CreatePhoto( Texture2D tex, GameObject creature)
     { 
-        //photoList.Add(new Photo(path, creature));
+        photoList.Add(new Photo(tex, creature));
     }
+
+
 };

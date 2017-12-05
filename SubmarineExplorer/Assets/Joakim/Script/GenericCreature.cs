@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenericCreature : MonoBehaviour {
 
 	// Use this for initialization
-	void Start () {
+	virtual public void Start () {
 
 		
 	}

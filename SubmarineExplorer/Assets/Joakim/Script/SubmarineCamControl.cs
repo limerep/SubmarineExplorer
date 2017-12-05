@@ -73,9 +73,7 @@ public class SubmarineCamControl : MonoBehaviour {
                 //Capture Image
                 if (Input.GetMouseButtonDown(0))
                 {
-                    TextureScreenshot(); 
-                    //TakePhoto(hit);
-                    //SetTexture(hit);
+                    TextureScreenshot(hit); 
                 }
 
             }
@@ -86,11 +84,8 @@ public class SubmarineCamControl : MonoBehaviour {
                 if (loadingAnimation.speed < 0)
                 {
                     loadingAnimation.speed = 0;
-                }
-                    
-                
+                }           
             }
-
         }
         else
         {
@@ -105,38 +100,10 @@ public class SubmarineCamControl : MonoBehaviour {
      
     }
 
-    void TakePhoto(RaycastHit hit)
+    
+    void TextureScreenshot(RaycastHit hit)
     {
-        int photos = photoManager.GetComponent<PhotoManager>().photos;
 
-        ScreenCapture.CaptureScreenshot("D:\\Screenshots\\Photo" + photos + ".png");    
-    }
-
-    void SetTexture(RaycastHit hit)
-    {
-        int photos = photoManager.GetComponent<PhotoManager>().photos;
-
-        w = new WWW("file://D://Screenshots//Photo" + photos + ".png");
-
-
-                Texture2D tex = new Texture2D(250, 250);
-
-        w.LoadImageIntoTexture(tex);
-
-
-        photoTest.GetComponent<Renderer>().material.EnableKeyword("_MainTex");
-
-        photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", tex);
-
-
-        photoManager.GetComponent<PhotoManager>().photos++;
-
-        photoManager.GetComponent<PhotoManager>().CreatePhoto("D:\\Screenshots\\Photo" + photos + ".png", hit.collider.gameObject);
- 
-    }
-
-    void TextureScreenshot()
-    {
         Texture2D screenShot = new Texture2D(Screen.width, Screen.height);
         screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0,0);
         screenShot.Apply();
@@ -145,10 +112,7 @@ public class SubmarineCamControl : MonoBehaviour {
 
         photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", screenShot);
 
-
-        //photoManager.GetComponent<PhotoManager>().photos++;
-
-        //photoManager.GetComponent<PhotoManager>().CreatePhoto("D:\\Screenshots\\Photo" + photos + ".png", hit.collider.gameObject);
+        photoManager.GetComponent<PhotoManager>().CreatePhoto(screenShot, hit.collider.gameObject);
 
     }
   

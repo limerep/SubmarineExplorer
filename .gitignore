@@ -32,6 +32,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-
-SubmarineExplorer/Library/
-SubmarineExplorer/Temp/
+SubmarineExplorer/Library/*
+SubmarineExplorer/ProjectSettings/
+SubmarineExplorer/Temp/*

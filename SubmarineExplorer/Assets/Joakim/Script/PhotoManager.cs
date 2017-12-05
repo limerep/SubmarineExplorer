@@ -33,7 +33,7 @@ public class PhotoManager : MonoBehaviour {
 
     public void CreatePhoto( Texture2D tex, GameObject creature)
     { 
-        photoList.Add(new Photo(tex, creature));
+       // photoList.Add(new Photo(tex, creature));
     }
 
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3A1B9E93-F56F-48A2-84B2-754E86B1071A}" SchemaVersion="80">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{3A1B9E93-F56F-48A2-84B2-754E86B1071A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{66B3DB23-5C3F-4906-AB8C-B4633B69A8AB}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Whale_Song" ID="{DB8A682B-C98C-4872-9B20-04C87DB67396}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

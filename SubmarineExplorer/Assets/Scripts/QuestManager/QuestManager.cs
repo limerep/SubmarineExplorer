@@ -6,7 +6,7 @@ public class QuestManager : MonoBehaviour {
 
     public static QuestManager questManager;
 
-    //Master quets listan
+    //Master quests listan
     public List <MissionPool> questList = new List <MissionPool>(); 
     //Nuvarande quest listan
     public List <MissionPool> currentQuest = new List<MissionPool>();
@@ -27,8 +27,9 @@ public class QuestManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-    //Acceptera questet
 
+
+    //Acceptera questet
     public void AcceptQuest(int questID)
     {
         for(int i = 0; i <questList.Count;i++)
@@ -42,7 +43,6 @@ public class QuestManager : MonoBehaviour {
     }
 
     //Ge upp questet
-
     public void GiveUpQuest(int questID)
     {
         for(int i = 0; i < currentQuest.Count; i++)
@@ -57,20 +57,17 @@ public class QuestManager : MonoBehaviour {
     }
 
     //Complete quest
-
     public void CompleteQuest(int questID)
     {
         for (int i = 0; i < currentQuest.Count; i++)
         {
-            if(currentQuest[i].id = questID && currentQuest[i].progress == MissionPool.QuestProgress.Complete)
+            if(currentQuest[i].id == questID && currentQuest[i].progress == MissionPool.QuestProgress.Complete)
             {
                 currentQuest[i].progress = MissionPool.QuestProgress.Done;
                 currentQuest.Remove(currentQuest[i]);
             }
         }
     }
-
-
 
     //Lägg till items (Kan vara att fotografera eller hitta något)
     public void AddQuestItem(string questObjective, int itemAmount)

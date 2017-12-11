@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
@@ -8,6 +7,8 @@ public class MeshCombinerWizard : ScriptableWizard {
     private string combinedMeshName = "New Combined Mesh";
     [SerializeField]
     private bool optimizeMesh = true;
+    [SerializeField]
+    private bool savePrefab = true;
     
     [MenuItem("Submarine Tools/Mesh Combiner...")]
     static void CombineMeshWizard() {
@@ -26,17 +27,15 @@ public class MeshCombinerWizard : ScriptableWizard {
 
         // Add a meshcombiner script to the new mesh object.
         MeshCombiner combiner = combinedMeshObject.AddComponent<MeshCombiner>();
-        combiner.meshes = new List<MeshFilter>();
 
-        // Add all the meshfilter to the combiner and then put the object 
-        // as a child to the object that will hold all old mesh objects.
+        // Make all objects as a child to the oldMeshesObject
         for (int i = 0; i < Selection.gameObjects.Length; i++) {
-            combiner.meshes.Add(Selection.gameObjects[i].GetComponent<MeshFilter>());
             Selection.gameObjects[i].transform.parent = oldMeshesObject.transform;
         }
 
         // Add a new list of materials and renderers to the combiner and
         // exectue the Combine function
+        combiner.meshes = oldMeshesObject.GetComponentsInChildren<MeshFilter>();
         combiner.materials = new List<Material>();
         combiner.renderers = oldMeshesObject.GetComponentsInChildren<MeshRenderer>();
         combiner.CombineMeshes();
@@ -62,11 +61,36 @@ public class MeshCombinerWizard : ScriptableWizard {
         GameObject[] selectedObjects = { combinedMeshObject };
 
         Selection.objects = selectedObjects;
-        
-        // I haven't made up my mind yet if we should keep this script on the object
-        // so that we can use it to update the object itself later or if we should
-        // give it a new editor script instead.
-        //DestroyImmediate(combinedMeshObject.GetComponent<MeshCombiner>());
+
+        if (savePrefab) {
+            SaveObjectPrefab(combinedMeshObject, path);
+        }
+    }
+
+    private void SaveObjectPrefab(GameObject go, string path) {
+        string localPath;
+
+        // Remove .asset from the filename
+        if (path.Contains(".asset")) {
+            localPath = path.Replace(".asset", "");
+        } else {
+            localPath = path;
+        }
+
+        // Make it a prefab
+        localPath += ".prefab";
+        if (AssetDatabase.LoadAssetAtPath(localPath, typeof(GameObject))) {
+            if (EditorUtility.DisplayDialog("Are you sure?", "The prefab already exists. Do you want to overwrite it?", "Yes", "No")) {
+                CreateNewPrefab(go, localPath);
+            }
+        } else {
+            CreateNewPrefab(go, localPath);
+        }
+    }
+
+    private static void CreateNewPrefab(GameObject go, string localPath) {
+        Object prefab = PrefabUtility.CreateEmptyPrefab(localPath);
+        PrefabUtility.ReplacePrefab(go, prefab, ReplacePrefabOptions.ConnectToPrefab);
     }
 
 }

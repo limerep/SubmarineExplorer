@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshRenderer))]
 public class MeshCombiner : MonoBehaviour {
 
-    public List<MeshFilter> meshes;
+    public MeshFilter[] meshes;
     public List<Material> materials;
     public MeshRenderer[] renderers;
     public Mesh ObjectMesh { get; set; }
@@ -17,14 +17,14 @@ public class MeshCombiner : MonoBehaviour {
 
     public void CombineMeshes() {
         // Return if there's no meshes
-        if (meshes.Count <= 0) {
+        if (meshes.Length <= 0) {
             return;
         }
 
-        foreach (MeshRenderer mRenderer in renderers) {
-            if (mRenderer.transform == transform) { continue; }
+        foreach (MeshRenderer meshRenderer in renderers) {
+            if (meshRenderer.transform == transform) { continue; }
 
-            Material[] localMaterials = mRenderer.sharedMaterials;
+            Material[] localMaterials = meshRenderer.sharedMaterials;
             foreach (Material localMat in localMaterials) {
                 if (!materials.Contains(localMat)) {
                     materials.Add(localMat);
@@ -36,11 +36,11 @@ public class MeshCombiner : MonoBehaviour {
         foreach (Material mat in materials) {
             List<CombineInstance> combiners = new List<CombineInstance>();
             foreach (MeshFilter mFilter in meshes) {
-                MeshRenderer mRenderer = mFilter.GetComponent<MeshRenderer>();
-                if (mRenderer == null) { continue; }
+                MeshRenderer meshRenderer = mFilter.GetComponent<MeshRenderer>();
+                if (meshRenderer == null) { continue; }
 
                 // Create a submesh for each material in the meshrenderer
-                Material[] localMaterials = mRenderer.sharedMaterials;
+                Material[] localMaterials = meshRenderer.sharedMaterials;
                 for (int matIndex = 0; matIndex < localMaterials.Length; matIndex++) {
                     if (localMaterials[matIndex] != mat) { continue; }
                     CombineInstance ci = new CombineInstance {

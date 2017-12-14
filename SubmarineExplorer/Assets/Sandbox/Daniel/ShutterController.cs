@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShutterController : MonoBehaviour
 {
-
 	Renderer thisRend;
 	private float shutterSpeed;
 	[SerializeField]
@@ -12,54 +11,61 @@ public class ShutterController : MonoBehaviour
 	private bool runShutter;
 	private int maxVal;
 	private float minVal;
+    private bool testRun;
 
 	void Start()
 	{
+        testRun = false;
 		maxVal = 1;
 		minVal = -0.5f;
 		minValReached = false;
 		runShutter = false;
 		shutterSpeed = 1; // set shutter speed
-		thisRend = GetComponent<Renderer>(); // Get renderer from object
-
+		thisRend = GetComponent<Renderer>(); // Get renderer from 
 	}
 
 	// Update is called once per frame
+    public void TestRun()
+    {
+        testRun = true;
+    }
 	void Update ()
 	{
-		if (Input.GetKey(KeyCode.Space))
-		{
-			if (shutterSpeed > minVal) // as long as the alpha is higher than the minimum value
-			{
-				runShutter = true;
-			}
-		}
+        if (testRun == true)
+        {
+            if (shutterSpeed > minVal) // as long as the alpha is higher than the minimum value
+            {
+                runShutter = true;
+                testRun = false;
+            }
+        }
 
-		if (runShutter == true)
-		{
-			shutterSpeed -= 0.1f;
-		}
+        if (runShutter == true)
+        {
+            shutterSpeed -= 0.2f;
+        }
 
-		if (shutterSpeed <= minVal) // As long as the alpha is lower than the minimum value
-		{
-			minValReached = true;
-			runShutter = false;
-		}
+        if (shutterSpeed <= minVal) // As long as the alpha is lower than the minimum value
+        {
+            minValReached = true;
+            runShutter = false;
+        }
 
-		if (minValReached == true) // if minimum value is reached
-		{
-			shutterSpeed += 0.1f;
-		}
+        if (minValReached == true) // if minimum value is reached
+        {
+            shutterSpeed += 0.2f;
+        }
 
-		if(shutterSpeed >= maxVal)
-		{
-			minValReached = false;
-		}
+        if (shutterSpeed >= maxVal)
+        {
+            minValReached = false;
+        }
+        thisRend.material.SetFloat("_Cutoff", shutterSpeed); //set alpha
+    }
 
-		thisRend.material.SetFloat("_Cutoff", shutterSpeed); //set alpha
-	}
+
 }
-
+    
 /*
 void Update()
 {
@@ -89,4 +95,3 @@ void Update()
 	thisRend.material.SetFloat("_Cutoff", shutterSpeed); //set alpha
 }
 }*/
-   

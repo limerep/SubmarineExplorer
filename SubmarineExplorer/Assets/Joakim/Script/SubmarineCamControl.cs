@@ -9,7 +9,7 @@ public class SubmarineCamControl : MonoBehaviour {
     public GameObject loadingCircle;
     public GameObject photoManager;
     public GameObject photoTest;
-    public WWW w;
+    private Plane[] planes; 
     bool playingAnimation; 
     
   
@@ -73,7 +73,7 @@ public class SubmarineCamControl : MonoBehaviour {
                 //Capture Image
                 if (Input.GetMouseButtonDown(0))
                 {
-                    TextureScreenshot(hit); 
+                    StartCoroutine("TextureScreenshot", hit); 
                 }
 
             }
@@ -81,7 +81,7 @@ public class SubmarineCamControl : MonoBehaviour {
             {
                 //Animation circle; 
                 loadingAnimation.speed -= 0.01f; 
-                if (loadingAnimation.speed < 0)
+                if (loadingAnimation.speed <= 0)
                 {
                     loadingAnimation.speed = 0;
                 }           
@@ -91,7 +91,7 @@ public class SubmarineCamControl : MonoBehaviour {
         {
             //Control animation speed
             loadingAnimation.speed -= 0.01f;
-            if (loadingAnimation.speed < 0)
+            if (loadingAnimation.speed <= 0)
             {
                 loadingAnimation.speed = 0;
             }
@@ -101,19 +101,39 @@ public class SubmarineCamControl : MonoBehaviour {
     }
 
     
-    void TextureScreenshot(RaycastHit hit)
+    IEnumerator TextureScreenshot(RaycastHit hit)
     {
-
+        loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
+        yield return new WaitForSeconds(0.1f);
         Texture2D screenShot = new Texture2D(Screen.width, Screen.height);
         screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0,0);
         screenShot.Apply();
+
+        planes = GeometryUtility.CalculateFrustumPlanes(subCamera);
+
+        Collider[] colliders = Physics.OverlapBox(hit.point, new Vector3(200, 200, 200));
+
+        List<string> creatures = new List<string>();
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GenericCreature>())
+            {
+                creatures.Add(colliders[i].gameObject.GetComponent<GenericCreature>().ReturnType());
+            }
+        }
 
         photoTest.GetComponent<Renderer>().material.EnableKeyword("_MainTex");
 
         photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", screenShot);
 
-        photoManager.GetComponent<PhotoManager>().CreatePhoto(screenShot, hit.collider.gameObject);
+        string fish = hit.collider.GetComponent<GenericCreature>().ReturnType();
+
+         photoManager.GetComponent<PhotoManager>().CreatePhoto(fish, screenShot, creatures);
+        yield return new WaitForSeconds(0.1f);
+        loadingCircle.GetComponent<SpriteRenderer>().enabled = true;
 
     }
-  
+
+   
 }

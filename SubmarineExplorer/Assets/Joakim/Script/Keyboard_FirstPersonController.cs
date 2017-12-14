@@ -66,7 +66,7 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
 
             if (Physics.Raycast(ray, out hit, 1))
             {
-                if (hit.collider.tag.Equals("Button"))
+                if (hit.collider.GetComponent<GenericButton>())
                 {
                     //print("This is a button, press 'F' to Activate it");
                     if (Input.GetKeyDown("f") && !usingCam)
@@ -82,23 +82,9 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
 
     void ActivateButton(RaycastHit hitObject)
     {
+        
+      hitObject.collider.GetComponent<GenericButton>().ButtonPressed(gameObject);
 
-        if (hitObject.collider.GetComponent<GenericButton>())
-        {
-            hitObject.collider.GetComponent<GenericButton>().ButtonPressed(gameObject);
-        }
-
-        ////Button for driving the submarine 
-        //if (hitObject.collider.GetComponent<SubmarineButtonScript>())
-        //{
-        //    hitObject.collider.GetComponent<SubmarineButtonScript>().ButtonPressed(gameObject);
-
-        //}
-        ////Button for testing
-        //else if (hitObject.collider.GetComponent<ButtonTest>())
-        //{
-        //    hitObject.collider.GetComponent<ButtonTest>().ButtonPressed(gameObject);
-        //}
     }
 
 }

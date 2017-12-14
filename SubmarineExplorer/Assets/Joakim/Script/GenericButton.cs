@@ -9,4 +9,8 @@ public class GenericButton : MonoBehaviour {
 
         print("Bla");
     }
+    public virtual void VrButtonPress()
+    {
+
+    }
 }

@@ -36,10 +36,7 @@ public class RandomMovement : MonoBehaviour {
             {
                 transform.Rotate(Vector3.right * Time.deltaTime);
             }
-        }
-
-        
-       
+        } 
     }
 
     void PickPosition()

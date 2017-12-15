@@ -4,29 +4,78 @@ using UnityEngine;
 
 public class WhalePatrol : MonoBehaviour {
 
-    public int moveSpeed = 1;  //per second 
-    Vector3 computerDirection = Vector3.left;
-    Vector3 moveDirection = Vector3.zero;
-    Vector3 newPosition = Vector3.zero;
+    public float speed, rotSpeed;
+    public float randomX, randomY, randomZ;
+    public float minWaitTime;
+    public float maxWaitTime;
+    //public float rotX, rotY, rotZ;
+
+    private Vector3 currentRandomPos;
+    [SerializeField]
+    bool rotate;
+
+    Transform target;
+    GameObject spawnObject;
+
     void Start()
     {
-
+        PickPosition();
     }
+
     void Update()
     {
-        Vector3 newPosition = new Vector3(-1, 0, 0) * (moveSpeed * Time.deltaTime);
-        newPosition = transform.position + newPosition;
-        newPosition.x = Mathf.Clamp(newPosition.x, -101, 126);
-        transform.position = newPosition;
-        if (newPosition.x > 126)
+        if (spawnObject)
         {
-            newPosition.x = 126;
-            computerDirection.x *= -1;
+            Vector3 targetDir = target.position - transform.position;
+            float step = rotSpeed * Time.deltaTime;
+            Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
+            Debug.DrawRay(transform.position, newDir, Color.red);
+            transform.rotation = Quaternion.LookRotation(newDir);
+
+            if (rotate)
+            {
+                transform.Rotate(Vector3.right * Time.deltaTime);
+            }
         }
-        else if (newPosition.x < -101)
+    }
+
+    void PickPosition()
+    {
+        currentRandomPos = new Vector3(Random.Range(-randomX, randomX), Random.Range(-randomY, randomY), Random.Range(-randomZ, randomZ));
+        spawnObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        spawnObject.transform.position = currentRandomPos;
+        spawnObject.SetActive(false);
+
+
+        target = spawnObject.transform;
+        StartCoroutine(MoveToRandomPos());
+
+        Destroy(spawnObject, 10f);
+    }
+
+    IEnumerator MoveToRandomPos()
+    {
+        float i = 0.0f;
+        float rate = 1.0f / speed;
+        Vector3 currentPos = transform.position;
+
+        while (i < 1.0f)
         {
-            newPosition.x = -101;
-            computerDirection.x *= 1;
+            i += Time.deltaTime * rate;
+            transform.position = Vector3.Lerp(currentPos, currentRandomPos, i);
+            yield return null;
         }
+
+        float randomFloat = Random.Range(0.0f, 1.0f); // Create %50 chance to wait
+        if (randomFloat < 0.5f)
+            StartCoroutine(WaitForSomeTime());
+        else
+            PickPosition();
+    }
+
+    IEnumerator WaitForSomeTime()
+    {
+        yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
+        PickPosition();
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomMovement : MonoBehaviour {
+public class WhalePatrol : MonoBehaviour {
 
     public float speed, rotSpeed;
     public float randomX, randomY, randomZ;
@@ -24,7 +24,7 @@ public class RandomMovement : MonoBehaviour {
 
     void Update()
     {
-        if(spawnObject)
+        if (spawnObject)
         {
             Vector3 targetDir = target.position - transform.position;
             float step = rotSpeed * Time.deltaTime;
@@ -36,7 +36,7 @@ public class RandomMovement : MonoBehaviour {
             {
                 transform.Rotate(Vector3.right * Time.deltaTime);
             }
-        } 
+        }
     }
 
     void PickPosition()

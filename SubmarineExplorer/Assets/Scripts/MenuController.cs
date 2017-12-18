@@ -36,11 +36,6 @@ public class MenuController : MonoBehaviour {
         exitBtn.onClick.AddListener(Exit);
 	}
 
-	void Update ()
-    {
-
-	}
-
     void Options()
     {
         mainAnim.SetTrigger("ScaleDown");

@@ -58,7 +58,6 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
     void FixedUpdate()
     {
        
-
         if (!usingCam)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

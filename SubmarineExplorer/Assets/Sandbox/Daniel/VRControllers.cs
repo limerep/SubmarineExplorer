@@ -66,6 +66,7 @@ public class VRControllers : MonoBehaviour
 
         //Value
         Vector2 touchValue = mDevice.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+        print(touchValue);
 
         #endregion
     }

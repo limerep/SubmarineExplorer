@@ -1,17 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
 
 public class Keyboard_SubmarineController : MonoBehaviour {
 
 
     public float speed = 10.0f;
-    public bool inVehicle = false; 
+    public bool inVehicle = false;
+    public GameObject submarine;
+
+    private SteamVR_TrackedObject trackedObject;
+    private SteamVR_Controller.Device device;
+    private Vector2 touchpad; 
+   
 
     // Use this for initialization
     void Start () {
-		
-	}
+        trackedObject = GetComponent<SteamVR_TrackedObject>();
+        device = SteamVR_Controller.Input((int)trackedObject.index);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,10 +27,23 @@ public class Keyboard_SubmarineController : MonoBehaviour {
 
         if (inVehicle)
         {
-            float translation = Input.GetAxis("Vertical") * speed;
-            float strafe = Input.GetAxis("Horizontal") * speed;
-            translation *= Time.deltaTime;
-           strafe *= 0.5f;
+
+            //float translation = Input.GetAxis("Vertical") * speed;
+            //float strafe = Input.GetAxis("Horizontal") * speed;
+
+            float translation;
+            float strafe;
+
+            
+            touchpad = device.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+            translation = touchpad.y;
+            strafe = touchpad.x;
+            strafe *= 0.5f;
+            translation *= 0.5f; 
+            
+           
+            
+            
             float lift = 0;
 
             if (Input.GetKey("space"))
@@ -42,8 +63,6 @@ public class Keyboard_SubmarineController : MonoBehaviour {
                 lift += 0.03f;
             }
 
-
-
             if (lift > 7)
             {
                 lift = 4;
@@ -52,8 +71,8 @@ public class Keyboard_SubmarineController : MonoBehaviour {
             {
                 lift = -4; 
             }
-            transform.Rotate(Vector3.up * strafe);
-            transform.Translate(0, lift, translation*-1);
+            submarine.transform.Rotate(Vector3.up * strafe);
+            submarine.transform.Translate(0, lift, translation*-1);
         }
       
 

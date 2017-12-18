@@ -9,8 +9,8 @@ public class GenericButton : MonoBehaviour {
 
         print("Bla");
     }
-    public virtual void VrButtonPress()
+    public virtual void VrButtonPress(GameObject character)
     {
-
+        print("Vr Yo!");
     }
 }

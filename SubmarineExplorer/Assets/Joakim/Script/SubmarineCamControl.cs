@@ -27,9 +27,7 @@ public class SubmarineCamControl : MonoBehaviour {
 
         originalRotation = transform.rotation;
         loadingAnimation = loadingCircle.GetComponent<Animator>();
-        loadingAnimation.speed = 0; 
-      
-        
+        loadingAnimation.speed = 0;  
     }
 	
 	// Update is called once per frame

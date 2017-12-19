@@ -10,7 +10,7 @@ public class Science : GenericButton {
 
 
     List<string> photographedCreatures;
-    List<Quest> finishedQuest;
+    public List<Quest> finishedQuest;
     Quest currentQuest;
     List<string> questList;  
 
@@ -27,75 +27,116 @@ public class Science : GenericButton {
 	void Start ()
     {
         finishedQuest = new List<Quest>();
-        CreateQuest("", "");
+        
 
         questList = new List<string>();
         questList.Add("BoomerangFish");
-        questList.Add("TorpedoFish");
+        questList.Add("BulletFish");
+        
+
+        CreateQuest("", "");
 
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
-		
+        questText.text = currentQuest.name;
 	}
 
 
     public void QuestFromPool()
     {
-        int chosenQuest = Random.Range(0, questList.Count - 1);
-        for (int i = 0; i < finishedQuest.Count; i++)
-        {
-            if (questList[chosenQuest] == finishedQuest[i].name)
-            {
-                
-            }
-        }
+        print("Quest From Pool");
+        int chosenQuest = Random.Range(0, questList.Count);
+
+        currentQuest = new Quest (questList[chosenQuest]);
+        questList.RemoveAt(chosenQuest);
+          
+        
 
     }
 
     public void CreateQuest(string name, string description)
     {
+      
+
         if (currentQuest == null)
         {
-            int random = Random.Range(0, questList.Count);
-            currentQuest = new Quest(questList[random]);
+           
+            currentQuest = new Quest(questList[0]);
+            questList.RemoveAt(0);
+           
         }
         else
         {
-            for (int i = 0; i < finishedQuest.Count; i++)
+                currentQuest = new Quest(name, description);
+
+            for (int i = 0; i < questList.Count; i++)
             {
-                if (name != finishedQuest[i].name)
+                if (currentQuest.name == questList[i])
                 {
-                    currentQuest = new Quest(name, description);
+                    questList.RemoveAt(i);
                 }
             }
-            
         }
         
     }
 
     public void TurnInQuest(int photo)
     {
+        Debug.Log("Tried to turn in photo");
+        bool questFromPool = true;
+        int chosenQuest = 500; 
         if (photoManager.photoList[photo].getName() == currentQuest.name)
         {
             finishedQuest.Add(currentQuest);
-            Debug.Log("Quest done");
+            
             List<GameObject> creatureList = photoManager.photoList[photo].getCreatures();
 
-            for (int i = 0; i < creatureList.Count; i++)
+
+            for (int j = 0; j < finishedQuest.Count; j++)
+
             {
-                if (creatureList[i].GetComponent<GenericCreature>().ReturnType() != currentQuest.name)
+                for (int i = 0; i < creatureList.Count; i++)
                 {
-                    CreateQuest(creatureList[i].GetComponent<GenericCreature>().ReturnType(), creatureList[i].GetComponent<GenericCreature>().GetDescription());
+
+                    if (creatureList[i].GetComponent<GenericCreature>().ReturnType() == finishedQuest[j].name)
+                    {
+
+                        questFromPool = true;
+                        chosenQuest = i;
+                        
+                    }
+
                 }
             }
 
-
-
+            if (!questFromPool)
+            {
+                
+                CreateQuest(creatureList[chosenQuest].GetComponent<GenericCreature>().ReturnType(), creatureList[chosenQuest].GetComponent<GenericCreature>().GetDescription());
+                print("Quest from background creature!");
+            }
+            else
+            {
+                if (questList.Count > 0)
+                {
+                    QuestFromPool();
+                }
+                else
+                {
+                    print("No more Quests");
+                }
+                
+            }
+           
             photoManager.RemovePhoto(photo);
+        }
+        else
+        {
+            print("Wrong creature");
         }
     }
     public void CompareConditions()

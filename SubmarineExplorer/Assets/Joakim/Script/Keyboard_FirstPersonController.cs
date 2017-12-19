@@ -25,7 +25,9 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
 
         }
         else if (usingCam)
-        { }
+        {
+
+        }
         else
         {
             float translation = Input.GetAxis("Vertical") * speed;
@@ -52,6 +54,7 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
                 terminalCamera.enabled = false;
                 Cursor.visible = false;
                 Cursor.lockState = CursorLockMode.Locked;
+                subCam.GetComponent<SubmarineCamControl>().usingCam = false; 
 
                 usingCam = false; 
             }

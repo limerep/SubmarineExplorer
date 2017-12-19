@@ -11,6 +11,8 @@ public class VRButtonControls : MonoBehaviour {
 
     public GameObject cameraPosition;
     public GameObject loadingCircle;
+    public GameObject cameraCanvas;
+    public GameObject cameraShutter;
     public GameObject photoManager;
     public GameObject photoTest;
     public Camera vrCamera;
@@ -25,9 +27,11 @@ public class VRButtonControls : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
         trackedObject = GetComponent<SteamVR_TrackedObject>();
         device = SteamVR_Controller.Input((int)trackedObject.index);
         loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
+        cameraCanvas.SetActive(false);
         loadingAnimation = loadingCircle.GetComponent<Animator>();
         loadingAnimation.speed = 0;
         Cursor.lockState = CursorLockMode.Locked;
@@ -53,6 +57,7 @@ public class VRButtonControls : MonoBehaviour {
         if (inCam)
         {
             loadingCircle.GetComponent<SpriteRenderer>().enabled = true;
+            cameraCanvas.SetActive(true);
             Ray ray = vrCamera.ViewportPointToRay(new Vector3 (0.5f, 0.5f, 0f));
             RaycastHit hit;
 
@@ -62,10 +67,12 @@ public class VRButtonControls : MonoBehaviour {
                 inCam = false;
                 gameObject.GetComponent<LaserPointer>().inCam = false;
                 loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
+                cameraCanvas.SetActive(false);
 
             }
 
-            if (Physics.Raycast(ray, out hit, 50))
+
+            if (Physics.Raycast(ray, out hit, 50, 5))
             {
                 
                 Debug.DrawLine(vrCamera.transform.position, hit.point, Color.red);
@@ -86,6 +93,8 @@ public class VRButtonControls : MonoBehaviour {
                     //Capture Image
                     if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
                     {
+                        
+                        cameraCanvas.SetActive(false);
                         StartCoroutine("TextureScreenshot", hit);
                     }
 
@@ -140,7 +149,7 @@ public class VRButtonControls : MonoBehaviour {
 
     IEnumerator TextureScreenshot(RaycastHit hit)
     {
-        loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
+        //loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(0.1f);
         Texture2D screenShot = new Texture2D(Screen.width, Screen.height);
         screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
@@ -168,7 +177,9 @@ public class VRButtonControls : MonoBehaviour {
 
         photoManager.GetComponent<PhotoManager>().CreatePhoto(fish, screenShot, creatures);
         yield return new WaitForSeconds(0.1f);
-        loadingCircle.GetComponent<SpriteRenderer>().enabled = true;
+        //loadingCircle.GetComponent<SpriteRenderer>().enabled = true;
+        cameraShutter.GetComponent<ShutterController>().RunShutter();
+        cameraCanvas.SetActive(true);
 
     }
 }

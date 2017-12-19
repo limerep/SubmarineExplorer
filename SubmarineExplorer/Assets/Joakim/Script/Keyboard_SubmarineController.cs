@@ -39,38 +39,51 @@ public class Keyboard_SubmarineController : MonoBehaviour {
             translation = touchpad.y;
             strafe = touchpad.x;
             strafe *= 0.5f;
-            translation *= 0.5f; 
+            translation *= 0.1f;
+            float lift = 0;
+
+            if (device.GetPress(SteamVR_Controller.ButtonMask.Trigger))
+            {
+                lift = touchpad.y;
+                lift *= 0.1f; 
+                translation = 0; 
+
+            }
+            else
+            {
+                lift = 0; 
+            }
             
            
             
             
-            float lift = 0;
+            
 
-            if (Input.GetKey("space"))
-            {
-                lift += 0.03f;
-            }
-            else if (Input.GetKey("c"))
-            {
-                lift -= 0.03f;
-            }
-            else if (!Input.GetKey("space") && lift > 0)
-            {
-                lift -= 0.03f; 
-            }
-            else if (!Input.GetKey("c") && lift < 0)
-            {
-                lift += 0.03f;
-            }
+            //if (Input.GetKey("space"))
+            //{
+            //    lift += 0.03f;
+            //}
+            //else if (Input.GetKey("c"))
+            //{
+            //    lift -= 0.03f;
+            //}
+            //else if (!Input.GetKey("space") && lift > 0)
+            //{
+            //    lift -= 0.03f; 
+            //}
+            //else if (!Input.GetKey("c") && lift < 0)
+            //{
+            //    lift += 0.03f;
+            //}
 
-            if (lift > 7)
-            {
-                lift = 4;
-            }
-            else if (lift < -7)
-            {
-                lift = -4; 
-            }
+            //if (lift > 7)
+            //{
+            //    lift = 4;
+            //}
+            //else if (lift < -7)
+            //{
+            //    lift = -4; 
+            //}
             submarine.transform.Rotate(Vector3.up * strafe);
             submarine.transform.Translate(0, lift, translation*-1);
         }

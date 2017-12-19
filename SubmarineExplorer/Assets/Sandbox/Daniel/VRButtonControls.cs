@@ -40,6 +40,13 @@ public class VRButtonControls : MonoBehaviour {
 
         if (inVehicle)
         {
+            if (device.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
+            {
+                gameObject.transform.parent.gameObject.transform.parent = null;
+                gameObject.GetComponent<LaserPointer>().inVehicle = false;
+                inVehicle = false;
+                gameObject.GetComponent<Keyboard_SubmarineController>().inVehicle = false;
+            }
             //gameObject.transform.parent.transform.position = originalPos.transform.position;
         }
 
@@ -121,14 +128,14 @@ public class VRButtonControls : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-       
-        
+
+        print("Hej");
     }
 
     private void OnTriggerExit(Collider other)
     {
-        
-       
+        print("Hej");
+
     }
 
     IEnumerator TextureScreenshot(RaycastHit hit)

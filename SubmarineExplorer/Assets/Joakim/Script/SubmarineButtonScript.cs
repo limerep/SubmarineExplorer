@@ -38,11 +38,8 @@ public class SubmarineButtonScript : GenericButton {
         else if (character.GetComponent<VRButtonControls>().inVehicle == true)
         {
             
-            character.GetComponent<LaserPointer>().inVehicle = false;
-            character.GetComponent<VRButtonControls>().inVehicle = false;
-            character.GetComponent<Keyboard_SubmarineController>().inVehicle = false;
-            character.transform.parent.gameObject.transform.parent = null; 
-
+            
+          
 
         }
     }

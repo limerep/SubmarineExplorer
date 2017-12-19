@@ -8,7 +8,7 @@ using System.IO;
 public class PhotoManager : MonoBehaviour {
 
     
-    List<Photo> photoList;
+    public List<Photo> photoList;
     public int photos;
     
     public RawImage image1;
@@ -21,18 +21,15 @@ public class PhotoManager : MonoBehaviour {
     public RawImage image8;
  
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         photos = 0;
-   
-       
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-   public void CreatePhoto(string name, Texture2D tex, List<string> creatures)
+	
+
+   public void CreatePhoto(string name, Texture2D tex, List<GameObject> creatures)
     { 
       if (photoList == null)
       {
@@ -43,21 +40,24 @@ public class PhotoManager : MonoBehaviour {
         {
             photos = 0;
         }
-        else
-        {
-            photoList.Insert(photos,new Photo(name, tex, creatures));
-            SetPhotoInCanvas();
-            photos++;
-        }
-
+        
+        photoList.Insert(photos,new Photo(name, tex, creatures));
+        SetPhotoInCanvas();
+        photos++;
+        
 
       byte[] bytes = tex.EncodeToPNG();
 
       //Object.Destroy(tex);
       File.WriteAllBytes(Application.dataPath + "/../" + photos + ".png", bytes);
 
-        
+    }
 
+
+    public void RemovePhoto(int photo)
+    {
+        photoList.RemoveAt(photo);
+        photos = 8; 
     }
     public void SetPhotoInCanvas()
     {
@@ -87,12 +87,5 @@ public class PhotoManager : MonoBehaviour {
 
             default: break; 
         }
-
-        
-        
-        
-
-
     }
-
 };

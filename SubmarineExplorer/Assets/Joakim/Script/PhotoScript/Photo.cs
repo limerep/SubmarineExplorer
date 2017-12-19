@@ -10,9 +10,9 @@ public class Photo {
 
     private string name;
     private Texture2D picture;
-    private List<string > creatures; 
+    private List<GameObject > creatures; 
 
-    public Photo(string fishName, Texture2D file, List<string> otherFishes)
+    public Photo(string fishName, Texture2D file, List<GameObject> otherFishes)
         {
 
             name = fishName;
@@ -28,9 +28,9 @@ public class Photo {
     {
          return picture; 
     }
-        public List<string> getCreatures()
-        {
-            return creatures; 
-        }
+    public List<GameObject> getCreatures()
+    {
+         return creatures; 
+    }
 }
 }

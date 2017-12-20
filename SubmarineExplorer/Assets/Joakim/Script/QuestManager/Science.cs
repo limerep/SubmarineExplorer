@@ -10,8 +10,10 @@ public class Science : GenericButton {
 
 
     List<string> photographedCreatures;
+
     public List<Quest> finishedQuest;
     Quest currentQuest;
+
     List<string> questList;  
 
     enum  QuestState
@@ -42,7 +44,7 @@ public class Science : GenericButton {
 	// Update is called once per frame
 	void Update ()
     {
-        questText.text = currentQuest.name;
+        
 	}
 
 
@@ -67,11 +69,12 @@ public class Science : GenericButton {
            
             currentQuest = new Quest(questList[0]);
             questList.RemoveAt(0);
+            questText.text = currentQuest.name; 
            
         }
         else
         {
-                currentQuest = new Quest(name, description);
+            currentQuest = new Quest(name, description);
 
             for (int i = 0; i < questList.Count; i++)
             {
@@ -89,6 +92,7 @@ public class Science : GenericButton {
         Debug.Log("Tried to turn in photo");
         bool questFromPool = true;
         int chosenQuest = 500; 
+
         if (photoManager.photoList[photo].getName() == currentQuest.name)
         {
             finishedQuest.Add(currentQuest);
@@ -96,21 +100,41 @@ public class Science : GenericButton {
             List<GameObject> creatureList = photoManager.photoList[photo].getCreatures();
 
 
-            for (int j = 0; j < finishedQuest.Count; j++)
+            //Remove creatures that have the same name as the current quest 
 
+
+            for (int j = 0; j < finishedQuest.Count; j ++)
+                 
             {
+                
                 for (int i = 0; i < creatureList.Count; i++)
                 {
+                    string creatureName = creatureList[i].GetComponent<GenericCreature>().ReturnType();
 
-                    if (creatureList[i].GetComponent<GenericCreature>().ReturnType() == finishedQuest[j].name)
+                    if (creatureName == finishedQuest[j].name)
                     {
 
-                        questFromPool = true;
-                        chosenQuest = i;
-                        
-                    }
+                        creatureList.RemoveAt(i);
 
+                        if (i > 0)
+                        {
+                            i--;
+                        }
+                      
+                    }
                 }
+
+                if (creatureList.Count == 0)
+                {
+                    break;
+                }
+               
+            }
+
+            if (creatureList.Count > 0)
+            {
+                questFromPool = false;
+                chosenQuest = 0;
             }
 
             if (!questFromPool)
@@ -118,16 +142,20 @@ public class Science : GenericButton {
                 
                 CreateQuest(creatureList[chosenQuest].GetComponent<GenericCreature>().ReturnType(), creatureList[chosenQuest].GetComponent<GenericCreature>().GetDescription());
                 print("Quest from background creature!");
+                questText.text = currentQuest.name;
             }
             else
             {
                 if (questList.Count > 0)
                 {
                     QuestFromPool();
+                    questText.text = currentQuest.name;
                 }
                 else
                 {
                     print("No more Quests");
+                    questText.text = "No More Quests";
+                    currentQuest = new Quest("");
                 }
                 
             }

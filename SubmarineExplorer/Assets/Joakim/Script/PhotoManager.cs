@@ -25,7 +25,6 @@ public class PhotoManager : MonoBehaviour {
 	}
 	
 
-	
 
    public void CreatePhoto(string name, Texture2D tex, List<GameObject> creatures)
     { 
@@ -42,6 +41,12 @@ public class PhotoManager : MonoBehaviour {
         photoList.Insert(photos,new Photo(name, tex, creatures));
         SetPhotoInCanvas();
         photos++;
+
+        if (photoList.Count > 8)
+        {
+            photoList.RemoveAt(8);
+        }
+        
         
 
       byte[] bytes = tex.EncodeToPNG();
@@ -54,7 +59,7 @@ public class PhotoManager : MonoBehaviour {
 
     public void RemovePhoto(int photo)
     {
-        photoList.RemoveAt(photo);
+        photoList[photo].SetName("");
         photos = photo;
 
 

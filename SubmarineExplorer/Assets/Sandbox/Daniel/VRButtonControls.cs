@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VRButtonControls : MonoBehaviour {
 
@@ -133,6 +134,16 @@ public class VRButtonControls : MonoBehaviour {
             }
         }
 
+        if (other.tag == "Button")
+        {
+            
+            if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+            {
+
+                other.GetComponent<Button>().onClick.Invoke();
+            }
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -159,13 +170,13 @@ public class VRButtonControls : MonoBehaviour {
 
         Collider[] colliders = Physics.OverlapBox(hit.point, new Vector3(200, 200, 200));
 
-        List<string> creatures = new List<string>();
+        List<GameObject> creatures = new List<GameObject>();
 
         for (int i = 0; i < colliders.Length; i++)
         {
             if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GenericCreature>())
             {
-                creatures.Add(colliders[i].gameObject.GetComponent<GenericCreature>().ReturnType());
+                creatures.Add(colliders[i].gameObject);
             }
         }
 

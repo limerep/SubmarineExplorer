@@ -9,6 +9,7 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
     public bool inVehicle = false;
     public bool usingCam = false;
     public Camera subCam;
+    public Camera terminalCamera; 
     public Camera mainCam; 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,9 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
 
         }
         else if (usingCam)
-        { }
+        {
+
+        }
         else
         {
             float translation = Input.GetAxis("Vertical") * speed;
@@ -48,6 +51,11 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
 
                 mainCam.enabled = true; 
                 subCam.enabled = false;
+                terminalCamera.enabled = false;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                subCam.GetComponent<SubmarineCamControl>().usingCam = false; 
+
                 usingCam = false; 
             }
         }

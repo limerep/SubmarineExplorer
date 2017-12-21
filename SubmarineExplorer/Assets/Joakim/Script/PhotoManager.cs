@@ -7,10 +7,8 @@ using System.IO;
 
 public class PhotoManager : MonoBehaviour {
 
-    
-    List<Photo> photoList;
+    public List<Photo> photoList;
     public int photos;
-    
     public RawImage image1;
     public RawImage image2;
     public RawImage image3;
@@ -21,42 +19,79 @@ public class PhotoManager : MonoBehaviour {
     public RawImage image8;
  
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
         photos = 0;
-   
-       
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-   public void CreatePhoto(string name, Texture2D tex, List<string> creatures)
+
+   public void CreatePhoto(string name, Texture2D tex, List<GameObject> creatures)
     { 
       if (photoList == null)
       {
          photoList = new List<Photo>();
       }
 
-        if (photos > 8)
+        if (photos > 7)
         {
             photos = 0;
         }
-        else
-        {
-            photoList.Insert(photos,new Photo(name, tex, creatures));
-            SetPhotoInCanvas();
-            photos++;
-        }
+        
+        photoList.Insert(photos,new Photo(name, tex, creatures));
+        SetPhotoInCanvas();
+        photos++;
 
+        if (photoList.Count > 8)
+        {
+            photoList.RemoveAt(8);
+        }
+        
+        
 
       byte[] bytes = tex.EncodeToPNG();
 
       //Object.Destroy(tex);
       File.WriteAllBytes(Application.dataPath + "/../" + photos + ".png", bytes);
 
-        
+    }
+
+
+    public void RemovePhoto(int photo)
+    {
+        photoList[photo].SetName("");
+        photos = photo;
+
+
+        switch (photo)
+        {
+            case 0:
+                image1.texture = null;
+                break;
+            case 1:
+                image2.texture = null;
+                break;
+            case 2:
+                image3.texture = null;
+                break;
+            case 3:
+                image4.texture = null;
+                break;
+            case 4:
+                image5.texture = null;
+                break;
+            case 5:
+                image6.texture = null; ;
+                break;
+            case 6:
+                image7.texture = null;
+                break;
+            case 7:
+                image8.texture = null;
+                break;
+
+            default: break;
+        }
 
     }
     public void SetPhotoInCanvas()
@@ -87,12 +122,5 @@ public class PhotoManager : MonoBehaviour {
 
             default: break; 
         }
-
-        
-        
-        
-
-
     }
-
 };

@@ -11,7 +11,8 @@ public class ButtonTest : GenericButton {
     {
         character.GetComponent<Keyboard_FirstPersonController>().usingCam = true; 
         Camera.main.enabled = false; 
-        subCam.enabled = true;  
+        subCam.enabled = true;
+        subCam.GetComponent<SubmarineCamControl>().usingCam = true; 
     }
 
 

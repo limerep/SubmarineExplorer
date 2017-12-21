@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GenericCreature : MonoBehaviour {
 
-
-
    
+
+
 	// Use this for initialization
 	virtual public void Start () {
 
@@ -17,5 +17,10 @@ public class GenericCreature : MonoBehaviour {
     virtual public string ReturnType()
     {
         return ""; 
+    }
+
+    virtual public string GetDescription()
+    {
+        return "";
     }
 }

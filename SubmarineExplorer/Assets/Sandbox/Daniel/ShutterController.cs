@@ -31,7 +31,7 @@ public class ShutterController : MonoBehaviour
     }
 	void Update ()
 	{
-        if (testRun == true)
+        if (testRun == true && shutterSpeed == 1)
         {
             if (shutterSpeed > minVal) // as long as the alpha is higher than the minimum value
             {

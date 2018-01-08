@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class NavAreaMove : MonoBehaviour {
 
+    [SerializeField]
+    private Transform submarine;
+    [SerializeField]
+    private float diveSpeed = 2.0f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,17 +16,19 @@ public class NavAreaMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            Vector3 oldPos = transform.position;
-            oldPos.y += Time.deltaTime;
-            transform.position = oldPos;
-        }
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            Vector3 oldPos = transform.position;
-            oldPos.y -= Time.deltaTime;
-            transform.position = oldPos;
-        }
+        Vector3 pos = transform.position;
+        
+        pos.x = submarine.position.x;
+        pos.z = submarine.position.z;
+
+        transform.position = pos;
+    }
+
+    public void Dive(float amount)
+    {
+        Vector3 pos = transform.position;
+
+        pos.y += amount * diveSpeed * Time.deltaTime;
+        transform.position = pos;
     }
 }

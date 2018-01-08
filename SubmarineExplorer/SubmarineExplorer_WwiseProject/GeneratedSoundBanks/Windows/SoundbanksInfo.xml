@@ -21,12 +21,27 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1443575244" Name="Whale_Song" ObjectPath="\Events\Default Work Unit\Whale_Song"/>
+				<Event Id="3761115081" Name="ButtonsPress" ObjectPath="\Events\Default Work Unit\UI Sounds\ButtonsPress"/>
+				<Event Id="1532263619" Name="CameraShutterSingle" ObjectPath="\Events\Default Work Unit\UI Sounds\CameraShutterSingle"/>
+				<Event Id="2440264179" Name="StartMenuMusic" ObjectPath="\Events\Default Work Unit\Music\StartMenuMusic"/>
+				<Event Id="1443575244" Name="Whale_Song" ObjectPath="\Events\Default Work Unit\Creatures\Whale_Song"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="347583926" Language="SFX">
+					<ShortName>TestCameraShutter.wav</ShortName>
+					<Path>SFX\TestCameraShutter_4112F633.wem</Path>
+				</File>
+				<File Id="591928996" Language="SFX">
+					<ShortName>Button sound.wav</ShortName>
+					<Path>SFX\Button sound_1C9C67B2.wem</Path>
+				</File>
 				<File Id="890765266" Language="SFX">
 					<ShortName>Whake.wav</ShortName>
 					<Path>SFX\Whake_1C9C67B2.wem</Path>
+				</File>
+				<File Id="908816145" Language="SFX">
+					<ShortName>Submarine Explorer Menu Theme.wav</ShortName>
+					<Path>SFX\Submarine Explorer Menu Theme_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

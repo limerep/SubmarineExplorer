@@ -5,7 +5,7 @@
   <CreateWwiseGlobal>true</CreateWwiseGlobal>
   <CreateWwiseListener>true</CreateWwiseListener>
   <ShowMissingRigidBodyWarning>true</ShowMissingRigidBodyWarning>
-  <WwiseInstallationPathWindows>D:\Wwise</WwiseInstallationPathWindows>
+  <WwiseInstallationPathWindows>D:\Wise</WwiseInstallationPathWindows>
   <WwiseInstallationPathMac>null</WwiseInstallationPathMac>
   <CreatedPicker>true</CreatedPicker>
 </WwiseSettings>

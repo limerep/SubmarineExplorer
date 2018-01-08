@@ -3,37 +3,314 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" ShortID="810475010">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ValueList>
-								<Value>200</Value>
-							</ValueList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-7</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-						</Reference>
-					</ReferenceList>
+				<Folder Name="Camera" ID="{F7A1CD06-6B5F-430C-87EE-F234F95C30B0}" ShortID="674432653">
 					<ChildrenList>
-						<AudioFileSource Name="Whake" ID="{E69084E1-D5B4-4CF7-82E1-536A23C482B7}" ShortID="890765266">
-							<Language>SFX</Language>
-							<AudioFile>Whake.wav</AudioFile>
-						</AudioFileSource>
+						<Sound Name="TestCameraShutter" ID="{54EFC24C-0C76-4C43-81DC-66CA6093C35F}" ShortID="996049475">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TestCameraShutter" ID="{B8A4435A-5E5A-48C8-800E-49B728E7A039}" ShortID="12758296">
+									<Language>SFX</Language>
+									<AudioFile>TestCameraShutter.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TestCameraShutter" ID="{B8A4435A-5E5A-48C8-800E-49B728E7A039}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="CameraShutterSingle" ID="{BAB78C91-06FF-4D49-B7C1-6E5B8A0B9BFB}" ShortID="959391808">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-23</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TestCameraShutter" ID="{92DFAF44-15B0-466D-A00D-EF2269D18B26}" ShortID="347583926">
+									<PropertyList>
+										<Property Name="TrimEnd" Type="Real64" Value="0.321937500000001"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TestCameraShutter.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="TestCameraShutter" ID="{92DFAF44-15B0-466D-A00D-EF2269D18B26}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Whake" ID="{E69084E1-D5B4-4CF7-82E1-536A23C482B7}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
+				</Folder>
+				<Folder Name="Whales" ID="{36FED394-9BD0-4F94-8EF6-57EDC611886D}" ShortID="161213344">
+					<ChildrenList>
+						<Sound Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" ShortID="810475010">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-450</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Whake" ID="{E69084E1-D5B4-4CF7-82E1-536A23C482B7}" ShortID="890765266">
+									<Language>SFX</Language>
+									<AudioFile>Whake.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Whake" ID="{E69084E1-D5B4-4CF7-82E1-536A23C482B7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{9C0EB30A-DD3E-4CAD-B40C-B453BA204848}" ShortID="1022481140">
+					<ChildrenList>
+						<Sound Name="Submarine Explorer Menu Theme" ID="{D0AED8F8-AE17-4E9F-B20C-BCE214D572BB}" ShortID="407923264">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-17</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Submarine Explorer Menu Theme" ID="{3CEF2552-0A37-4120-8B3F-937CD92C827B}" ShortID="908816145">
+									<Language>SFX</Language>
+									<AudioFile>Submarine Explorer Menu Theme.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Submarine Explorer Menu Theme" ID="{3CEF2552-0A37-4120-8B3F-937CD92C827B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{AC46FEFF-6AE5-4956-8510-75F9AA70C7EB}" ShortID="169137110">
+					<ChildrenList>
+						<RandomSequenceContainer Name="ButtonClicks" ID="{45753B92-95A2-4DBF-9D84-403A225F1A35}" ShortID="506094421">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Button sound" ID="{2F67CA71-FB46-4844-AC5F-7F7785FDEEE9}" ShortID="250148248">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>65</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-350</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-17</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Button sound" ID="{76565E8B-91A1-4903-A10E-B15E6380143E}" ShortID="591928996">
+											<Language>SFX</Language>
+											<AudioFile>Button sound.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Button sound" ID="{76565E8B-91A1-4903-A10E-B15E6380143E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Button sound_01" ID="{D9CB9C30-9C14-4CAE-A305-630ADF22C6E1}" ShortID="78908077">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>65</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-17</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Button sound" ID="{019CCCEA-B409-4C24-85A8-C7FAC1AA8EB1}" ShortID="36188329">
+											<Language>SFX</Language>
+											<AudioFile>Button sound.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="591928996"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Button sound" ID="{019CCCEA-B409-4C24-85A8-C7FAC1AA8EB1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Button sound_02" ID="{258B369A-FC78-4D6A-985A-05E3AEA62526}" ShortID="151712196">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>65</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>350</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-17</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Button sound" ID="{77D969C3-2A2E-485D-B1C8-9257BB86A776}" ShortID="187224745">
+											<Language>SFX</Language>
+											<AudioFile>Button sound.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="591928996"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Button sound" ID="{77D969C3-2A2E-485D-B1C8-9257BB86A776}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Button sound_03" ID="{B27B1B45-6411-4E65-B394-CE73975C5DF2}" ShortID="252309322">
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>2</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ValueList>
+												<Value>65</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-700</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-17</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Button sound" ID="{82AAE66E-5ACB-48CC-8FF2-E3A1D0E593DF}" ShortID="694206346">
+											<Language>SFX</Language>
+											<AudioFile>Button sound.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="591928996"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Button sound" ID="{82AAE66E-5ACB-48CC-8FF2-E3A1D0E593DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

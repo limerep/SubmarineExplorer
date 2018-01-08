@@ -78,6 +78,7 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
                     //print("This is a button, press 'F' to Activate it");
                     if (Input.GetKeyDown("f") && !usingCam)
                     {
+                        AkSoundEngine.PostEvent("ButtonsPress", gameObject);
                         ActivateButton(hit);
                     }
                 }

@@ -610,6 +610,46 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &925876000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 925876002}
+  - component: {fileID: 925876001}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &925876001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925876000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0cda693ca732841a1dbbbc51ee1b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &925876002
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925876000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.4795775, y: 8.808128, z: 11.187784}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017633719
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,6 +660,7 @@ GameObject:
   - component: {fileID: 1017633722}
   - component: {fileID: 1017633721}
   - component: {fileID: 1017633720}
+  - component: {fileID: 1017633723}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -673,6 +714,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1017633723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1017633719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aff1f6d31735f5b4e85011ff0c492216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  valueGuid: 23dbb3663f5c0649ab8cb4633b69a8ab
+  bankName: Main
+  loadAsynchronous: 0
+  decodeBank: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
 --- !u!1001 &1106769938
 Prefab:
   m_ObjectHideFlags: 0
@@ -712,7 +772,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 81260512823898482, guid: 35743ce69e3be15418d21d0ab30b481f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 81260512823898482, guid: 35743ce69e3be15418d21d0ab30b481f, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 35743ce69e3be15418d21d0ab30b481f, type: 2}
   m_IsPrefabParent: 0
 --- !u!20 &1180487756 stripped
@@ -720,6 +786,45 @@ Camera:
   m_PrefabParentObject: {fileID: 20431381445098592, guid: 35743ce69e3be15418d21d0ab30b481f,
     type: 2}
   m_PrefabInternal: {fileID: 1106769938}
+--- !u!1 &1191741011 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1047237818698712, guid: 35743ce69e3be15418d21d0ab30b481f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1106769938}
+--- !u!114 &1191741016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191741011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91994c03c0ced6448a47b5bf1fd5011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
+--- !u!114 &1191741017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1191741011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b43df4af2fc354296ff23655075440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_positionOffsetData:
+    positionOffset: {x: 0, y: 0, z: 0}
+    KeepMe: 0
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  m_listeners:
+    initialListenerList:
+    - {fileID: 1191741016}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1377369238
 GameObject:
   m_ObjectHideFlags: 0

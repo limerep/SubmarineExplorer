@@ -3,34 +3,88 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Whale_Song" ID="{DB8A682B-C98C-4872-9B20-04C87DB67396}">
+				<Folder Name="Music" ID="{D497E6C0-EC83-41BA-86F5-AF148ECA0627}" ShortID="759620760">
 					<ChildrenList>
-						<Action Name="" ID="{86FCE127-7420-433B-ADC3-B32BE3A6241D}" ShortID="446719802">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="StartMenuMusic" ID="{670752FF-D727-4D65-862C-4F59D9E23760}">
+							<ChildrenList>
+								<Action Name="" ID="{05E1A66F-EBA0-4DD9-B61D-3FB6C203F89F}" ShortID="3022672">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submarine Explorer Menu Theme" ID="{D0AED8F8-AE17-4E9F-B20C-BCE214D572BB}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
-				<Event Name="Whale_song_Modified" ID="{CDB84254-3D06-4187-92BC-68EDA6E49F22}">
+				</Folder>
+				<Folder Name="UI Sounds" ID="{3D1C292C-0312-4886-89CD-000B962F553F}" ShortID="767473500">
 					<ChildrenList>
-						<Action Name="" ID="{4298F0C8-F530-47D2-A1BA-C20B19AD2F27}" ShortID="107297018">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+						<Event Name="ButtonsPress" ID="{18A6AFB9-9B60-42F9-85BC-F8F0A2442874}">
+							<ChildrenList>
+								<Action Name="" ID="{3404D0E8-8540-4EF3-82A6-A69A44BB213E}" ShortID="277914766">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ButtonClicks" ID="{45753B92-95A2-4DBF-9D84-403A225F1A35}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="CameraShutterSingle" ID="{5CF27C92-B880-4F60-8246-EA66D35A1529}">
+							<ChildrenList>
+								<Action Name="" ID="{5C4A11B6-0655-43B8-AAFE-8D4C614179E6}" ShortID="137439845">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="CameraShutterSingle" ID="{BAB78C91-06FF-4D49-B7C1-6E5B8A0B9BFB}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
+				<Folder Name="Creatures" ID="{CF225618-FD6E-455A-8186-3B43CC773FF5}" ShortID="573534044">
+					<ChildrenList>
+						<Event Name="Whale_Song" ID="{DB8A682B-C98C-4872-9B20-04C87DB67396}">
+							<ChildrenList>
+								<Action Name="" ID="{86FCE127-7420-433B-ADC3-B32BE3A6241D}" ShortID="446719802">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Whale_song_Modified" ID="{CDB84254-3D06-4187-92BC-68EDA6E49F22}">
+							<ChildrenList>
+								<Action Name="" ID="{4298F0C8-F530-47D2-A1BA-C20B19AD2F27}" ShortID="107297018">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

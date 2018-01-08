@@ -108,6 +108,7 @@ public class SubmarineCamControl : MonoBehaviour {
     IEnumerator TextureScreenshot(RaycastHit hit)
     {
 
+        AkSoundEngine.PostEvent("CameraShutterSingle", gameObject);
         loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
 
         yield return new WaitForSeconds(0.05f);

@@ -1,6 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1443575244	Whale_Song			\Default Work Unit\Whale_Song	
+	1443575244	Whale_Song			\Default Work Unit\Creatures\Whale_Song	
+	1532263619	CameraShutterSingle			\Default Work Unit\UI Sounds\CameraShutterSingle	
+	2440264179	StartMenuMusic			\Default Work Unit\Music\StartMenuMusic	
+	3761115081	ButtonsPress			\Default Work Unit\UI Sounds\ButtonsPress	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	890765266	Whake	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whake		31309888
+	347583926	CameraShutterSingle	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\TestCameraShutter_4112F633.wem		\Actor-Mixer Hierarchy\Default Work Unit\Camera\CameraShutterSingle		61876
+	591928996	Button sound	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Button sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonClicks\Button sound		17236
+	890765266	Whake	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whake		31309888
+	908816145	Submarine Explorer Menu Theme	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Explorer Menu Theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Submarine Explorer Menu Theme		28400464
 

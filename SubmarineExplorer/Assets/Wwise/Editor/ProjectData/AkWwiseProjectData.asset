@@ -16,29 +16,75 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}'
-    m_lastTimePsrt1: 1575366228
-    m_lastTimePart2: -1999291432
+    m_lastTimePsrt1: 2066258172
+    m_lastTimePart2: -1999284573
     List:
-    - Name: Whale_Song
-      Path: Default Work Unit\Whale_Song
+    - Name: ButtonsPress
+      Path: Default Work Unit\UI Sounds\ButtonsPress
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: UI Sounds
+        ObjectType: 4
+      - ElementName: ButtonsPress
+        ObjectType: 3
+      ID: -533852215
+      Guid: b9afa618609bf94285bcf8f0a2442874
+      maxAttenuation: 0
+    - Name: CameraShutterSingle
+      Path: Default Work Unit\UI Sounds\CameraShutterSingle
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI Sounds
+        ObjectType: 4
+      - ElementName: CameraShutterSingle
+        ObjectType: 3
+      ID: 1532263619
+      Guid: 927cf25c80b8604f8246ea66d35a1529
+      maxAttenuation: 0
+    - Name: StartMenuMusic
+      Path: Default Work Unit\Music\StartMenuMusic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: StartMenuMusic
+        ObjectType: 3
+      ID: -1854703117
+      Guid: ff52076727d7654d862c4f59d9e23760
+      maxAttenuation: 0
+    - Name: Whale_Song
+      Path: Default Work Unit\Creatures\Whale_Song
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Creatures
+        ObjectType: 4
       - ElementName: Whale_Song
         ObjectType: 3
       ID: 1443575244
       Guid: 2b688adb8cc972489b2004c87db67396
       maxAttenuation: 0
     - Name: Whale_song_Modified
-      Path: Default Work Unit\Whale_song_Modified
+      Path: Default Work Unit\Creatures\Whale_song_Modified
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Creatures
+        ObjectType: 4
       - ElementName: Whale_song_Modified
         ObjectType: 3
       ID: 857147130
       Guid: 5442b8cd063d874192bc68eda6e49f22
       maxAttenuation: 0
+  - PhysicalPath: Events\Music.wwu
+    ParentPhysicalPath: 
+    Guid: '{43D1C32A-3724-4046-8B1D-4743FBCD58B9}'
+    m_lastTimePsrt1: -1834054337
+    m_lastTimePart2: -1999284591
+    List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -64,8 +110,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3A1B9E93-F56F-48A2-84B2-754E86B1071A}'
-    m_lastTimePsrt1: 1583366686
-    m_lastTimePart2: -1999291432
+    m_lastTimePsrt1: 2066338172
+    m_lastTimePart2: -1999284573
     List:
     - Name: Main
       Path: Default Work Unit\Main
@@ -94,6 +140,7 @@ MonoBehaviour:
   - /SubmarineExplorer_WwiseProject
   - /SubmarineExplorer_WwiseProject/Events
   - /SubmarineExplorer_WwiseProject/Events/Default Work Unit
+  - /SubmarineExplorer_WwiseProject/Events/Default Work Unit/Music
   - /SubmarineExplorer_WwiseProject/SoundBanks
   - /SubmarineExplorer_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0

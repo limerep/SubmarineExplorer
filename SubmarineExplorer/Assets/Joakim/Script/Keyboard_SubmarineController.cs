@@ -53,37 +53,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
             {
                 lift = 0; 
             }
-            
            
-            
-            
-            
-
-            //if (Input.GetKey("space"))
-            //{
-            //    lift += 0.03f;
-            //}
-            //else if (Input.GetKey("c"))
-            //{
-            //    lift -= 0.03f;
-            //}
-            //else if (!Input.GetKey("space") && lift > 0)
-            //{
-            //    lift -= 0.03f; 
-            //}
-            //else if (!Input.GetKey("c") && lift < 0)
-            //{
-            //    lift += 0.03f;
-            //}
-
-            //if (lift > 7)
-            //{
-            //    lift = 4;
-            //}
-            //else if (lift < -7)
-            //{
-            //    lift = -4; 
-            //}
             submarine.transform.Rotate(Vector3.up * strafe);
             submarine.transform.Translate(0, lift, translation*-1);
         }

@@ -13,6 +13,9 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BUTTONSPRESS = 3761115081U;
+        static const AkUniqueID CAMERASHUTTERSINGLE = 1532263619U;
+        static const AkUniqueID STARTMENUMUSIC = 2440264179U;
         static const AkUniqueID WHALE_SONG = 1443575244U;
     } // namespace EVENTS
 

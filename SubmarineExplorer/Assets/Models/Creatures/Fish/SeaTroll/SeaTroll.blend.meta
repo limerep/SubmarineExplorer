@@ -1,23 +1,30 @@
 fileFormatVersion: 2
-guid: b69f71beb938ec64b9e11f71cabcb1a8
-timeCreated: 1513334357
+guid: 9e725445c0e816146b2b0ba9a4b4e171
+timeCreated: 1515072776
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_002
+    100000: Armature
+    100002: Body
+    100004: Body_001
+    100006: Head
+    100008: //RootNode
+    400000: Armature
+    400002: Body
+    400004: Body_001
+    400006: Head
+    400008: //RootNode
+    4300000: Body_001
     7400000: Default Take
     9500000: //RootNode
+    13700000: Body_001
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coral
-    second: {fileID: 2100000, guid: d7d8d537cdceabb4286fd257982bfdd9, type: 2}
+      name: Material_001
+    second: {fileID: 2100000, guid: 4d0f9c6122633a848beebbe1c8718ac1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

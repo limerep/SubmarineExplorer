@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b69f71beb938ec64b9e11f71cabcb1a8
-timeCreated: 1513334357
+guid: c2555883116d6e54e8f13e5c5970c1c5
+timeCreated: 1513606142
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -16,8 +16,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coral
-    second: {fileID: 2100000, guid: d7d8d537cdceabb4286fd257982bfdd9, type: 2}
+      name: SmallCorals
+    second: {fileID: 2100000, guid: 4bfdc4c9a94f39d44b5a7e688f1b7166, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

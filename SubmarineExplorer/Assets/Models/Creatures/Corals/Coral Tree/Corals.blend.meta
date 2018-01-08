@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b69f71beb938ec64b9e11f71cabcb1a8
+guid: 42a92f1ba52967848b6b364f100d0577
 timeCreated: 1513334357
 licenseType: Free
 ModelImporter:
@@ -17,7 +17,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Coral
-    second: {fileID: 2100000, guid: d7d8d537cdceabb4286fd257982bfdd9, type: 2}
+    second: {fileID: 2100000, guid: 87e05621f182bad4fbae19109767d9f9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

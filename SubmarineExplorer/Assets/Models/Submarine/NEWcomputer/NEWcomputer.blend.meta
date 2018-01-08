@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: b69f71beb938ec64b9e11f71cabcb1a8
-timeCreated: 1513334357
+guid: bc1ecd583a978224cac2f6cab0cba1ef
+timeCreated: 1514983030
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,15 +9,15 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder_002
+    4300000: Cylinder
     7400000: Default Take
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coral
-    second: {fileID: 2100000, guid: d7d8d537cdceabb4286fd257982bfdd9, type: 2}
+      name: Material_001
+    second: {fileID: 2100000, guid: 4d0f9c6122633a848beebbe1c8718ac1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

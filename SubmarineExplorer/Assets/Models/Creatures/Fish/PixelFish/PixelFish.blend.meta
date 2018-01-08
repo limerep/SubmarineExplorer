@@ -1,23 +1,34 @@
 fileFormatVersion: 2
-guid: b69f71beb938ec64b9e11f71cabcb1a8
-timeCreated: 1513334357
+guid: 4ca5597d944983a419620aa75dd69e78
+timeCreated: 1515078981
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder_002
+    100000: Armature
+    100002: Backfin
+    100004: Body
+    100006: Cube
+    100008: //RootNode
+    100010: Spine_
+    400000: Armature
+    400002: Backfin
+    400004: Body
+    400006: Cube
+    400008: //RootNode
+    400010: Spine_
+    4300000: Cube
     7400000: Default Take
+    7400002: PixelFishSwim
+    7400004: PixelFishSwim_001
     9500000: //RootNode
+    13700000: Cube
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Coral
-    second: {fileID: 2100000, guid: d7d8d537cdceabb4286fd257982bfdd9, type: 2}
+      name: Material_001
+    second: {fileID: 2100000, guid: 4d0f9c6122633a848beebbe1c8718ac1, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -43,7 +54,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: PixelFishSwim
+      takeName: PixelFishSwim
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

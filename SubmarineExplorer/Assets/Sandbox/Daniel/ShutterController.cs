@@ -25,7 +25,7 @@ public class ShutterController : MonoBehaviour
 	}
 
 	// Update is called once per frame
-    public void TestRun()
+    public void RunShutter()
     {
         testRun = true;
     }

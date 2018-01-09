@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SubmarineButtonScript : GenericButton {
 
-    public GameObject submarine; 
+    public GameObject submarine;
+    public GameObject cameraPosition; 
+
 
     public override void ButtonPressed(GameObject character)
     {
@@ -21,6 +23,24 @@ public class SubmarineButtonScript : GenericButton {
             character.GetComponent<Keyboard_FirstPersonController>().inVehicle = false;
             character.transform.parent = null; 
         }
-     
+    }
+
+
+    public override void VrButtonPress(GameObject character)
+    {
+        if (character.GetComponent<VRButtonControls>().inVehicle == false)
+        {
+            character.GetComponent<VRButtonControls>().inVehicle = true;
+            character.GetComponent<LaserPointer>().inVehicle = true;
+            character.GetComponent<Keyboard_SubmarineController>().inVehicle = true;
+            character.transform.parent.gameObject.transform.parent = submarine.transform; 
+        }
+        else if (character.GetComponent<VRButtonControls>().inVehicle == true)
+        {
+            
+            
+          
+
+        }
     }
 }

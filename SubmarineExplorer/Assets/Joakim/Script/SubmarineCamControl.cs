@@ -9,8 +9,9 @@ public class SubmarineCamControl : MonoBehaviour {
     public GameObject loadingCircle;
     public GameObject photoManager;
     public GameObject photoTest;
-    public WWW w;
-    bool playingAnimation; 
+    private Plane[] planes; 
+    bool playingAnimation;
+    public bool usingCam = false; 
     
   
     Animator loadingAnimation;
@@ -27,73 +28,76 @@ public class SubmarineCamControl : MonoBehaviour {
 
         originalRotation = transform.rotation;
         loadingAnimation = loadingCircle.GetComponent<Animator>();
-        loadingAnimation.speed = 0; 
-      
-        
+        loadingAnimation.speed = 0;  
     }
 	
 	// Update is called once per frame
 	void Update () {
 
 
-        var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-        md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
-        smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1 / smoothing);
-        smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1 / smoothing);
-        mouseLook += smoothV;
-        mouseLook.y = Mathf.Clamp(mouseLook.y, -90f, 90f);
 
-
-        Quaternion xQuaternion = Quaternion.AngleAxis(mouseLook.x, Vector3.up);
-        Quaternion yQuaternion = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
-
-        transform.localRotation = originalRotation * xQuaternion * yQuaternion;
-
-      
-        
-        Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 50))
+        if (usingCam)
         {
+            var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+            md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
+            smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1 / smoothing);
+            smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1 / smoothing);
+            mouseLook += smoothV;
+            mouseLook.y = Mathf.Clamp(mouseLook.y, -90f, 90f);
 
-            Debug.DrawLine(this.transform.position, hit.point, Color.red);
 
-            if (hit.collider.GetComponent<GenericCreature>())
+            Quaternion xQuaternion = Quaternion.AngleAxis(mouseLook.x, Vector3.up);
+            Quaternion yQuaternion = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+
+            transform.localRotation = originalRotation * xQuaternion * yQuaternion;
+
+
+
+            Ray ray = subCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+
+            if (Physics.Raycast(ray, out hit, 50))
             {
 
-                //Control animation speed of the loading circle
-                loadingAnimation.speed += 0.01f;
-                if (loadingAnimation.speed > 1)
+                Debug.DrawLine(this.transform.position, hit.point, Color.red);
+
+                if (hit.collider.GetComponent<GenericCreature>())
                 {
-                    loadingAnimation.speed = 1;
+
+                    //Control animation speed of the loading circle
+                    loadingAnimation.speed += 0.01f;
+                    if (loadingAnimation.speed > 1)
+                    {
+                        loadingAnimation.speed = 1;
+                    }
+
+
+                    //Capture Image
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        StartCoroutine("TextureScreenshot", hit);
+                    }
+
                 }
-
-
-                //Capture Image
-                if (Input.GetMouseButtonDown(0))
+                else
                 {
-                    TextureScreenshot(hit); 
+                    //Animation circle; 
+                    loadingAnimation.speed -= 0.01f;
+                    if (loadingAnimation.speed <= 0)
+                    {
+                        loadingAnimation.speed = 0;
+                    }
                 }
-
             }
             else
             {
-                //Animation circle; 
-                loadingAnimation.speed -= 0.01f; 
-                if (loadingAnimation.speed < 0)
+                //Control animation speed
+                loadingAnimation.speed -= 0.01f;
+                if (loadingAnimation.speed <= 0)
                 {
                     loadingAnimation.speed = 0;
-                }           
-            }
-        }
-        else
-        {
-            //Control animation speed
-            loadingAnimation.speed -= 0.01f;
-            if (loadingAnimation.speed < 0)
-            {
-                loadingAnimation.speed = 0;
+                }
             }
         }
           
@@ -101,19 +105,41 @@ public class SubmarineCamControl : MonoBehaviour {
     }
 
     
-    void TextureScreenshot(RaycastHit hit)
+    IEnumerator TextureScreenshot(RaycastHit hit)
     {
+
+        loadingCircle.GetComponent<SpriteRenderer>().enabled = false;
+
+        yield return new WaitForSeconds(0.05f);
 
         Texture2D screenShot = new Texture2D(Screen.width, Screen.height);
         screenShot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0,0);
         screenShot.Apply();
 
-        photoTest.GetComponent<Renderer>().material.EnableKeyword("_MainTex");
+        planes = GeometryUtility.CalculateFrustumPlanes(subCamera);
 
-        photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", screenShot);
+        Collider[] colliders = Physics.OverlapBox(hit.point, new Vector3(200, 200, 200));
 
-        photoManager.GetComponent<PhotoManager>().CreatePhoto(screenShot, hit.collider.gameObject);
+        List<GameObject> creatures = new List<GameObject>();
+
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GenericCreature>())
+            {
+                creatures.Add(colliders[i].gameObject);
+            }
+        }
+
+
+        string fish = hit.collider.GetComponent<GenericCreature>().ReturnType();
+
+        photoManager.GetComponent<PhotoManager>().CreatePhoto(fish, screenShot, creatures);
+
+        yield return new WaitForSeconds(0.05f);
+
+        loadingCircle.GetComponent<SpriteRenderer>().enabled = true;
 
     }
-  
+
+   
 }

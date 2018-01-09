@@ -8,8 +8,11 @@ public class RandomMovement : MonoBehaviour {
     public float randomX, randomY, randomZ;
     public float minWaitTime;
     public float maxWaitTime;
-    private Vector3 currentRandomPos;
+    //public float rotX, rotY, rotZ;
 
+    private Vector3 currentRandomPos;
+    [SerializeField]
+    bool rotate;
 
     Transform target;
     GameObject spawnObject;
@@ -28,8 +31,12 @@ public class RandomMovement : MonoBehaviour {
             Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, step, 0.0F);
             Debug.DrawRay(transform.position, newDir, Color.red);
             transform.rotation = Quaternion.LookRotation(newDir);
-        }
-       
+
+            if (rotate)
+            {
+                transform.Rotate(Vector3.right * Time.deltaTime);
+            }
+        } 
     }
 
     void PickPosition()

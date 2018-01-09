@@ -25,7 +25,6 @@ public class InfoScreen : MonoBehaviour {
     IEnumerator WaitForSomeTime()
     {
         yield return new WaitForSeconds(2);
-        Debug.Log("Object is destroyed");
         Destroy(gameObject);
     }
 }

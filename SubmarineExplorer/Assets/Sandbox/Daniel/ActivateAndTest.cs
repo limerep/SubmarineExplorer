@@ -9,6 +9,6 @@ public class ActivateAndTest : MonoBehaviour {
 	void Update ()
 	{
 		if(Input.GetKeyDown("up"))
-		testObject.GetComponent<ShutterController>().TestRun();
+		testObject.GetComponent<ShutterController>().RunShutter();
 	}
 }

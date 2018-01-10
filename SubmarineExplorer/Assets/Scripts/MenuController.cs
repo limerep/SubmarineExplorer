@@ -22,6 +22,8 @@ public class MenuController : MonoBehaviour {
         }
         else
             Debug.Log("Populate the menu canvases plz");
+
+        
     }
 
     void Start () {
@@ -34,7 +36,9 @@ public class MenuController : MonoBehaviour {
         backBtn.onClick.AddListener(Back);
         startBtn.onClick.AddListener(StartGame);
         exitBtn.onClick.AddListener(Exit);
-	}
+
+        
+    }
 
     void Options()
     {
@@ -52,10 +56,17 @@ public class MenuController : MonoBehaviour {
     void StartGame()
     {
         SceneManager.LoadScene(1);
+        PlaySound();
+        
     }
 
     void Exit()
     {
         Application.Quit();
+    }
+
+    void PlaySound()
+    {
+        AkSoundEngine.PostEvent("ButtonsPress", gameObject);
     }
 }

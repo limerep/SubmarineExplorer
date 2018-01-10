@@ -15,9 +15,26 @@ namespace AK
     {
         static const AkUniqueID BUTTONSPRESS = 3761115081U;
         static const AkUniqueID CAMERASHUTTERSINGLE = 1532263619U;
-        static const AkUniqueID STARTMENUMUSIC = 2440264179U;
+        static const AkUniqueID MENUMUSIC = 679636833U;
+        static const AkUniqueID SUBMARINE_CREAKING = 3476538210U;
+        static const AkUniqueID SUBMARINE_DOUBLE_KNOCK = 2986501728U;
+        static const AkUniqueID SUBMARINE_SINGLE_KNOCK = 3496368343U;
         static const AkUniqueID WHALE_SONG = 1443575244U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace FISHES
+        {
+            static const AkUniqueID GROUP = 2503175619U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BOOMERANG = 1198215643U;
+            } // namespace SWITCH
+        } // namespace FISHES
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {
@@ -29,6 +46,7 @@ namespace AK
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
+        static const AkUniqueID UNDERWATERSOUNDS = 2552791746U;
     } // namespace BUSSES
 
 }// namespace AK

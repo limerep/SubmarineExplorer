@@ -5,9 +5,9 @@
 			<ChildrenList>
 				<Folder Name="Music" ID="{D497E6C0-EC83-41BA-86F5-AF148ECA0627}" ShortID="759620760">
 					<ChildrenList>
-						<Event Name="StartMenuMusic" ID="{670752FF-D727-4D65-862C-4F59D9E23760}">
+						<Event Name="MenuMusic" ID="{ADA46256-2968-44EC-93F3-77C996803A0B}">
 							<ChildrenList>
-								<Action Name="" ID="{05E1A66F-EBA0-4DD9-B61D-3FB6C203F89F}" ShortID="3022672">
+								<Action Name="" ID="{C569184B-7991-4CB6-AE09-9D6F4B15C324}" ShortID="740100958">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
@@ -78,6 +78,66 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Submarine" ID="{A89DB64C-BA54-4738-A151-060CF684F9B4}" ShortID="459950745">
+					<ChildrenList>
+						<Event Name="Submarine_Creaking" ID="{EAE8BBC9-98CE-4FEC-A77C-37AF60B14B51}">
+							<ChildrenList>
+								<Action Name="" ID="{B3208CC4-A4BD-4416-8F21-5CA4F3E7CE1B}" ShortID="107775165">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submarine Creaking" ID="{45EC4A10-AD38-4DAC-8498-EA36CAAEC958}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Submarine_Single_Knock" ID="{73FBF11D-8B74-45D7-B5AB-36B0D66818EE}">
+							<ChildrenList>
+								<Action Name="" ID="{18CEA695-5B79-46A4-8BC8-ECAD967F5F16}" ShortID="834011680">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submarine_Single_Knock" ID="{4032CC19-4C89-4F6E-95C7-6ED37CE61241}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Submarine_Double_Knock" ID="{9514F4D2-B86F-41B0-8849-82A23492C900}">
+							<ChildrenList>
+								<Action Name="" ID="{707CFD13-8595-4299-8FDE-8A59D872A676}" ShortID="988186937">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submarine_Three_Knocks_Pitched_Down" ID="{C4054752-A12A-4DEE-A65D-A30C0E9539A4}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Submarine_TripleKnock_Creak" ID="{FB8F907D-2DA7-4BC6-BFD4-EC11F79BE869}">
+							<ChildrenList>
+								<Action Name="" ID="{B898FF6A-EB13-406B-A615-467D10BCCC64}" ShortID="1000371172">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submarine_Knocks" ID="{2F70D609-22DC-42ED-866B-3B85B400F03B}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

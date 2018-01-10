@@ -23,10 +23,21 @@
 			<IncludedEvents>
 				<Event Id="3761115081" Name="ButtonsPress" ObjectPath="\Events\Default Work Unit\UI Sounds\ButtonsPress"/>
 				<Event Id="1532263619" Name="CameraShutterSingle" ObjectPath="\Events\Default Work Unit\UI Sounds\CameraShutterSingle"/>
-				<Event Id="2440264179" Name="StartMenuMusic" ObjectPath="\Events\Default Work Unit\Music\StartMenuMusic"/>
+				<Event Id="679636833" Name="MenuMusic" ObjectPath="\Events\Default Work Unit\Music\MenuMusic"/>
+				<Event Id="3476538210" Name="Submarine_Creaking" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Creaking"/>
+				<Event Id="2986501728" Name="Submarine_Double_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Double_Knock"/>
+				<Event Id="3496368343" Name="Submarine_Single_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Single_Knock"/>
 				<Event Id="1443575244" Name="Whale_Song" ObjectPath="\Events\Default Work Unit\Creatures\Whale_Song"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="87904772" Language="SFX">
+					<ShortName>Submarine Creaking.wav</ShortName>
+					<Path>SFX\Submarine Creaking_43F91951.wem</Path>
+				</File>
+				<File Id="196458412" Language="SFX">
+					<ShortName>Submarine Creaking.wav</ShortName>
+					<Path>SFX\Submarine Creaking_1C9C67B2.wem</Path>
+				</File>
 				<File Id="347583926" Language="SFX">
 					<ShortName>TestCameraShutter.wav</ShortName>
 					<Path>SFX\TestCameraShutter_4112F633.wem</Path>
@@ -42,6 +53,10 @@
 				<File Id="908816145" Language="SFX">
 					<ShortName>Submarine Explorer Menu Theme.wav</ShortName>
 					<Path>SFX\Submarine Explorer Menu Theme_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1017624843" Language="SFX">
+					<ShortName>Submarine Creaking.wav</ShortName>
+					<Path>SFX\Submarine Creaking_9237184D.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

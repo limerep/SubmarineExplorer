@@ -72,8 +72,8 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       focusDistance: 10
-      aperture: 5.6
-      focalLength: 135
+      aperture: 6.2
+      focalLength: 130
       useCameraFov: 0
       kernelSize: 1
   motionBlur:
@@ -88,14 +88,14 @@ MonoBehaviour:
       lowPercent: 60.299927
       highPercent: 99
       minLuminance: -5
-      maxLuminance: 1
+      maxLuminance: 2
       keyValue: 0.25
       dynamicKeyValue: 1
       adaptationType: 0
       speedUp: 2
       speedDown: 1
       logMin: -8
-      logMax: 2
+      logMax: 3
   bloom:
     m_Enabled: 1
     m_Settings:

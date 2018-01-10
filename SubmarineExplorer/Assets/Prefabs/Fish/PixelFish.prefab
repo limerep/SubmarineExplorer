@@ -35,6 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4274540753068438}
   - component: {fileID: 95459157163415556}
+  - component: {fileID: 114874447055037812}
   m_Layer: 0
   m_Name: PixelFish
   m_TagString: Untagged
@@ -109,7 +110,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1134799794675976}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 11, y: 8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -117,7 +118,7 @@ Transform:
   - {fileID: 4563628502672236}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4300861666250098
 Transform:
   m_ObjectHideFlags: 1
@@ -203,6 +204,20 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114874447055037812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134799794675976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c500e0da4259159479b7915a48de9961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myManager: {fileID: 0}
+  speed: 2
+  speedMult: 1
 --- !u!137 &137986753320586790
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

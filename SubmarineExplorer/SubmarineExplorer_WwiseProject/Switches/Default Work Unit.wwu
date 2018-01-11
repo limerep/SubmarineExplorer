@@ -6,6 +6,14 @@
 				<SwitchGroup Name="Fishes" ID="{B1A6F8E8-EAF3-4FF1-A35C-FCEEDCE967C1}">
 					<ChildrenList>
 						<Switch Name="Boomerang" ID="{65FE9139-47CD-46BE-B498-724CC00EBA6C}"/>
+						<Switch Name="Torpedo" ID="{77572F91-A764-4B4C-BE1D-00CD4FF2D019}"/>
+						<Switch Name="Bullet" ID="{EACDFF11-A9F0-4A10-95FF-5CA8FC1946AE}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="SubmarineSwitch" ID="{FAA5D438-DAFF-469C-A530-4C9E26299302}">
+					<ChildrenList>
+						<Switch Name="Creaking" ID="{9816413F-2FAC-4D36-A0DB-CD735E1AEB87}"/>
+						<Switch Name="Knocking" ID="{0667E2CD-5205-443B-8945-12D656944713}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

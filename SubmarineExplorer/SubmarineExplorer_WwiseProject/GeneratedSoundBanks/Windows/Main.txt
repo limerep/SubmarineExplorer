@@ -6,13 +6,24 @@ Event	ID	Name			Wwise Object Path	Notes
 	3476538210	Submarine_Creaking			\Default Work Unit\Submarine\Submarine_Creaking	
 	3496368343	Submarine_Single_Knock			\Default Work Unit\Submarine\Submarine_Single_Knock	
 	3761115081	ButtonsPress			\Default Work Unit\UI Sounds\ButtonsPress	
+	3851594899	SubmarineSwitch			\Default Work Unit\Submarine\SubmarineSwitch	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3851594899	SubmarineSwitch			\Default Work Unit\SubmarineSwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	297067049	Creaking	SubmarineSwitch			
+	1503258909	Knocking	SubmarineSwitch			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	87904772	Submarine_Single_Knock	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_43F91951.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\Submarine_Knocks\Submarine_Single_Knock		123396
-	196458412	Submarine Creaking	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\Submarine Creaking		1674408
+	18526076	Submarine_Single_Knock_Short	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_77CF5CA4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Knock\Submarine_Single_Knock_Short		127136
+	87904772	Submarine_Single_Knock	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_43F91951.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Knock\Submarine_Single_Knock		123396
+	169332820	Submarine_Creak_2_Pitched_Down	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_C4AB43C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Creaking\Submarine_Creak_2_Pitched_Down		861528
+	196458412	Submarine Creaking	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Creaking\Submarine Creaking		1674408
 	347583926	CameraShutterSingle	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\TestCameraShutter_4112F633.wem		\Actor-Mixer Hierarchy\Default Work Unit\Camera\CameraShutterSingle		61876
+	433708384	Submarine_Single_Creak	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_0122008C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Creaking\Submarine_Single_Creak		345772
 	591928996	Button sound	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Button sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonClicks\Button sound		17236
 	890765266	Whake	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whales\Whake		31309888
 	908816145	Submarine Explorer Menu Theme	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Explorer Menu Theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Submarine Explorer Menu Theme		28400464
-	1017624843	Submarine_Three_Knocks_Pitched_Down	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_9237184D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\Submarine_Three_Knocks_Pitched_Down		170116
+	1017624843	Submarine_Three_Knocks_Pitched_Down	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_9237184D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Knock\Submarine_Three_Knocks_Pitched_Down		170116
 

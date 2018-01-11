@@ -6,7 +6,9 @@ public class SubmarineCreaking : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        AkSoundEngine.PostEvent("Submarine_Creaking", gameObject);
+      
+      
+        
 	}
 	
 	// Update is called once per frame

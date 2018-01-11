@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{17AE3D98-ADF3-46CC-8242-05D937EAC513}" SchemaVersion="80">
+	<InteractiveMusic>
+		<WorkUnit Name="Music" ID="{17AE3D98-ADF3-46CC-8242-05D937EAC513}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSegment Name="Submarine Explorer Menu Theme" ID="{B3FF9ADB-452F-4095-83AB-B5FED8828B11}" ShortID="21281852">
+					<PropertyList>
+						<Property Name="EndPosition" Type="Real64" Value="161000"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicTrack Name="Submarine Explorer Menu Theme" ID="{CF861D2C-F4C0-414E-9A1A-0B8E4FE6EC0D}" ShortID="274402148">
+							<ReferenceList>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Submarine Explorer Menu Theme" ID="{245B9491-B386-487A-9845-D9B3F6787243}" ShortID="816467331">
+									<Language>SFX</Language>
+									<AudioFile>Submarine Explorer Menu Theme.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{9F439A09-7D6D-49E9-880B-03DB416FC655}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<SequenceList>
+								<MusicTrackSequence Name="" ID="{754E5CAD-36B7-4488-9E04-64E147F477FE}">
+									<ClipList>
+										<MusicClip Name="Submarine Explorer Menu Theme" ID="{CD2EB75D-AF82-4C95-ABD5-355D37296EB4}">
+											<PropertyList>
+												<Property Name="EndTrimOffset" Type="Real64" Value="161000"/>
+												<Property Name="FadeInMode" Type="int16" Value="0"/>
+												<Property Name="FadeOutMode" Type="int16" Value="0"/>
+											</PropertyList>
+											<AudioSourceRef Name="Submarine Explorer Menu Theme" ID="{245B9491-B386-487A-9845-D9B3F6787243}"/>
+										</MusicClip>
+									</ClipList>
+								</MusicTrackSequence>
+							</SequenceList>
+						</MusicTrack>
+					</ChildrenList>
+					<CueList>
+						<MusicCue Name="Entry Cue" ID="{F1349AB7-B407-47FA-8346-9F33625A1CE3}"/>
+						<MusicCue Name="Exit Cue" ID="{AE828D01-EABE-470F-8183-23C1150A4E77}">
+							<PropertyList>
+								<Property Name="CueType" Type="int16" Value="1"/>
+								<Property Name="TimeMs" Type="Real64" Value="161000"/>
+							</PropertyList>
+						</MusicCue>
+					</CueList>
+				</MusicSegment>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>

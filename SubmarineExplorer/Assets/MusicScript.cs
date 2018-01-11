@@ -7,7 +7,7 @@ public class MusicScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        AkSoundEngine.PostEvent("MenuMusic", gameObject);
+        //AkSoundEngine.PostEvent("MenuMusic", gameObject);
 	}
 	
 	// Update is called once per frame

@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID SUBMARINE_CREAKING = 3476538210U;
         static const AkUniqueID SUBMARINE_DOUBLE_KNOCK = 2986501728U;
         static const AkUniqueID SUBMARINE_SINGLE_KNOCK = 3496368343U;
+        static const AkUniqueID SUBMARINESWITCH = 3851594899U;
         static const AkUniqueID WHALE_SONG = 1443575244U;
     } // namespace EVENTS
 
@@ -31,8 +32,21 @@ namespace AK
             namespace SWITCH
             {
                 static const AkUniqueID BOOMERANG = 1198215643U;
+                static const AkUniqueID BULLET = 1256513485U;
+                static const AkUniqueID TORPEDO = 2008830742U;
             } // namespace SWITCH
         } // namespace FISHES
+
+        namespace SUBMARINESWITCH
+        {
+            static const AkUniqueID GROUP = 3851594899U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CREAKING = 297067049U;
+                static const AkUniqueID KNOCKING = 1503258909U;
+            } // namespace SWITCH
+        } // namespace SUBMARINESWITCH
 
     } // namespace SWITCHES
 

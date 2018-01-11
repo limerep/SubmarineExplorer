@@ -10,6 +10,7 @@
 						<ObjectRef Name="Submarine_Single_Knock" ID="{73FBF11D-8B74-45D7-B5AB-36B0D66818EE}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Whale_Song" ID="{DB8A682B-C98C-4872-9B20-04C87DB67396}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ButtonClicks" ID="{45753B92-95A2-4DBF-9D84-403A225F1A35}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="SubmarineSwitch" ID="{D48F0FC7-1D6A-4E21-BEF5-44246B4A9A87}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="CameraShutterSingle" ID="{5CF27C92-B880-4F60-8246-EA66D35A1529}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Submarine_Creaking" ID="{EAE8BBC9-98CE-4FEC-A77C-37AF60B14B51}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

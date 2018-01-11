@@ -143,6 +143,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="SubmarineSwitch" ID="{619D4A86-FD2E-4739-8477-9A9ABD7A445A}">
+							<ChildrenList>
+								<Action Name="" ID="{24E273E4-6615-430A-BD2B-4542B9C17901}" ShortID="1004354788">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SubmarineSwitch" ID="{D48F0FC7-1D6A-4E21-BEF5-44246B4A9A87}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

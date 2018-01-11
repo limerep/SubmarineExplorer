@@ -142,6 +142,13 @@
 				<Folder Name="UI" ID="{AC46FEFF-6AE5-4956-8510-75F9AA70C7EB}" ShortID="169137110">
 					<ChildrenList>
 						<RandomSequenceContainer Name="ButtonClicks" ID="{45753B92-95A2-4DBF-9D84-403A225F1A35}" ShortID="506094421">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-14</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
@@ -325,20 +332,19 @@
 				</Folder>
 				<Folder Name="Submarine Sounds" ID="{AB32CC08-A964-419C-89C5-DF0F79FA733D}" ShortID="885496661">
 					<ChildrenList>
-						<Sound Name="Submarine Creaking" ID="{45EC4A10-AD38-4DAC-8498-EA36CAAEC958}" ShortID="586941537">
+						<SwitchContainer Name="SubmarineSwitch" ID="{D48F0FC7-1D6A-4E21-BEF5-44246B4A9A87}" ShortID="1064667083">
 							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-1260</Value>
-									</ValueList>
-								</Property>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-17</Value>
+										<Value>-12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="SubmarineAttenuation" ID="{9D61345C-D62F-4B3C-91F4-2EA72EC1E724}" WorkUnitID="{CECE58D1-57C2-48F6-84C4-C8363D77F369}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
 								</Reference>
@@ -347,125 +353,7 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Submarine Creaking" ID="{3EB35FB9-4A91-4A78-9A19-9B10CF282212}" ShortID="196458412">
-									<Language>SFX</Language>
-									<AudioFile>Submarine Creaking.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Submarine Creaking" ID="{3EB35FB9-4A91-4A78-9A19-9B10CF282212}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Submarine_Creak_2_Pitched_Down" ID="{B74996DF-0D9D-40AB-9210-5C352E75E49D}" ShortID="360474524">
-							<PropertyList>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>46</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-1440</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-13</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Submarine Creaking" ID="{F576A6BB-E2CF-4D42-A860-A378BA7E7F2A}" ShortID="169332820">
-									<PropertyList>
-										<Property Name="TrimBegin" Type="Real64" Value="4.60815795068027"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Submarine Creaking.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Submarine Creaking" ID="{F576A6BB-E2CF-4D42-A860-A378BA7E7F2A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Submarine_Three_Knocks_Pitched_Down" ID="{C4054752-A12A-4DEE-A65D-A30C0E9539A4}" ShortID="554305864">
-							<PropertyList>
-								<Property Name="Lowpass" Type="int16">
-									<ValueList>
-										<Value>65</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-2400</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-10</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Submarine Creaking" ID="{23837C80-30B6-4096-ABBF-E864E83CB4DD}" ShortID="1017624843">
-									<PropertyList>
-										<Property Name="TrimBegin" Type="Real64" Value="8.07222151360545"/>
-										<Property Name="TrimEnd" Type="Real64" Value="9.03622696995465"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Submarine Creaking.wav</AudioFile>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Submarine Creaking" ID="{23837C80-30B6-4096-ABBF-E864E83CB4DD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<RandomSequenceContainer Name="Submarine_Knocks" ID="{2F70D609-22DC-42ED-866B-3B85B400F03B}" ShortID="1064122702">
-							<PropertyList>
-								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<Sound Name="Submarine_Single_Knock" ID="{4032CC19-4C89-4F6E-95C7-6ED37CE61241}" ShortID="403801969">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>48</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-2220</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-11</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								<RandomSequenceContainer Name="Creaking" ID="{7B61C52C-1818-497C-9E85-96D7B6F12EDA}" ShortID="731733251">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
@@ -475,32 +363,115 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Submarine Creaking" ID="{B2F7C2A1-8BC4-4984-9E19-EFB7B98F6F4B}" ShortID="87904772">
+										<Sound Name="Submarine Creaking" ID="{45EC4A10-AD38-4DAC-8498-EA36CAAEC958}" ShortID="586941537">
 											<PropertyList>
-												<Property Name="TrimBegin" Type="Real64" Value="8.44299284297052"/>
-												<Property Name="TrimEnd" Type="Real64" Value="9.14216163548753"/>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-1260</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-17</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Submarine Creaking.wav</AudioFile>
-										</AudioFileSource>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Submarine Creaking" ID="{3EB35FB9-4A91-4A78-9A19-9B10CF282212}" ShortID="196458412">
+													<Language>SFX</Language>
+													<AudioFile>Submarine Creaking.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Submarine Creaking" ID="{3EB35FB9-4A91-4A78-9A19-9B10CF282212}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Submarine_Single_Creak" ID="{3A711735-A37E-48EB-BB5E-D1D3801DE8B0}" ShortID="781984926">
+											<PropertyList>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-630</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-14</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Submarine Creaking" ID="{F474F837-8414-4C92-9641-1AC21C5BC577}" ShortID="433708384">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.43011798469388"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.752136125283442"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.71192743764172"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Submarine Creaking.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Submarine Creaking" ID="{F474F837-8414-4C92-9641-1AC21C5BC577}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Submarine_Creak_2_Pitched_Down" ID="{B74996DF-0D9D-40AB-9210-5C352E75E49D}" ShortID="360474524">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>46</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-1440</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-13</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Submarine Creaking" ID="{F576A6BB-E2CF-4D42-A860-A378BA7E7F2A}" ShortID="169332820">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="4.60815795068027"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Submarine Creaking.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Submarine Creaking" ID="{F576A6BB-E2CF-4D42-A860-A378BA7E7F2A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Submarine Creaking" ID="{B2F7C2A1-8BC4-4984-9E19-EFB7B98F6F4B}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Submarine_Single_Creak" ID="{3A711735-A37E-48EB-BB5E-D1D3801DE8B0}" ShortID="781984926">
-									<PropertyList>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-630</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-14</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Knock" ID="{6000BF72-14C4-431E-AEB4-F07550E2C7EF}" ShortID="230326703">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
@@ -510,67 +481,159 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Submarine Creaking" ID="{F474F837-8414-4C92-9641-1AC21C5BC577}" ShortID="433708384">
+										<Sound Name="Submarine_Three_Knocks_Pitched_Down" ID="{C4054752-A12A-4DEE-A65D-A30C0E9539A4}" ShortID="554305864">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="1.43011798469388"/>
-												<Property Name="TrimBegin" Type="Real64" Value="0.752136125283442"/>
-												<Property Name="TrimEnd" Type="Real64" Value="2.71192743764172"/>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>65</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-2400</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-10</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Submarine Creaking.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Submarine Creaking" ID="{F474F837-8414-4C92-9641-1AC21C5BC577}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Submarine_Single_Knock_Short" ID="{18DE5BAD-4E99-4B00-8E05-B6825E920FF4}" ShortID="209784043">
-									<PropertyList>
-										<Property Name="Lowpass" Type="int16">
-											<ValueList>
-												<Value>48</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Pitch" Type="int32">
-											<ValueList>
-												<Value>-1520</Value>
-											</ValueList>
-										</Property>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-11</Value>
-											</ValueList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Submarine Creaking" ID="{99998E5A-0F85-4F55-B908-3D49B5110743}" ShortID="18526076">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Submarine Creaking" ID="{23837C80-30B6-4096-ABBF-E864E83CB4DD}" ShortID="1017624843">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="8.07222151360545"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.03622696995465"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Submarine Creaking.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Submarine Creaking" ID="{23837C80-30B6-4096-ABBF-E864E83CB4DD}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Submarine_Single_Knock" ID="{4032CC19-4C89-4F6E-95C7-6ED37CE61241}" ShortID="403801969">
 											<PropertyList>
-												<Property Name="TrimBegin" Type="Real64" Value="8.31587124433106"/>
-												<Property Name="TrimEnd" Type="Real64" Value="9.03622696995465"/>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>48</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-2220</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-11</Value>
+													</ValueList>
+												</Property>
 											</PropertyList>
-											<Language>SFX</Language>
-											<AudioFile>Submarine Creaking.wav</AudioFile>
-										</AudioFileSource>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Submarine Creaking" ID="{B2F7C2A1-8BC4-4984-9E19-EFB7B98F6F4B}" ShortID="87904772">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="8.44299284297052"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.14216163548753"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Submarine Creaking.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Submarine Creaking" ID="{B2F7C2A1-8BC4-4984-9E19-EFB7B98F6F4B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Submarine_Single_Knock_Short" ID="{18DE5BAD-4E99-4B00-8E05-B6825E920FF4}" ShortID="209784043">
+											<PropertyList>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>48</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ValueList>
+														<Value>-1520</Value>
+													</ValueList>
+												</Property>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-11</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Submarine Creaking" ID="{99998E5A-0F85-4F55-B908-3D49B5110743}" ShortID="18526076">
+													<PropertyList>
+														<Property Name="TrimBegin" Type="Real64" Value="8.31587124433106"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.03622696995465"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Submarine Creaking.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Submarine Creaking" ID="{99998E5A-0F85-4F55-B908-3D49B5110743}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
 									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Submarine Creaking" ID="{99998E5A-0F85-4F55-B908-3D49B5110743}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
+								</RandomSequenceContainer>
 							</ChildrenList>
-							<Playlist>
-								<ItemRef Name="Submarine_Single_Knock_Short" ID="{18DE5BAD-4E99-4B00-8E05-B6825E920FF4}"/>
-								<ItemRef Name="Submarine_Single_Knock" ID="{4032CC19-4C89-4F6E-95C7-6ED37CE61241}"/>
-								<ItemRef Name="Submarine_Single_Creak" ID="{3A711735-A37E-48EB-BB5E-D1D3801DE8B0}"/>
-							</Playlist>
-						</RandomSequenceContainer>
+							<PositioningInfo>
+								<Position Name="" ID="{BD77E7B9-4AB5-4845-9E09-FC36B3CB6C00}"/>
+							</PositioningInfo>
+							<GroupingInfo>
+								<GroupRef Name="SubmarineSwitch" ID="{FAA5D438-DAFF-469C-A530-4C9E26299302}"/>
+								<DefaultSwitchRef Name="Creaking" ID="{9816413F-2FAC-4D36-A0DB-CD735E1AEB87}"/>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Creaking" ID="{7B61C52C-1818-497C-9E85-96D7B6F12EDA}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Knock" ID="{6000BF72-14C4-431E-AEB4-F07550E2C7EF}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Creaking" ID="{9816413F-2FAC-4D36-A0DB-CD735E1AEB87}"/>
+										<ItemList>
+											<ItemRef Name="Creaking" ID="{7B61C52C-1818-497C-9E85-96D7B6F12EDA}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Knocking" ID="{0667E2CD-5205-443B-8945-12D656944713}"/>
+										<ItemList>
+											<ItemRef Name="Knock" ID="{6000BF72-14C4-431E-AEB4-F07550E2C7EF}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
 					</ChildrenList>
 				</Folder>
 				<SwitchContainer Name="FishSwitch" ID="{B1AB15CB-1C94-47F5-B89A-DC3CEEA12CF6}" ShortID="924507952">

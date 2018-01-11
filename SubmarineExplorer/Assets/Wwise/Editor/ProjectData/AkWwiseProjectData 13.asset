@@ -12,12 +12,21 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 13
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
+<<<<<<< HEAD
+  EventWwu: []
+  AuxBusWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  BankWwu: []
+  RtpcWwu: []
+  TriggerWwu: []
+=======
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}'
-    m_lastTimePsrt1: 1441049121
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1575366228
+    m_lastTimePart2: -1999291432
     List:
     - Name: Whale_Song
       Path: Default Work Unit\Whale_Song
@@ -43,29 +52,29 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D8341183-8BB1-401C-A3F2-B7988ACCC341}'
-    m_lastTimePsrt1: 1444109427
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1579166445
+    m_lastTimePart2: -1999291432
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BCCCE11F-257F-451E-9326-8A07AEFE966B}'
-    m_lastTimePsrt1: 1447179734
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1583376686
+    m_lastTimePart2: -1999291432
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}'
-    m_lastTimePsrt1: 1447209737
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1583406688
+    m_lastTimePart2: -1999291432
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3A1B9E93-F56F-48A2-84B2-754E86B1071A}'
-    m_lastTimePsrt1: 1447169733
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1583366686
+    m_lastTimePart2: -1999291432
     List:
     - Name: Main
       Path: Default Work Unit\Main
@@ -80,16 +89,17 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8DAC5BAD-334A-4526-B5CB-9006C018914B}'
-    m_lastTimePsrt1: 1441049121
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1575366228
+    m_lastTimePart2: -1999291432
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F42CD228-0997-4F2E-A3F9-26A95EA0B023}'
-    m_lastTimePsrt1: 1447209737
-    m_lastTimePart2: -1999291612
+    m_lastTimePsrt1: 1583426689
+    m_lastTimePart2: -1999291432
     List: []
+>>>>>>> 9d96bab8977ddfef7cb0457694bdd006a7955705
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0

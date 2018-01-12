@@ -178,6 +178,6 @@ public class Science : GenericButton {
         Camera.main.enabled = false;
         terminalCamera.enabled = true;
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        //Cursor.lockState = CursorLockMode.None;
     }
 }

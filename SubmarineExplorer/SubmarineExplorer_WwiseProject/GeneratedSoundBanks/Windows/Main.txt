@@ -15,15 +15,24 @@ Switch	ID	Name	Switch Group			Notes
 	297067049	Creaking	SubmarineSwitch			
 	1503258909	Knocking	SubmarineSwitch			
 
+Effect plug-ins	ID	Name	Type				Notes
+	1866712635	High_Freq_Cut_1	Wwise Parametric EQ			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	18526076	Submarine_Single_Knock_Short	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_77CF5CA4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Knock\Submarine_Single_Knock_Short		127136
 	87904772	Submarine_Single_Knock	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_43F91951.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Knock\Submarine_Single_Knock		123396
+	100838462	Whale_5	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_7FFF0A7F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_5		701920
+	139323460	Whale_3	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_0B4A133B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_3		474284
+	146192026	Whale_7	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_FF99B3C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_7		1095648
 	169332820	Submarine_Creak_2_Pitched_Down	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_C4AB43C7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Creaking\Submarine_Creak_2_Pitched_Down		861528
 	196458412	Submarine Creaking	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Creaking\Submarine Creaking		1674408
+	225703179	Whale_1	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_5636AB20.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_1		629056
 	347583926	CameraShutterSingle	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\TestCameraShutter_4112F633.wem		\Actor-Mixer Hierarchy\Default Work Unit\Camera\CameraShutterSingle		61876
+	425250632	Whale_4	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_488975D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_4		599212
 	433708384	Submarine_Single_Creak	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_0122008C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Creaking\Submarine_Single_Creak		345772
+	510646461	Whale_6	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_289CE05D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_6		2584964
 	591928996	Button sound	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Button sound_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\ButtonClicks\Button sound		17236
-	890765266	Whake	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whales\Whake		31309888
 	908816145	Submarine Explorer Menu Theme	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Explorer Menu Theme_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\Submarine Explorer Menu Theme		28400464
 	1017624843	Submarine_Three_Knocks_Pitched_Down	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Submarine Creaking_9237184D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Submarine Sounds\SubmarineSwitch\Knock\Submarine_Three_Knocks_Pitched_Down		170116
+	1068705366	Whale_2	D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\.cache\Windows\SFX\Whake_587E137D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Whales\Whale sounds\Whale_2		524224
 

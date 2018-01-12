@@ -24,11 +24,11 @@
 				<Event Id="3761115081" Name="ButtonsPress" ObjectPath="\Events\Default Work Unit\UI Sounds\ButtonsPress"/>
 				<Event Id="1532263619" Name="CameraShutterSingle" ObjectPath="\Events\Default Work Unit\UI Sounds\CameraShutterSingle"/>
 				<Event Id="679636833" Name="MenuMusic" ObjectPath="\Events\Default Work Unit\Music\MenuMusic"/>
-				<Event Id="3476538210" Name="Submarine_Creaking" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Creaking" MaxAttenuation="25.000000"/>
-				<Event Id="2986501728" Name="Submarine_Double_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Double_Knock" MaxAttenuation="25.000000"/>
-				<Event Id="3496368343" Name="Submarine_Single_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Single_Knock" MaxAttenuation="25.000000"/>
-				<Event Id="3851594899" Name="SubmarineSwitch" ObjectPath="\Events\Default Work Unit\Submarine\SubmarineSwitch" MaxAttenuation="25.000000"/>
-				<Event Id="1443575244" Name="Whale_Song" ObjectPath="\Events\Default Work Unit\Creatures\Whale_Song"/>
+				<Event Id="3476538210" Name="Submarine_Creaking" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Creaking" MaxAttenuation="16.000000"/>
+				<Event Id="2986501728" Name="Submarine_Double_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Double_Knock" MaxAttenuation="16.000000"/>
+				<Event Id="3496368343" Name="Submarine_Single_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Single_Knock" MaxAttenuation="16.000000"/>
+				<Event Id="3851594899" Name="SubmarineSwitch" ObjectPath="\Events\Default Work Unit\Submarine\SubmarineSwitch" MaxAttenuation="16.000000"/>
+				<Event Id="1443575244" Name="Whale_Song" ObjectPath="\Events\Default Work Unit\Creatures\Whale_Song" MaxAttenuation="60.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="18526076" Language="SFX">
@@ -39,6 +39,18 @@
 					<ShortName>Submarine Creaking.wav</ShortName>
 					<Path>SFX\Submarine Creaking_43F91951.wem</Path>
 				</File>
+				<File Id="100838462" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_7FFF0A7F.wem</Path>
+				</File>
+				<File Id="139323460" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_0B4A133B.wem</Path>
+				</File>
+				<File Id="146192026" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_FF99B3C4.wem</Path>
+				</File>
 				<File Id="169332820" Language="SFX">
 					<ShortName>Submarine Creaking.wav</ShortName>
 					<Path>SFX\Submarine Creaking_C4AB43C7.wem</Path>
@@ -47,21 +59,29 @@
 					<ShortName>Submarine Creaking.wav</ShortName>
 					<Path>SFX\Submarine Creaking_1C9C67B2.wem</Path>
 				</File>
+				<File Id="225703179" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_5636AB20.wem</Path>
+				</File>
 				<File Id="347583926" Language="SFX">
 					<ShortName>TestCameraShutter.wav</ShortName>
 					<Path>SFX\TestCameraShutter_4112F633.wem</Path>
+				</File>
+				<File Id="425250632" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_488975D7.wem</Path>
 				</File>
 				<File Id="433708384" Language="SFX">
 					<ShortName>Submarine Creaking.wav</ShortName>
 					<Path>SFX\Submarine Creaking_0122008C.wem</Path>
 				</File>
+				<File Id="510646461" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_289CE05D.wem</Path>
+				</File>
 				<File Id="591928996" Language="SFX">
 					<ShortName>Button sound.wav</ShortName>
 					<Path>SFX\Button sound_1C9C67B2.wem</Path>
-				</File>
-				<File Id="890765266" Language="SFX">
-					<ShortName>Whake.wav</ShortName>
-					<Path>SFX\Whake_1C9C67B2.wem</Path>
 				</File>
 				<File Id="908816145" Language="SFX">
 					<ShortName>Submarine Explorer Menu Theme.wav</ShortName>
@@ -70,6 +90,10 @@
 				<File Id="1017624843" Language="SFX">
 					<ShortName>Submarine Creaking.wav</ShortName>
 					<Path>SFX\Submarine Creaking_9237184D.wem</Path>
+				</File>
+				<File Id="1068705366" Language="SFX">
+					<ShortName>Whake.wav</ShortName>
+					<Path>SFX\Whake_587E137D.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

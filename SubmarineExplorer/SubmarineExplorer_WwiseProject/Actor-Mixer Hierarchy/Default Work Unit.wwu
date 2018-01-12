@@ -107,6 +107,294 @@
 								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+						<RandomSequenceContainer Name="Whale sounds" ID="{6674E878-E3A3-45ED-96D9-01436718A4FF}" ShortID="947574423">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-710</Value>
+									</ValueList>
+								</Property>
+								<Property Name="PositioningType" Type="int16" Value="1"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Whale" ID="{43D28C23-9183-4EE5-A195-3AF4C9102078}" WorkUnitID="{CECE58D1-57C2-48F6-84C4-C8363D77F369}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="High_Freq_Cut_1" ID="{BA5BC68D-BCA7-4CE0-9878-1560F2D8B257}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Whale_1" ID="{931BEF1D-B417-42F4-8FD3-E3260AB79166}" ShortID="231220572">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Dual_Filters_Narrow_Bandwidth" ID="{A24607C6-04E1-4D41-B513-28C0914D138D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{FF6312CC-AAD4-45BB-996B-3BCF635AD2F1}" ShortID="225703179">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="4.55619047619048"/>
+												<Property Name="TrimEnd" Type="Real64" Value="8.12190476190475"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{FF6312CC-AAD4-45BB-996B-3BCF635AD2F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Whale_2" ID="{5C392773-637B-419B-BE30-A8E89A30864B}" ShortID="260642837">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Dual_Filters_Narrow_Bandwidth" ID="{A24607C6-04E1-4D41-B513-28C0914D138D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{8895F1DF-F75D-4E52-88C6-625BDF43A422}" ShortID="1068705366">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="8.32"/>
+												<Property Name="TrimEnd" Type="Real64" Value="11.2914285714286"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{8895F1DF-F75D-4E52-88C6-625BDF43A422}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Whale_3" ID="{A1E26035-B60D-4186-BD29-74DC29919A40}" ShortID="749423414">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="High_Freq_Cut_6" ID="{D064E2D9-269F-4D94-BAAD-86E171F9C28B}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{1CCD44A2-CF2C-4704-B533-8A4596AA7BF1}" ShortID="139323460">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="16.7250217396964"/>
+												<Property Name="TrimEnd" Type="Real64" Value="19.4133333333333"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{1CCD44A2-CF2C-4704-B533-8A4596AA7BF1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Whale_4" ID="{975EE3BC-1775-482F-9851-3C1CCFF8F2B8}" ShortID="693217825">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="High_Freq_Cut_7" ID="{D21CF913-1854-4FBB-B96E-6EE1BBA618DE}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{1CB4E12F-16CD-4F67-944A-A2237D599DBB}" ShortID="425250632">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="38.3323491889922"/>
+												<Property Name="TrimEnd" Type="Real64" Value="41.7288864589028"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{1CB4E12F-16CD-4F67-944A-A2237D599DBB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Whale_5" ID="{E4B732E1-DB0A-4482-882A-6009446BA801}" ShortID="48350628">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{0C17E702-1898-467C-BA5B-711E4AA455EA}" ShortID="100838462">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="100.149327501367"/>
+												<Property Name="TrimEnd" Type="Real64" Value="104.128128303262"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{0C17E702-1898-467C-BA5B-711E4AA455EA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Whale_6" ID="{B2E2E7D5-FC5F-4303-8995-59E00BCB76C8}" ShortID="343086752">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{A72A034D-39DA-4E89-ABC5-20689BD7DDD0}" ShortID="510646461">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="150.126947330053"/>
+												<Property Name="TrimEnd" Type="Real64" Value="164.780579551668"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{A72A034D-39DA-4E89-ABC5-20689BD7DDD0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Whale_7" ID="{AB56D583-F905-42F0-80A2-53958C7BAB61}" ShortID="336240103">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-450</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Whake" ID="{51226D92-C2A7-4245-80D6-744362E0A655}" ShortID="146192026">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="31.9274503371605"/>
+												<Property Name="TrimEnd" Type="Real64" Value="38.1382613449972"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Whake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Whake" ID="{51226D92-C2A7-4245-80D6-744362E0A655}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{9C0EB30A-DD3E-4CAD-B40C-B453BA204848}" ShortID="1022481140">

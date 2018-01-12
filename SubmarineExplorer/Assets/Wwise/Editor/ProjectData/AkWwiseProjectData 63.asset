@@ -1,0 +1,244 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ae249544499c2b44b414f8484ee9327, type: 3}
+  m_Name: AkWwiseProjectData 63
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}'
+    m_lastTimePsrt1: 1387573004
+    m_lastTimePart2: -1999283976
+    List:
+    - Name: ButtonsPress
+      Path: Default Work Unit\UI Sounds\ButtonsPress
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI Sounds
+        ObjectType: 4
+      - ElementName: ButtonsPress
+        ObjectType: 3
+      ID: -533852215
+      Guid: b9afa618609bf94285bcf8f0a2442874
+      maxAttenuation: 0
+    - Name: CameraShutterSingle
+      Path: Default Work Unit\UI Sounds\CameraShutterSingle
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI Sounds
+        ObjectType: 4
+      - ElementName: CameraShutterSingle
+        ObjectType: 3
+      ID: 1532263619
+      Guid: 927cf25c80b8604f8246ea66d35a1529
+      maxAttenuation: 0
+    - Name: MenuMusic
+      Path: Default Work Unit\Music\MenuMusic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music
+        ObjectType: 4
+      - ElementName: MenuMusic
+        ObjectType: 3
+      ID: 679636833
+      Guid: 5662a4ad6829ec4493f377c996803a0b
+      maxAttenuation: 0
+    - Name: Submarine_Creaking
+      Path: Default Work Unit\Submarine\Submarine_Creaking
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Submarine
+        ObjectType: 4
+      - ElementName: Submarine_Creaking
+        ObjectType: 3
+      ID: -818429086
+      Guid: c9bbe8eace98ec4fa77c37af60b14b51
+      maxAttenuation: 16
+    - Name: Submarine_Double_Knock
+      Path: Default Work Unit\Submarine\Submarine_Double_Knock
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Submarine
+        ObjectType: 4
+      - ElementName: Submarine_Double_Knock
+        ObjectType: 3
+      ID: -1308465568
+      Guid: d2f414956fb8b041884982a23492c900
+      maxAttenuation: 16
+    - Name: Submarine_Single_Knock
+      Path: Default Work Unit\Submarine\Submarine_Single_Knock
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Submarine
+        ObjectType: 4
+      - ElementName: Submarine_Single_Knock
+        ObjectType: 3
+      ID: -798598953
+      Guid: 1df1fb73748bd745b5ab36b0d66818ee
+      maxAttenuation: 16
+    - Name: Submarine_TripleKnock_Creak
+      Path: Default Work Unit\Submarine\Submarine_TripleKnock_Creak
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Submarine
+        ObjectType: 4
+      - ElementName: Submarine_TripleKnock_Creak
+        ObjectType: 3
+      ID: 274955499
+      Guid: 7d908ffba72dc64bbfd4ec11f79be869
+      maxAttenuation: 0
+    - Name: SubmarineSwitch
+      Path: Default Work Unit\Submarine\SubmarineSwitch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Submarine
+        ObjectType: 4
+      - ElementName: SubmarineSwitch
+        ObjectType: 3
+      ID: -443372397
+      Guid: 864a9d612efd394784779a9abd7a445a
+      maxAttenuation: 16
+    - Name: Whale_Song
+      Path: Default Work Unit\Creatures\Whale_Song
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Creatures
+        ObjectType: 4
+      - ElementName: Whale_Song
+        ObjectType: 3
+      ID: 1443575244
+      Guid: 2b688adb8cc972489b2004c87db67396
+      maxAttenuation: 60
+  - PhysicalPath: Events\Music.wwu
+    ParentPhysicalPath: 
+    Guid: '{43D1C32A-3724-4046-8B1D-4743FBCD58B9}'
+    m_lastTimePsrt1: -1834054337
+    m_lastTimePart2: -1999284591
+    List: []
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{D8341183-8BB1-401C-A3F2-B7988ACCC341}'
+    m_lastTimePsrt1: 1778912015
+    m_lastTimePart2: -1999284371
+    List: []
+  StateWwu:
+  - PhysicalPath: States\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{BCCCE11F-257F-451E-9326-8A07AEFE966B}'
+    m_lastTimePsrt1: -1621492394
+    m_lastTimePart2: -1999292815
+    List: []
+  SwitchWwu:
+  - PhysicalPath: Switches\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}'
+    m_lastTimePsrt1: 605918772
+    m_lastTimePart2: -1999284177
+    List:
+    - Name: Fishes
+      Path: Default Work Unit\Fishes
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Fishes
+        ObjectType: 11
+      ID: -1791791677
+      Guid: e8f8a6b1f3eaf14fa35cfceedce967c1
+      values:
+      - Boomerang
+      - Bullet
+      - Torpedo
+      ValueIcons:
+      - ElementName: Boomerang
+        ObjectType: 10
+      - ElementName: Bullet
+        ObjectType: 10
+      - ElementName: Torpedo
+        ObjectType: 10
+      valueIDs: db516b47cddfe44a1653bc77
+      ValueGuids:
+      - bytes: 3991fe65cd47be46b498724cc00eba6c
+      - bytes: 11ffcdeaf0a9104a95ff5ca8fc1946ae
+      - bytes: 912f577764a74c4bbe1d00cd4ff2d019
+    - Name: SubmarineSwitch
+      Path: Default Work Unit\SubmarineSwitch
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: SubmarineSwitch
+        ObjectType: 11
+      ID: -443372397
+      Guid: 38d4a5faffda9c46a5304c9e26299302
+      values:
+      - Creaking
+      - Knocking
+      ValueIcons:
+      - ElementName: Creaking
+        ObjectType: 10
+      - ElementName: Knocking
+        ObjectType: 10
+      valueIDs: 29e2b4111de99959
+      ValueGuids:
+      - bytes: 3f411698ac2f364da0dbcd735e1aeb87
+      - bytes: cde2670605523b44894512d656944713
+  BankWwu:
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{3A1B9E93-F56F-48A2-84B2-754E86B1071A}'
+    m_lastTimePsrt1: 605998780
+    m_lastTimePart2: -1999284177
+    List:
+    - Name: Main
+      Path: Default Work Unit\Main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      ID: -1133058374
+      Guid: 23dbb3663f5c0649ab8cb4633b69a8ab
+  RtpcWwu:
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{8DAC5BAD-334A-4526-B5CB-9006C018914B}'
+    m_lastTimePsrt1: -1621572402
+    m_lastTimePart2: -1999292815
+    List: []
+  TriggerWwu:
+  - PhysicalPath: Triggers\Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{F42CD228-0997-4F2E-A3F9-26A95EA0B023}'
+    m_lastTimePsrt1: -1621462391
+    m_lastTimePart2: -1999292815
+    List: []
+  ExpandedItems: []
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio\GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  callbackManagerBufferSize: 4

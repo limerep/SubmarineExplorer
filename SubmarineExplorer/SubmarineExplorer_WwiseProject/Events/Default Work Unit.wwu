@@ -57,27 +57,13 @@
 					<ChildrenList>
 						<Event Name="Whale_Song" ID="{DB8A682B-C98C-4872-9B20-04C87DB67396}">
 							<ChildrenList>
-								<Action Name="" ID="{86FCE127-7420-433B-ADC3-B32BE3A6241D}" ShortID="446719802">
+								<Action Name="" ID="{E06D3349-A275-41AB-B343-34222FADFA2B}" ShortID="666296993">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="Whale_song_Modified" ID="{CDB84254-3D06-4187-92BC-68EDA6E49F22}">
-							<ChildrenList>
-								<Action Name="" ID="{4298F0C8-F530-47D2-A1BA-C20B19AD2F27}" ShortID="107297018">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Whake" ID="{23838EDD-1B90-4ECC-9AC1-BE785948BED2}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+											<ObjectRef Name="Whale sounds" ID="{6674E878-E3A3-45ED-96D9-01436718A4FF}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

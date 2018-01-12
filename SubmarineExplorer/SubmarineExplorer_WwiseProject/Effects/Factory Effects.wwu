@@ -238,8 +238,8 @@
 												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 												<Property Name="FilterTypeBand2" Type="int32" Value="4"/>
 												<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-												<Property Name="FrequencyBand2" Type="Real32" Value="15000"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="18000"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="97"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="533"/>
 												<Property Name="GainBand2" Type="Real32" Value="-2"/>
 												<Property Name="GainBand3" Type="Real32" Value="-3"/>
 												<Property Name="OnOffBand1" Type="bool" Value="False"/>
@@ -298,8 +298,8 @@
 												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 												<Property Name="FilterTypeBand2" Type="int32" Value="4"/>
 												<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-												<Property Name="FrequencyBand2" Type="Real32" Value="9000"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="13500"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="117"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="318"/>
 												<Property Name="GainBand2" Type="Real32" Value="-6"/>
 												<Property Name="GainBand3" Type="Real32" Value="-3"/>
 												<Property Name="OnOffBand1" Type="bool" Value="False"/>
@@ -310,8 +310,8 @@
 												<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 												<Property Name="FilterTypeBand2" Type="int32" Value="4"/>
 												<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-												<Property Name="FrequencyBand2" Type="Real32" Value="8000"/>
-												<Property Name="FrequencyBand3" Type="Real32" Value="11000"/>
+												<Property Name="FrequencyBand2" Type="Real32" Value="218"/>
+												<Property Name="FrequencyBand3" Type="Real32" Value="591"/>
 												<Property Name="GainBand2" Type="Real32" Value="-7"/>
 												<Property Name="GainBand3" Type="Real32" Value="-3"/>
 												<Property Name="OnOffBand1" Type="bool" Value="False"/>
@@ -654,11 +654,13 @@
 								</Effect>
 								<Effect Name="Dual_Filters_Narrow_Bandwidth" ID="{A24607C6-04E1-4D41-B513-28C0914D138D}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
-										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+										<Property Name="FilterTypeBand1" Type="int32" Value="5"/>
 										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="500"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="3081"/>
+										<Property Name="GainBand1" Type="Real32" Value="-8.5"/>
 										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="OnOffBand3" Type="bool" Value="False"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
@@ -1588,9 +1590,11 @@
 								<Effect Name="Chorus_Like" ID="{EEE0CC86-8CA5-4DBC-A6B7-568FCB26F290}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
 									<PropertyList>
 										<Property Name="DelayTime" Type="Real32" Value="10"/>
+										<Property Name="FeedForwardLevel" Type="Real32" Value="-0.8"/>
 										<Property Name="ModDepth" Type="Real32" Value="60"/>
-										<Property Name="ModFrequency" Type="Real32" Value="0.85"/>
+										<Property Name="ModFrequency" Type="Real32" Value="4.85"/>
 										<Property Name="ModPWM" Type="Real32" Value="0"/>
+										<Property Name="ModWaveform" Type="int32" Value="1"/>
 									</PropertyList>
 								</Effect>
 							</ChildrenList>

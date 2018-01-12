@@ -13,7 +13,7 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
     public Camera mainCam; 
 	// Use this for initialization
 	void Start () {
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
@@ -41,8 +41,8 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
         //Basic movement
         
 
-        if (Input.GetKeyDown("escape"))
-            Cursor.lockState = CursorLockMode.None;
+        //if (Input.GetKeyDown("escape"))
+        //    Cursor.lockState = CursorLockMode.None;
 
         if (usingCam)
         {
@@ -52,8 +52,8 @@ public class Keyboard_FirstPersonController : MonoBehaviour {
                 mainCam.enabled = true; 
                 subCam.enabled = false;
                 terminalCamera.enabled = false;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                //Cursor.visible = false;
+                //Cursor.lockState = CursorLockMode.Locked;
                 subCam.GetComponent<SubmarineCamControl>().usingCam = false; 
 
                 usingCam = false; 

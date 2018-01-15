@@ -109,6 +109,11 @@
 						</ActorMixer>
 						<RandomSequenceContainer Name="Whale sounds" ID="{6674E878-E3A3-45ED-96D9-01436718A4FF}" ShortID="947574423">
 							<PropertyList>
+								<Property Name="DivergenceCenter" Type="int32">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>-710</Value>
@@ -117,7 +122,7 @@
 								<Property Name="PositioningType" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>12</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -922,6 +927,289 @@
 								</GroupingList>
 							</GroupingInfo>
 						</SwitchContainer>
+						<Folder Name="Bubbles" ID="{59E64691-7394-4D6D-854F-BE14D28C8F79}" ShortID="32232361">
+							<ChildrenList>
+								<Sound Name="SingleBubble" ID="{ABEA65AA-234F-44F8-97E6-BE983B9CE75F}" ShortID="250159052">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{412BA166-FEBF-4975-91F8-49E8CBF14FCD}" ShortID="910463784">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{412BA166-FEBF-4975-91F8-49E8CBF14FCD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="UnderwaterBubbles" ID="{61787A82-BB7C-4B28-8281-F366E2CD8CBE}" ShortID="452687422">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{AF082A35-F5F2-4473-B9FE-D4D391AFF342}" ShortID="501803310">
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{AF082A35-F5F2-4473-B9FE-D4D391AFF342}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_01" ID="{5AD012FA-2383-409E-AC95-ADCCEF24E1A8}" ShortID="919914139">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>30</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{CECE0267-7097-4471-85F4-7941A33576FE}" ShortID="420407508">
+											<PropertyList>
+												<Property Name="TrimBegin" Type="Real64" Value="4.01390371056387"/>
+												<Property Name="TrimEnd" Type="Real64" Value="5.19624694856984"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{CECE0267-7097-4471-85F4-7941A33576FE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_02" ID="{3B3FF7B1-971B-46CD-8BB1-45EB3019BEC6}" ShortID="808156433">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{62C3EF52-D689-43B9-8B55-DD32F10D550A}" ShortID="620370806">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{62C3EF52-D689-43B9-8B55-DD32F10D550A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_03" ID="{0FFA2C88-BE72-48ED-A826-00F5EFFBA1D6}" ShortID="819466933">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{08D1A65F-9B7F-4DF9-9AC8-9891C6AD4EFF}" ShortID="540328871">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{08D1A65F-9B7F-4DF9-9AC8-9891C6AD4EFF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_04" ID="{14E0BC49-6893-4F6B-8940-436A37077446}" ShortID="302327254">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{4DEE4363-1BCB-4C69-8FB9-50D136081B2F}" ShortID="612644473">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{4DEE4363-1BCB-4C69-8FB9-50D136081B2F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_05" ID="{63E283BF-449F-4FC9-B62A-3688F1333437}" ShortID="650923876">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{5DAB9686-D799-49BA-963F-CACEC425F4D2}" ShortID="1045064638">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{5DAB9686-D799-49BA-963F-CACEC425F4D2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_06" ID="{1CF95F45-A3DB-4DBD-A4C6-CB34BE458DC4}" ShortID="566056798">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{8147CF5D-766A-4B4D-8AA7-48B2062C4DF2}" ShortID="524221597">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{8147CF5D-766A-4B4D-8AA7-48B2062C4DF2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_07" ID="{77AB3A04-12B5-46D0-8629-C4C33C2F0ADA}" ShortID="423913883">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{0FEE71FD-BC65-4734-8B9B-BAB79091B1C7}" ShortID="475023184">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{0FEE71FD-BC65-4734-8B9B-BAB79091B1C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="SingleBubble_08" ID="{6D4302EE-8F10-4C73-976B-63979E504D94}" ShortID="422178741">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="UnderwaterSounds" ID="{C0E22E61-DAA7-4980-BA17-49B74F80FD6E}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="UnderwaterBubbles" ID="{650CDFA7-5E68-476E-AF66-6FED1C1EF25F}" ShortID="563099811">
+											<PropertyList>
+												<Property Name="TrimEnd" Type="Real64" Value="0.951937889061219"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>UnderwaterBubbles.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="910463784"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="UnderwaterBubbles" ID="{650CDFA7-5E68-476E-AF66-6FED1C1EF25F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<SwitchContainer Name="FishSwitch" ID="{B1AB15CB-1C94-47F5-B89A-DC3CEEA12CF6}" ShortID="924507952">

@@ -143,6 +143,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Submarine_Water_Movement" ID="{224632E5-9377-4A0A-A964-CC2F1264A6CE}">
+							<ChildrenList>
+								<Action Name="" ID="{E9CEF2D7-F3EA-4EE9-8F24-B076128785F2}" ShortID="326347807">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="UnderwaterBubbles" ID="{61787A82-BB7C-4B28-8281-F366E2CD8CBE}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

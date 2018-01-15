@@ -19,7 +19,7 @@ public class WhaleSounds : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-       
+        transform.position += new Vector3(0, 0, 0.01f);
 
         if (playerClose)
         {
@@ -41,7 +41,7 @@ public class WhaleSounds : MonoBehaviour {
 
     IEnumerator PlayWhaleSounds()
     {
-        AkSoundEngine.PostEvent("WhaleSong", gameObject);
+        AkSoundEngine.PostEvent("Whale_Song", gameObject);
 
         yield return null; 
     }

@@ -16,21 +16,12 @@ public class Science : GenericButton {
 
     List<string> questList;  
 
-    enum  QuestState
-    {
-        Started,
-        Ongoing, 
-        Done,
-        Cancelled
-    };
-
-
 	// Use this for initialization
 	void Start ()
     {
+
         finishedQuest = new List<Quest>();
         
-
         questList = new List<string>();
         questList.Add("BoomerangFish");
         questList.Add("BulletFish");
@@ -47,7 +38,7 @@ public class Science : GenericButton {
         
 	}
 
-
+    //Creates a quest from the mission pool
     public void QuestFromPool()
     {
         print("Quest From Pool");
@@ -60,10 +51,11 @@ public class Science : GenericButton {
 
     }
 
+    //Creates a quest from a creature in the background of the photo
     public void CreateQuest(string name, string description)
     {
       
-
+        //If the quest is null, create a new questList
         if (currentQuest == null)
         {
            
@@ -72,6 +64,7 @@ public class Science : GenericButton {
             questText.text = currentQuest.name; 
            
         }
+        //Use the description and name from a creature in the background to create a new quest
         else
         {
             currentQuest = new Quest(name, description);
@@ -86,7 +79,7 @@ public class Science : GenericButton {
         }
         
     }
-
+    //Function for turning in quests and 
     public void TurnInQuest(int photo)
     {
         Debug.Log("Tried to turn in photo");

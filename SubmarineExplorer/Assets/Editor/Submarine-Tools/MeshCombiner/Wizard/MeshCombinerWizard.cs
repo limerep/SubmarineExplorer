@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System.IO;
+using System.Text;
 
 public class MeshCombinerWizard : ScriptableWizard {
     [SerializeField]
@@ -9,6 +11,8 @@ public class MeshCombinerWizard : ScriptableWizard {
     private bool optimizeMesh = true;
     [SerializeField]
     private bool savePrefab = true;
+    [SerializeField]
+    private bool exportObj = false;
     
     [MenuItem("Submarine Tools/Mesh Combiner...")]
     static void CombineMeshWizard() {
@@ -35,7 +39,7 @@ public class MeshCombinerWizard : ScriptableWizard {
 
         // Add a new list of materials and renderers to the combiner and
         // exectue the Combine function
-        combiner.meshes = oldMeshesObject.GetComponentsInChildren<MeshFilter>(); /// TODO (Richard) Figure out why this causes a crash
+        combiner.meshes = oldMeshesObject.GetComponentsInChildren<MeshFilter>();
         combiner.materials = new List<Material>();
         combiner.renderers = oldMeshesObject.GetComponentsInChildren<MeshRenderer>();
         combiner.CombineMeshes();
@@ -65,6 +69,11 @@ public class MeshCombinerWizard : ScriptableWizard {
         if (savePrefab) {
             SaveObjectPrefab(combinedMeshObject, path);
         }
+
+        if (exportObj)
+        {
+            ObjExporter.DoExport(true);
+        }
     }
 
     private void SaveObjectPrefab(GameObject go, string path) {
@@ -93,4 +102,162 @@ public class MeshCombinerWizard : ScriptableWizard {
         PrefabUtility.ReplacePrefab(go, prefab, ReplacePrefabOptions.ConnectToPrefab);
     }
 
+}
+
+public class ObjExporterScript
+{
+    private static int StartIndex = 0;
+
+    public static void Start()
+    {
+        StartIndex = 0;
+    }
+    public static void End()
+    {
+        StartIndex = 0;
+    }
+
+
+    public static string MeshToString(MeshFilter meshFilter, Transform trans)
+    {
+        Vector3 scale = trans.localScale;
+        Vector3 position = trans.localPosition;
+        Quaternion rotation = trans.localRotation;
+
+
+        int numVertices = 0;
+        Mesh mesh = meshFilter.sharedMesh;
+        if (!mesh)
+        {
+            return "####Error####";
+        }
+        Material[] mats = meshFilter.GetComponent<Renderer>().sharedMaterials;
+
+        StringBuilder stringbuilder = new StringBuilder();
+
+        foreach (Vector3 verts in mesh.vertices)
+        {
+            Vector3 vert = trans.TransformPoint(verts);
+            numVertices++;
+            stringbuilder.Append(string.Format("v {0} {1} {2}\n", vert.x, vert.y, -vert.z));
+        }
+        stringbuilder.Append("\n");
+        foreach (Vector3 meshNormal in mesh.normals)
+        {
+            Vector3 v = rotation * meshNormal;
+            stringbuilder.Append(string.Format("vn {0} {1} {2}\n", -v.x, -v.y, v.z));
+        }
+        stringbuilder.Append("\n");
+        foreach (Vector3 v in mesh.uv)
+        {
+            stringbuilder.Append(string.Format("vt {0} {1}\n", v.x, v.y));
+        }
+        for (int material = 0; material < mesh.subMeshCount; material++)
+        {
+            stringbuilder.Append("\n");
+            stringbuilder.Append("usemtl ").Append(mats[material].name).Append("\n");
+            stringbuilder.Append("usemap ").Append(mats[material].name).Append("\n");
+
+            int[] triangles = mesh.GetTriangles(material);
+            for (int i = 0; i < triangles.Length; i += 3)
+            {
+                stringbuilder.Append(string.Format("f {0}/{0}/{0} {1}/{1}/{1} {2}/{2}/{2}\n",
+                    triangles[i] + 1 + StartIndex, triangles[i + 1] + 1 + StartIndex, triangles[i + 2] + 1 + StartIndex));
+            }
+        }
+
+        StartIndex += numVertices;
+        return stringbuilder.ToString();
+    }
+}
+
+public class ObjExporter : ScriptableObject
+{
+    [MenuItem("File/Export/Wavefront OBJ")]
+    static void DoExportWSubmeshes()
+    {
+        DoExport(true);
+    }
+
+    [MenuItem("File/Export/Wavefront OBJ (No Submeshes)")]
+    static void DoExportWOSubmeshes()
+    {
+        DoExport(false);
+    }
+
+
+    public static void DoExport(bool makeSubmeshes)
+    {
+        if (Selection.gameObjects.Length == 0)
+        {
+            Debug.Log("Didn't Export Any Meshes; Nothing was selected!");
+            return;
+        }
+
+        string meshName = Selection.gameObjects[0].name;
+        string fileName = EditorUtility.SaveFilePanel("Export .obj file", "", meshName, "obj");
+
+        ObjExporterScript.Start();
+
+        StringBuilder meshString = new StringBuilder();
+
+        meshString.Append("#" + meshName + ".obj"
+                            + "\n#" + System.DateTime.Now.ToLongDateString()
+                            + "\n#" + System.DateTime.Now.ToLongTimeString()
+                            + "\n#-------"
+                            + "\n\n");
+
+        Transform trans = Selection.gameObjects[0].transform;
+
+        Vector3 originalPosition = trans.position;
+        trans.position = Vector3.zero;
+
+        if (!makeSubmeshes)
+        {
+            meshString.Append("g ").Append(trans.name).Append("\n");
+        }
+        meshString.Append(processTransform(trans, makeSubmeshes));
+
+        WriteToFile(meshString.ToString(), fileName);
+
+        trans.position = originalPosition;
+
+        ObjExporterScript.End();
+        Debug.Log("Exported Mesh: " + fileName);
+    }
+
+    static string processTransform(Transform trans, bool makeSubmeshes)
+    {
+        StringBuilder meshString = new StringBuilder();
+
+        meshString.Append("#" + trans.name
+                        + "\n#-------"
+                        + "\n");
+
+        if (makeSubmeshes)
+        {
+            meshString.Append("g ").Append(trans.name).Append("\n");
+        }
+
+        MeshFilter meshFilter = trans.GetComponent<MeshFilter>();
+        if (meshFilter)
+        {
+            meshString.Append(ObjExporterScript.MeshToString(meshFilter, trans));
+        }
+
+        for (int i = 0; i < trans.childCount; i++)
+        {
+            meshString.Append(processTransform(trans.GetChild(i), makeSubmeshes));
+        }
+
+        return meshString.ToString();
+    }
+
+    static void WriteToFile(string s, string filename)
+    {
+        using (StreamWriter sw = new StreamWriter(filename))
+        {
+            sw.Write(s);
+        }
+    }
 }

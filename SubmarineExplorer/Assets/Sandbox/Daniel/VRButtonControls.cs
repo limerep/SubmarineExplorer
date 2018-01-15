@@ -35,7 +35,7 @@ public class VRButtonControls : MonoBehaviour {
         cameraCanvas.SetActive(false);
         loadingAnimation = loadingCircle.GetComponent<Animator>();
         loadingAnimation.speed = 0;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         loadingCircle.transform.position = vrCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 15));
 
     }
@@ -47,7 +47,7 @@ public class VRButtonControls : MonoBehaviour {
         {
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
             {
-                gameObject.transform.parent.gameObject.transform.parent = null;
+                //gameObject.transform.parent.gameObject.transform.parent = null;
                 gameObject.GetComponent<LaserPointer>().inVehicle = false;
                 inVehicle = false;
                 gameObject.GetComponent<Keyboard_SubmarineController>().inVehicle = false;
@@ -131,6 +131,7 @@ public class VRButtonControls : MonoBehaviour {
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
                 other.GetComponent<GenericButton>().VrButtonPress(gameObject);
+                Debug.Log("Hit");
             }
         }
 
@@ -148,13 +149,14 @@ public class VRButtonControls : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-
-        print("Hej");
+        if (other.GetComponent<GenericButton>())
+            print("Trigger enter");
     }
 
     private void OnTriggerExit(Collider other)
     {
-        print("Hej");
+        if (other.GetComponent<GenericButton>())
+            print("Trigger exit");
 
     }
 

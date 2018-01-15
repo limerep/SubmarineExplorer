@@ -35,7 +35,7 @@ public class MeshCombinerWizard : ScriptableWizard {
 
         // Add a new list of materials and renderers to the combiner and
         // exectue the Combine function
-        combiner.meshes = oldMeshesObject.GetComponentsInChildren<MeshFilter>();
+        combiner.meshes = oldMeshesObject.GetComponentsInChildren<MeshFilter>(); /// TODO (Richard) Figure out why this causes a crash
         combiner.materials = new List<Material>();
         combiner.renderers = oldMeshesObject.GetComponentsInChildren<MeshRenderer>();
         combiner.CombineMeshes();

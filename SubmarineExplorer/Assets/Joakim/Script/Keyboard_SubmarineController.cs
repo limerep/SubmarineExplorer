@@ -20,7 +20,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
     [SerializeField]
     private Transform navigationPlane;
     private Vector3 targetPosition;
-    private Vector3 startDirection;
+    private Vector3 targetDirection;
     private float maxSpeed = 4;
     private NavMeshAgent navAgent;
 
@@ -29,8 +29,8 @@ public class Keyboard_SubmarineController : MonoBehaviour {
         trackedObject = GetComponent<SteamVR_TrackedObject>();
         device = SteamVR_Controller.Input((int)trackedObject.index);
         targetPosition = submarine.transform.position + submarine.transform.forward * 1000;
-        startDirection = targetPosition - submarine.transform.position;
-        startDirection = startDirection.normalized;
+        targetDirection = targetPosition - submarine.transform.position;
+        targetDirection = targetDirection.normalized;
         navAgent = submarine.GetComponent<NavMeshAgent>();
         navAgent.speed = 0;
     }
@@ -44,28 +44,25 @@ public class Keyboard_SubmarineController : MonoBehaviour {
 
             //float translation = Input.GetAxis("Vertical") * speed;
             //float strafe = Input.GetAxis("Horizontal") * speed;
-
-            float translation;
-            float strafe;
-
+            
+            float strafe = 0.0f;
+            float accelerate = 0.0f;
             
             touchpad = device.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-            translation = touchpad.y;
+            
             strafe = touchpad.x;
-            translation *= 0.1f;
-
-
-            navAgent.speed = Mathf.Min(navAgent.speed, maxSpeed);
-
+            accelerate = touchpad.y;
+            
             if (device.GetPress(SteamVR_Controller.ButtonMask.Trigger))
             {
                 navigationPlane.GetComponent<NavAreaMove>().Dive(touchpad.y);
             }
             else
             {
-                if (Mathf.Abs(touchpad.y) > 0.5f)
+                if (Mathf.Abs(accelerate) > 0.5f && device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
                 {
-                    navAgent.speed += touchpad.y * Time.deltaTime;
+                    navAgent.speed += Mathf.Round(accelerate);
+                    navAgent.speed = Mathf.Min(navAgent.speed, maxSpeed);
                 }
 
             }
@@ -74,13 +71,11 @@ public class Keyboard_SubmarineController : MonoBehaviour {
             {
                 submarine.transform.Rotate(Vector3.up * strafe * Time.deltaTime * 15, Space.Self);
             }
-            //submarine.transform.Translate(0, lift, translation*-1);
 
+            // Always update targetdirection and position while we're in pilot mode.
             targetPosition = submarine.transform.position + submarine.transform.forward * 1000;
-
-            Vector3 navPlanePos = submarine.transform.position;
-            navPlanePos.y = navigationPlane.position.y;
-            submarine.transform.position = navPlanePos;
+            targetDirection = targetPosition - submarine.transform.position;
+            targetDirection = targetDirection.normalized;
         }
 
         Vector3 heading = targetPosition - submarine.transform.position;
@@ -90,5 +85,32 @@ public class Keyboard_SubmarineController : MonoBehaviour {
 
         submarine.transform.rotation = Quaternion.Slerp(submarine.transform.rotation, Quaternion.LookRotation(direction), 0.1f * Time.deltaTime);
         navAgent.destination = submarine.transform.position + submarine.transform.forward * 15;
+
+        Vector3 navPlanePos = submarine.transform.position;
+        navPlanePos.y = navigationPlane.position.y;
+        submarine.transform.position = navPlanePos;
+
+
+        if (navAgent.speed == 0)
+        {
+            Debug.Log(navAgent.velocity.magnitude);
+            navAgent.destination = submarine.transform.position + submarine.transform.forward * 15 * navAgent.velocity.magnitude * 0.5f;
+            navAgent.isStopped = true;
+
+            if (navAgent.velocity.magnitude < 0.6f)
+            {
+                navAgent.velocity = Vector3.zero;
+            }
+        }
+        else
+        {
+            navAgent.isStopped = false;
+        }
+
+        // Calculate new target position if we're getting close to our goal
+        if (distanceToTarget < 100)
+        {
+            targetPosition = submarine.transform.position + targetDirection * 1000;
+        }
     }
 }

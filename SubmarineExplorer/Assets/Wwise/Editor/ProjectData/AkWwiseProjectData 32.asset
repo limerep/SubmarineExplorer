@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData 32
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 605838764
     m_lastTimePart2: -1999284177
     List:
@@ -122,47 +127,78 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Creatures
         ObjectType: 4
+=======
+    m_lastTimePsrt1: -268105819
+    m_lastTimePart2: -1999291432
+    List:
+    - Name: Whale_Song
+      Path: Default Work Unit\Whale_Song
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
       - ElementName: Whale_Song
         ObjectType: 3
       ID: 1443575244
       Guid: 2b688adb8cc972489b2004c87db67396
       maxAttenuation: 0
     - Name: Whale_song_Modified
+<<<<<<< HEAD
       Path: Default Work Unit\Creatures\Whale_song_Modified
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Creatures
         ObjectType: 4
+=======
+      Path: Default Work Unit\Whale_song_Modified
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
       - ElementName: Whale_song_Modified
         ObjectType: 3
       ID: 857147130
       Guid: 5442b8cd063d874192bc68eda6e49f22
       maxAttenuation: 0
+<<<<<<< HEAD
   - PhysicalPath: Events\Music.wwu
     ParentPhysicalPath: 
     Guid: '{43D1C32A-3724-4046-8B1D-4743FBCD58B9}'
     m_lastTimePsrt1: -1834054337
     m_lastTimePart2: -1999284591
     List: []
+=======
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D8341183-8BB1-401C-A3F2-B7988ACCC341}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 1778912015
     m_lastTimePart2: -1999284371
+=======
+    m_lastTimePsrt1: -264195595
+    m_lastTimePart2: -1999291432
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BCCCE11F-257F-451E-9326-8A07AEFE966B}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1621492394
     m_lastTimePart2: -1999292815
+=======
+    m_lastTimePsrt1: -258365262
+    m_lastTimePart2: -1999291432
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 605918772
     m_lastTimePart2: -1999284177
     List:
@@ -212,12 +248,22 @@ MonoBehaviour:
       ValueGuids:
       - bytes: 3f411698ac2f364da0dbcd735e1aeb87
       - bytes: cde2670605523b44894512d656944713
+=======
+    m_lastTimePsrt1: -258345260
+    m_lastTimePart2: -1999291432
+    List: []
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3A1B9E93-F56F-48A2-84B2-754E86B1071A}'
+<<<<<<< HEAD
     m_lastTimePsrt1: 605998780
     m_lastTimePart2: -1999284177
+=======
+    m_lastTimePsrt1: -258375262
+    m_lastTimePart2: -1999291432
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
     List:
     - Name: Main
       Path: Default Work Unit\Main
@@ -232,16 +278,36 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8DAC5BAD-334A-4526-B5CB-9006C018914B}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1621572402
     m_lastTimePart2: -1999292815
+=======
+    m_lastTimePsrt1: -268105819
+    m_lastTimePart2: -1999291432
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F42CD228-0997-4F2E-A3F9-26A95EA0B023}'
+<<<<<<< HEAD
     m_lastTimePsrt1: -1621462391
     m_lastTimePart2: -1999292815
     List: []
+=======
+    m_lastTimePsrt1: -258335260
+    m_lastTimePart2: -1999291432
+    List: []
+=======
+  EventWwu: []
+  AuxBusWwu: []
+  StateWwu: []
+  SwitchWwu: []
+  BankWwu: []
+  RtpcWwu: []
+  TriggerWwu: []
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
+>>>>>>> c039868e1ab653011f8e160368902997db20e9c0
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0

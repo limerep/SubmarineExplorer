@@ -36,11 +36,15 @@ public class MenuController : MonoBehaviour {
         exitBtn.onClick.AddListener(Exit);
 	}
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
     void Options()
     {
         mainAnim.SetTrigger("ScaleDown");
-        optionsAnim.SetTrigger("ScaleUp");
-        
+        optionsAnim.SetTrigger("ScaleUp"); 
     }
 
     void Back()

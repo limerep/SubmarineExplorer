@@ -1,4 +1,4 @@
-﻿Shader "Holistic/ToonRamp"{
+﻿Shader "Custom/ToonRamp"{
 	Properties{
 		_Colour("Colour", Color) = (1,1,1,1)
 		_RampTex("Ramp Texture", 2D) = "white"{}

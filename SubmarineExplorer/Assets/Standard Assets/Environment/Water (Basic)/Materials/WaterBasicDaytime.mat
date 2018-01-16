@@ -55,7 +55,7 @@ Material:
     - _BumpPeturb2: 0.745283
     - _Highlight: 33.207546
     - _Shininess: 1
-    - _WaveScale: 0.02
+    - _WaveScale: 0.133
     - _bScale: 0.07
     - _bTwirl: 0.05
     - _distort: 0.1

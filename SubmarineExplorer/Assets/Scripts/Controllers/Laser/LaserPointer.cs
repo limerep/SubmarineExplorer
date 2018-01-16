@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserPointer : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class LaserPointer : MonoBehaviour
 
     private void Start()
     {
-        // 1 pawn a new laser and save a reference to it in laser.
+        // 1 spawn a new laser and save a reference to it in laser.
         laser = Instantiate(laserPrefab);
         // 2 Store the laser’s transform component.
         laserTransform = laser.transform;
@@ -51,38 +52,67 @@ public class LaserPointer : MonoBehaviour
     }
     private void Update()
     {
-        if (!inCam && !inVehicle)
+
+
+        Scene mainScene = SceneManager.GetActiveScene();  
+        
+
+        if(mainScene.name == "MainMenu")
         {
-            // 1 If the touchpad is held down
-            if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
+
+            RaycastHit hit;
+
+            
+
+           
+
+            if (Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, 100))
             {
-                RaycastHit hit;
 
-                // 2 Shoot a ray from the controller. If it hits something, make it store the point where it hit and show the laser.
-                if (Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, 100, teleportMask))
+                hitPoint = hit.point;
+                ShowLaser(hit);
+
+            }
+
+
+        } else
+        {
+            if (!inCam && !inVehicle)
+            {
+                // 1 If the touchpad is held down
+                if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
                 {
-                    hitPoint = hit.point;
-                    ShowLaser(hit);
+                    RaycastHit hit;
 
-                    // 1 Show the teleport reticle
-                    reticle.SetActive(true);
-                    // 2 Move the reticle to where the raycast hit with the addition of an offset to avoid Z-fighting.
-                    teleportReticleTransform.position = hitPoint + teleportReticleOffset;
-                    // 3 Set shouldTeleport to true to indicate the script found a valid position for teleporting.
-                    shouldTeleport = true;
+                    // 2 Shoot a ray from the controller. If it hits something, make it store the point where it hit and show the laser.
+                    if (Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, 100, teleportMask))
+                    {
+                        hitPoint = hit.point;
+                        ShowLaser(hit);
+
+                        // 1 Show the teleport reticle
+                        reticle.SetActive(true);
+                        // 2 Move the reticle to where the raycast hit with the addition of an offset to avoid Z-fighting.
+                        teleportReticleTransform.position = hitPoint + teleportReticleOffset;
+                        // 3 Set shouldTeleport to true to indicate the script found a valid position for teleporting.
+                        shouldTeleport = true;
+                    }
+                }
+                else // 3 Hide the laser when the player released the touchpad.
+                {
+                    laser.SetActive(false);
+                    reticle.SetActive(false);
+                }
+
+                if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && shouldTeleport)
+                {
+                    Teleport();
                 }
             }
-            else // 3 Hide the laser when the player released the touchpad.
-            {
-                laser.SetActive(false);
-                reticle.SetActive(false);
-            }
 
-            if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Touchpad) && shouldTeleport)
-            {
-                Teleport();
-            }
         }
+
+       
     }
 
     // Teleport player

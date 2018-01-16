@@ -16,8 +16,13 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}'
-    m_lastTimePsrt1: -1259079103
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -268105819
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1441049121
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List:
     - Name: Whale_Song
       Path: Default Work Unit\Whale_Song
@@ -43,29 +48,49 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{D8341183-8BB1-401C-A3F2-B7988ACCC341}'
-    m_lastTimePsrt1: -1256298825
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -264195595
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1444109427
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BCCCE11F-257F-451E-9326-8A07AEFE966B}'
-    m_lastTimePsrt1: -1253428538
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -258365262
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1447179734
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}'
-    m_lastTimePsrt1: -1253398535
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -258345260
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1447209737
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{3A1B9E93-F56F-48A2-84B2-754E86B1071A}'
-    m_lastTimePsrt1: -1253438539
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -258375262
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1447169733
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List:
     - Name: Main
       Path: Default Work Unit\Main
@@ -80,15 +105,25 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8DAC5BAD-334A-4526-B5CB-9006C018914B}'
-    m_lastTimePsrt1: -1259069102
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -268105819
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1441049121
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{F42CD228-0997-4F2E-A3F9-26A95EA0B023}'
-    m_lastTimePsrt1: -1253398535
-    m_lastTimePart2: -1999291614
+<<<<<<< HEAD
+    m_lastTimePsrt1: -258335260
+    m_lastTimePart2: -1999291432
+=======
+    m_lastTimePsrt1: 1447209737
+    m_lastTimePart2: -1999291612
+>>>>>>> fe52124a2111f853fbccc28e0e54132d675335e4
     List: []
   ExpandedItems: []
   m_lastPopulateTimePsrt1: 0

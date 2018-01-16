@@ -1,24 +1,28 @@
 fileFormatVersion: 2
-guid: 4308f068547e6e84fa97f51b2e2cb520
-timeCreated: 1515498804
+guid: cb44a02fe4c0f964583b472853b946cf
+timeCreated: 1516016636
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: Armature
     100002: Body
-    100004: Body_001
+    100004: Body_000
     100006: Head
-    100008: //RootNode
+    100008: Head_0
+    100010: //RootNode
     400000: Armature
     400002: Body
-    400004: Body_001
+    400004: Body_000
     400006: Head
-    400008: //RootNode
-    4300000: Body_001
+    400008: Head_0
+    400010: //RootNode
+    4300000: Body_000
+    4300002: Head
     7400000: Default Take
     9500000: //RootNode
-    13700000: Body_001
+    13700000: Body_000
+    13700002: Head
   externalObjects:
   - first:
       type: UnityEngine:Material

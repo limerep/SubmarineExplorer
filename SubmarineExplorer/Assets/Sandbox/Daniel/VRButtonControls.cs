@@ -35,7 +35,7 @@ public class VRButtonControls : MonoBehaviour {
         cameraCanvas.SetActive(false);
         loadingAnimation = loadingCircle.GetComponent<Animator>();
         loadingAnimation.speed = 0;
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
         loadingCircle.transform.position = vrCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 15));
 
     }

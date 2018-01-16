@@ -242,7 +242,7 @@ public class SteamVR_Menu : MonoBehaviour
 		SaveCursorState();
 
 		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.None;
+		//Cursor.lockState = CursorLockMode.None;
 
 		this.overlay = overlay;
 		uvOffset = overlay.uvOffset;
@@ -268,7 +268,7 @@ public class SteamVR_Menu : MonoBehaviour
 
 	public void HideMenu()
 	{
-		RestoreCursorState();
+		//RestoreCursorState();
 
 		if (overlayCam != null)
 			overlayCam.enabled = true;
@@ -320,13 +320,13 @@ public class SteamVR_Menu : MonoBehaviour
 	void SaveCursorState()
 	{
 		savedCursorVisible = Cursor.visible;
-		savedCursorLockState = Cursor.lockState;
-	}
+	//	savedCursorLockState = Cursor.lockState;
+	//}
 
-	void RestoreCursorState()
-	{
-		Cursor.visible = savedCursorVisible;
-		Cursor.lockState = savedCursorLockState;
+	//void RestoreCursorState()
+	//{
+	//	Cursor.visible = savedCursorVisible;
+	//	Cursor.lockState = savedCursorLockState;
 	}
 }
 

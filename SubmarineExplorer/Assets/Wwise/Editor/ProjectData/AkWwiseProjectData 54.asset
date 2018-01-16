@@ -19,12 +19,7 @@ MonoBehaviour:
   BankWwu: []
   RtpcWwu: []
   TriggerWwu: []
-  ExpandedItems:
-  - /SubmarineExplorer_WwiseProject
-  - /SubmarineExplorer_WwiseProject/Events
-  - /SubmarineExplorer_WwiseProject/Events/Default Work Unit
-  - /SubmarineExplorer_WwiseProject/SoundBanks
-  - /SubmarineExplorer_WwiseProject/SoundBanks/Default Work Unit
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

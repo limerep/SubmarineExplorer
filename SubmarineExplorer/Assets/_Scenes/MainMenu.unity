@@ -732,6 +732,39 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34ee84bb68e87184f910f089688728ee, type: 2}
   m_IsPrefabParent: 0
+--- !u!21 &339012995
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &350539839 stripped
 Transform:
   m_PrefabParentObject: {fileID: 427060, guid: 51d908c0308a79e47861a7fcc1110af4, type: 2}
@@ -779,12 +812,12 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 875953203}
+      objectReference: {fileID: 850925145}
     - target: {fileID: 23140831355845974, guid: 9ca413c798fd7f240969ef58a7e6f01b,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 581057375}
+      objectReference: {fileID: 339012995}
     - target: {fileID: 114360213780476538, guid: 9ca413c798fd7f240969ef58a7e6f01b,
         type: 2}
       propertyPath: m_Enabled
@@ -1154,39 +1187,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e90b72ea33d023c43820a97e882cf63b, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &581057375
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &612174858
 Prefab:
   m_ObjectHideFlags: 0
@@ -1427,12 +1427,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4622010649757518, guid: 92ebafd562154cf4b820a78415748114,
     type: 2}
   m_PrefabInternal: {fileID: 848804648}
---- !u!4 &865896005 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4842602507054422, guid: 088ade71e141aa743b5880db82a1de3e,
-    type: 2}
-  m_PrefabInternal: {fileID: 71285838}
---- !u!43 &875953203
+--- !u!43 &850925145
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -1560,6 +1555,11 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!4 &865896005 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4842602507054422, guid: 088ade71e141aa743b5880db82a1de3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 71285838}
 --- !u!4 &889256080 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400146, guid: ede2e71d99efb7c44be8b51f441b2e29, type: 2}
@@ -1709,6 +1709,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1601830583}
     m_Modifications:
+    - target: {fileID: 2354932, guid: 0627b9e08dee29a438f99b15e0bc452d, type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 454932, guid: 0627b9e08dee29a438f99b15e0bc452d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -1741,6 +1745,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2354932, guid: 0627b9e08dee29a438f99b15e0bc452d, type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a1317203160db04d8985681f5c90cbb, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0627b9e08dee29a438f99b15e0bc452d, type: 2}
   m_IsPrefabParent: 0
@@ -2060,6 +2068,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1416406508}
     m_Modifications:
+    - target: {fileID: 23600593134599138, guid: 088ade71e141aa743b5880db82a1de3e,
+        type: 2}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4842602507054422, guid: 088ade71e141aa743b5880db82a1de3e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -26.272236
@@ -2116,6 +2129,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.17117938
       objectReference: {fileID: 0}
+    - target: {fileID: 23600593134599138, guid: 088ade71e141aa743b5880db82a1de3e,
+        type: 2}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a097e59ae0c9d63458ae0972dfea5974, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 088ade71e141aa743b5880db82a1de3e, type: 2}
   m_IsPrefabParent: 0
@@ -3940,7 +3958,7 @@ MonoBehaviour:
   minIntense: 0.8
   maxIntense: 1.2
   rotateAroundY: 1
-  rotSpeed: 0.001
+  rotSpeed: 0.15
 --- !u!1001 &2015574784
 Prefab:
   m_ObjectHideFlags: 0

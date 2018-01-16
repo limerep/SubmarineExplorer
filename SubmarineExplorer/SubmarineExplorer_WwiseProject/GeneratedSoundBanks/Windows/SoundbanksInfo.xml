@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="3761115081" Name="ButtonsPress" ObjectPath="\Events\Default Work Unit\UI Sounds\ButtonsPress"/>
 				<Event Id="1532263619" Name="CameraShutterSingle" ObjectPath="\Events\Default Work Unit\UI Sounds\CameraShutterSingle"/>
+				<Event Id="3479155863" Name="MainMusic" ObjectPath="\Events\Default Work Unit\Music\MainMusic"/>
 				<Event Id="679636833" Name="MenuMusic" ObjectPath="\Events\Default Work Unit\Music\MenuMusic"/>
 				<Event Id="3476538210" Name="Submarine_Creaking" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Creaking" MaxAttenuation="16.000000"/>
 				<Event Id="2986501728" Name="Submarine_Double_Knock" ObjectPath="\Events\Default Work Unit\Submarine\Submarine_Double_Knock" MaxAttenuation="16.000000"/>
@@ -75,6 +76,10 @@
 					<ShortName>Submarine Creaking.wav</ShortName>
 					<Path>SFX\Submarine Creaking_0122008C.wem</Path>
 				</File>
+				<File Id="472842757" Language="SFX">
+					<ShortName>SubmarineTheme_Layer_1.wav</ShortName>
+					<Path>SFX\SubmarineTheme_Layer_1_F17FB28C.wem</Path>
+				</File>
 				<File Id="510646461" Language="SFX">
 					<ShortName>Whake.wav</ShortName>
 					<Path>SFX\Whake_3E24DF2E.wem</Path>
@@ -82,6 +87,10 @@
 				<File Id="591928996" Language="SFX">
 					<ShortName>Button sound.wav</ShortName>
 					<Path>SFX\Button sound_1C9C67B2.wem</Path>
+				</File>
+				<File Id="763444961" Language="SFX">
+					<ShortName>SubmarineTheme_Layer_2.wav</ShortName>
+					<Path>SFX\SubmarineTheme_Layer_2_F17FB28C.wem</Path>
 				</File>
 				<File Id="908816145" Language="SFX">
 					<ShortName>Submarine Explorer Menu Theme.wav</ShortName>

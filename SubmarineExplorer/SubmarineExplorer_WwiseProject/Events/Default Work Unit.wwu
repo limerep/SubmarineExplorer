@@ -19,6 +19,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="MainMusic" ID="{B5F0DFC9-50A3-40F4-B41C-0C5ECFDA7118}">
+							<ChildrenList>
+								<Action Name="" ID="{CDA6CB25-25E0-4113-994E-5F771A06796C}" ShortID="604130185">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Layers" ID="{1A173BB6-DCAF-486E-9670-83B943FD4E4E}" WorkUnitID="{17AE3D98-ADF3-46CC-8242-05D937EAC513}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI Sounds" ID="{3D1C292C-0312-4886-89CD-000B962F553F}" ShortID="767473500">

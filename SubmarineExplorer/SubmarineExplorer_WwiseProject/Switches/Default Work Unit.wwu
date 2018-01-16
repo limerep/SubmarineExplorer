@@ -16,6 +16,13 @@
 						<Switch Name="Knocking" ID="{0667E2CD-5205-443B-8945-12D656944713}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Interactive_Music" ID="{3F5E858F-6D00-4BFC-A500-8079BEC968EA}">
+					<ChildrenList>
+						<Switch Name="Layer1" ID="{C96431CF-960C-4828-BD87-3B3BD36B447D}"/>
+						<Switch Name="Layer2" ID="{4BD6C1B9-7DE9-4E1C-B933-D349BF3FC353}"/>
+						<Switch Name="Layer_0" ID="{C0832F63-8835-47F6-8460-6DA0F497F12E}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

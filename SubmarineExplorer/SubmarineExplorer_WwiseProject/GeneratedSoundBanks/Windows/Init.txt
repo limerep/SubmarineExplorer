@@ -1,3 +1,12 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1658244764	MusicLayers			\Default Work Unit\MusicLayers	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicLayers			
+	1026627430	Middle	MusicLayers			
+	1834394558	Surface	MusicLayers			
+	3898915424	Bottom	MusicLayers			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
 	2552791746	UnderwaterSounds			\Default Work Unit\Master Audio Bus\UnderwaterSounds	

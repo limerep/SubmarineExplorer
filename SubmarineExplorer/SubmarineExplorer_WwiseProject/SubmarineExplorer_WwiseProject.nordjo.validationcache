@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="80">
-	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1941401580" DateHigh="30640866"/>
+	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="3615088074" DateHigh="30641079"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Attenuations\Default Work Unit.wwu" DateLow="362259648" DateHigh="30640862"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Audio Devices\Default Work Unit.wwu" DateLow="2095120761" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Control Surface Sessions\Default Work Unit.wwu" DateLow="3581640469" DateHigh="30632031"/>
@@ -9,21 +9,21 @@
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Dynamic Dialogue\Default Work Unit.wwu" DateLow="3690672987" DateHigh="30640675"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Effects\Default Work Unit.wwu" DateLow="2095150764" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Effects\Factory Effects.wwu" DateLow="809468876" DateHigh="30640865"/>
-	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Events\Default Work Unit.wwu" DateLow="809348876" DateHigh="30640865"/>
+	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Events\Default Work Unit.wwu" DateLow="3615208086" DateHigh="30641079"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Events\Music.wwu" DateLow="1882688831" DateHigh="30640250"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Game Parameters\Default Work Unit.wwu" DateLow="2095170766" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="2095180767" DateHigh="30632026"/>
-	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Interactive Music Hierarchy\Music.wwu" DateLow="1144385595" DateHigh="30640682"/>
+	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Interactive Music Hierarchy\Music.wwu" DateLow="3617378303" DateHigh="30641079"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1200687887" DateHigh="30640470"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Mixing Sessions\Default Work Unit.wwu" DateLow="2095080757" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Modulators\Default Work Unit.wwu" DateLow="2095240773" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Presets\Default Work Unit.wwu" DateLow="2095190768" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Queries\Default Work Unit.wwu" DateLow="2095200769" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Queries\Factory Queries.wwu" DateLow="2095210770" DateHigh="30632026"/>
-	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="27774652" DateHigh="30640664"/>
+	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\SoundBanks\Default Work Unit.wwu" DateLow="4251065291" DateHigh="30641034"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Soundcaster Sessions\Default Work Unit.wwu" DateLow="2095250774" DateHigh="30632026"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\States\Default Work Unit.wwu" DateLow="2095250774" DateHigh="30632026"/>
-	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\SubmarineExplorer_WwiseProject.nordjo.wsettings" DateLow="1153781448" DateHigh="30640886"/>
+	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\SubmarineExplorer_WwiseProject.nordjo.wsettings" DateLow="3622138779" DateHigh="30641079"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\SubmarineExplorer_WwiseProject.wproj" DateLow="1882608823" DateHigh="30640250"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Switches\Default Work Unit.wwu" DateLow="27694644" DateHigh="30640664"/>
 	<ValidationCacheItem File="D:\Submarine Explorer\SubmarineExplorer\SubmarineExplorer_WwiseProject\Triggers\Default Work Unit.wwu" DateLow="2095280777" DateHigh="30632026"/>

@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowPlayerMovement : MonoBehaviour {
-
+public class FollowPlayerMovement : MonoBehaviour
+{
     public Transform target;
 
-	// Update is called once per frame
-	void Update () {
-
+	void Update ()
+    {
         transform.LookAt(target);
-
 	}
 }

@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{66B3DB23-5C3F-4906-AB8C-B4633B69A8AB}">
 					<ObjectInclusionList>
+						<ObjectRef Name="MainMusic" ID="{B5F0DFC9-50A3-40F4-B41C-0C5ECFDA7118}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Submarine_Double_Knock" ID="{9514F4D2-B86F-41B0-8849-82A23492C900}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MenuMusic" ID="{ADA46256-2968-44EC-93F3-77C996803A0B}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Submarine_Single_Knock" ID="{73FBF11D-8B74-45D7-B5AB-36B0D66818EE}" WorkUnitID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" Filter="7" Origin="Manual"/>

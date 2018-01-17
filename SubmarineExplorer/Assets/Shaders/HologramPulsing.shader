@@ -23,7 +23,7 @@
 
 		void surf (Input IN, inout SurfaceOutput o){
 			half rim = 1-saturate (dot(normalize(IN.viewDir), o.Normal));
-			o.Emission = _RimColor.rgb * pow(rim,_RimPower) * 10 *_SinTime;
+			o.Emission = _RimColor.rgb * pow(rim,_RimPower) * 10 * (_SinTime * 0.1);
 			o.Alpha = pow (rim, _RimPower);
 		}
 		ENDCG

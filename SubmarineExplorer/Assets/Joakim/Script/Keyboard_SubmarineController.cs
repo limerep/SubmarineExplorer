@@ -21,7 +21,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
     private Transform navigationPlane;
     private Vector3 targetPosition;
     private Vector3 targetDirection;
-    private float maxSpeed = 4;
+    private float maxSpeed = 12;
     private NavMeshAgent navAgent;
 
     // Use this for initialization
@@ -61,7 +61,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
             {
                 if (Mathf.Abs(accelerate) > 0.5f && device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
                 {
-                    navAgent.speed += Mathf.Round(accelerate);
+                    navAgent.speed += Mathf.Round(accelerate * 4);
                     navAgent.speed = Mathf.Min(navAgent.speed, maxSpeed);
                 }
 

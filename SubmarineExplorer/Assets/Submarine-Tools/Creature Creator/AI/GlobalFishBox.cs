@@ -15,6 +15,7 @@ public class GlobalFishBox : MonoBehaviour {
     // Actual side length will be twice the values given here
     public Vector3 swimLimits = new Vector3(5, 5, 5);
 
+
     private void Awake() {
 
         if (fishProps.Family == FishFamily.School) {

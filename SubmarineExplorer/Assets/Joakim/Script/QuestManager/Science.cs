@@ -14,7 +14,7 @@ public class Science : GenericButton {
     public List<Quest> finishedQuest;
     Quest currentQuest;
 
-    List<string> questList;  
+    public static List<string> questList = new List<string>();  
 
     enum  QuestState
     {
@@ -29,16 +29,7 @@ public class Science : GenericButton {
 	void Start ()
     {
         finishedQuest = new List<Quest>();
-        
-
-        questList = new List<string>();
-        questList.Add("BoomerangFish");
-        questList.Add("BulletFish");
-        
-
         CreateQuest("", "");
-
-
     }
 	
 	// Update is called once per frame

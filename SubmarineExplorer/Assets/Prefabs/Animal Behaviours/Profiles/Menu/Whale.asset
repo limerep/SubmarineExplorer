@@ -22,3 +22,4 @@ MonoBehaviour:
   fishPrefab: {fileID: 1418033984764002, guid: 1a8fd4b4a8b0c3546af3d97a69b6edf8, type: 2}
   swimAreaColor: {r: 1, g: 0, b: 0, a: 0.266}
   targetColor: {r: 0, g: 1, b: 0, a: 1}
+  generateQuest: 0

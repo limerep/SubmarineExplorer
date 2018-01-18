@@ -45,6 +45,8 @@ public class VRButtonControls : MonoBehaviour {
 
         if (inVehicle)
         {
+            StartCoroutine(LongVibration(0.01f, 400));
+
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
             {
                 //gameObject.transform.parent.gameObject.transform.parent = null;
@@ -64,6 +66,7 @@ public class VRButtonControls : MonoBehaviour {
 
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
             {
+                StartCoroutine(LongVibration(0.1f, 2000));
                 gameObject.transform.parent.transform.position = originalPos.transform.position;
                 inCam = false;
                 gameObject.GetComponent<LaserPointer>().inCam = false;
@@ -80,7 +83,7 @@ public class VRButtonControls : MonoBehaviour {
 
               
 
-                if (hit.collider.GetComponent<GenericCreature>())
+                if (hit.collider.GetComponent<GlobalFishBox>())
                 {
 
                     //Control animation speed of the loading circle
@@ -94,7 +97,7 @@ public class VRButtonControls : MonoBehaviour {
                     //Capture Image
                     if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
                     {
-                        
+                        StartCoroutine(LongVibration(0.2f, 2000));
                         cameraCanvas.SetActive(false);
                         StartCoroutine("TextureScreenshot", hit);
                     }
@@ -130,6 +133,7 @@ public class VRButtonControls : MonoBehaviour {
         {
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             {
+                StartCoroutine(LongVibration(0.1f, 2000));
                 other.GetComponent<GenericButton>().VrButtonPress(gameObject);
                 Debug.Log("Hit");
             }
@@ -176,7 +180,7 @@ public class VRButtonControls : MonoBehaviour {
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GenericCreature>())
+            if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GlobalFishBox>())
             {
                 creatures.Add(colliders[i].gameObject);
             }
@@ -186,7 +190,7 @@ public class VRButtonControls : MonoBehaviour {
 
         photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", screenShot);
 
-        string fish = hit.collider.GetComponent<GenericCreature>().ReturnType();
+        string fish = hit.collider.GetComponent<GlobalFishBox>().fishProps.Type;
 
         photoManager.GetComponent<PhotoManager>().CreatePhoto(fish, screenShot, creatures);
         yield return new WaitForSeconds(0.1f);
@@ -194,5 +198,14 @@ public class VRButtonControls : MonoBehaviour {
         cameraShutter.GetComponent<ShutterController>().RunShutter();
         cameraCanvas.SetActive(true);
 
+    }
+
+    IEnumerator LongVibration(float length, ushort strength)
+    {
+        for (float i = 0; i < length; i += Time.deltaTime)
+        {
+            device.TriggerHapticPulse(strength);
+            yield return null; //every single frame for the duration of "length" you will vibrate at "strength" amount
+        }
     }
 }

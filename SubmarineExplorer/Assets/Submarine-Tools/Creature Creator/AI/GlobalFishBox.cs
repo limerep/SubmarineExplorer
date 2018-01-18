@@ -36,13 +36,10 @@ public class GlobalFishBox : MonoBehaviour {
                                                            Random.Range(-swimLimits.y, swimLimits.y),
                                                            Random.Range(-swimLimits.z, swimLimits.z));
 
-            var go = new GameObject();
-            go.transform.position = pos;
+            var go = Instantiate(fishProps.FishPrefab, pos, Quaternion.identity);
             FishBox fish = go.AddComponent<FishBox>();
             MeshFilter fishMesh = go.AddComponent<MeshFilter>();
-            fishMesh.sharedMesh = fishProps.Model;
             MeshRenderer mRend = go.AddComponent<MeshRenderer>();
-            mRend.material = fishProps.FishMaterial;
             fish.speed = fishProps.SwimSpeed;
             fish.rotationSpeed = fishProps.TurnSpeed;
             fish.boundingBox = this;
@@ -56,9 +53,9 @@ public class GlobalFishBox : MonoBehaviour {
 
     private void OnDrawGizmosSelected() {
         // Draw swimlimit box
-        Gizmos.color = new Color(1, 0, 0, 0.5f);
+        Gizmos.color = fishProps.SwimAreaColor;
         Gizmos.DrawCube(transform.position, new Vector3(swimLimits.x * 2, swimLimits.y * 2, swimLimits.z * 2));
-        Gizmos.color = new Color(0, 1, 0, 1);
+        Gizmos.color = fishProps.TargetColor;
         Gizmos.DrawSphere(goalPos, 0.5f);
     }
 

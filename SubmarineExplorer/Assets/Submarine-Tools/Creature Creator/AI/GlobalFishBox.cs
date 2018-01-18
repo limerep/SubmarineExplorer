@@ -35,6 +35,7 @@ public class GlobalFishBox : MonoBehaviour {
     private void Start() {
         goalPos = transform.position;
 
+        gameObject.AddComponent<NavMeshSourceTag>();
         GetComponent<NavMeshSourceTag>().enabled = false;
 
         for (int i = 0; i < numFish; i++) {

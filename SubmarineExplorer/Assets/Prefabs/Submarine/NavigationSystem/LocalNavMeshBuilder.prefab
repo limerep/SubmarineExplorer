@@ -52,4 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Tracked: {fileID: 0}
-  m_Size: {x: 80, y: 40, z: 80}
+  m_Size: {x: 100, y: 10, z: 100}

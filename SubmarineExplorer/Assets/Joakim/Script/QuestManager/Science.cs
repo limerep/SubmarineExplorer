@@ -100,7 +100,7 @@ public class Science : GenericButton {
                 
                 for (int i = 0; i < creatureList.Count; i++)
                 {
-                    string creatureName = creatureList[i].GetComponent<GenericCreature>().ReturnType();
+                    string creatureName = creatureList[i].GetComponent<GlobalFishBox>().fishProps.Type;
 
                     if (creatureName == finishedQuest[j].name)
                     {
@@ -130,8 +130,10 @@ public class Science : GenericButton {
 
             if (!questFromPool)
             {
-                
-                CreateQuest(creatureList[chosenQuest].GetComponent<GenericCreature>().ReturnType(), creatureList[chosenQuest].GetComponent<GenericCreature>().GetDescription());
+                GlobalFishBox fishbox = creatureList[chosenQuest].GetComponent<GlobalFishBox>();
+                var fishprops = fishbox.fishProps;
+
+                CreateQuest(fishprops.Type, fishprops.Description);
                 print("Quest from background creature!");
                 questText.text = currentQuest.name;
             }

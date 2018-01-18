@@ -40,11 +40,15 @@ public class MenuController : MonoBehaviour {
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
+
     void Options()
     {
         mainAnim.SetTrigger("ScaleDown");
-        optionsAnim.SetTrigger("ScaleUp");
-        
+        optionsAnim.SetTrigger("ScaleUp"); 
     }
 
     void Back()

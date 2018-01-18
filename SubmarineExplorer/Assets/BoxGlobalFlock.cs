@@ -67,7 +67,6 @@ public class BoxGlobalFlock : MonoBehaviour {
                                                                 Random.Range(-swimLimits.z, swimLimits.z));
 
             var go = Instantiate(fishPrefab, pos, Quaternion.identity);
-            //go.transform.LookAt(goalPos);
             allFish[i] = go;
             go.transform.SetParent(gameObject.transform.parent);
             allFish[i].GetComponent<BoxFlock>().myManager = this;

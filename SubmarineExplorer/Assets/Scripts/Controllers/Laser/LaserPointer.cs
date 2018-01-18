@@ -1,17 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LaserPointer : MonoBehaviour
 {
     private SteamVR_TrackedObject trackedObj;
-    SteamVR_Controller.Device device;
     public bool inCam = false;
-    public bool inVehicle = false;
-    private bool canVibrate = true;
-    private bool hasVibrated = false;
+    public bool inVehicle = false; 
 
     // LASER //
     // 1 This is a reference to the Laser’s prefab.
@@ -53,48 +49,31 @@ public class LaserPointer : MonoBehaviour
         reticle = Instantiate(teleportReticlePrefab);
         // 2 Store the reticle’s transform component.
         teleportReticleTransform = reticle.transform;
-
     }
     private void Update()
     {
-        Scene mainScene = SceneManager.GetActiveScene();
-        device = SteamVR_Controller.Input((int)trackedObj.index);
 
-        if (mainScene.name == "MainMenu")
+
+        Scene mainScene = SceneManager.GetActiveScene();  
+        
+
+        if(mainScene.name == "MainMenu")
         {
-            //if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
-            //{
-                RaycastHit hit;
-    
+
+            RaycastHit hit;
+
+            
+
+           
+
             if (Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, 100))
             {
+
                 hitPoint = hit.point;
                 ShowLaser(hit);
-                canVibrate = true;
 
-                if(canVibrate && !hasVibrated)
-                {
-                    Debug.Log("VIBRERA FÖR FAN");
-                    StartCoroutine(LongVibration(0.05f, 550));
-                }
-             
-                Button button = hit.collider.GetComponent<Button>();
-                if (hit.collider.tag == "Button")
-                {
-                    button.animator.Play("Button_Highlight");
-                    if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
-                    {
-                        hit.collider.gameObject.GetComponent<Button>().onClick.Invoke();
-                        button.animator.Play("Button_Pressed");
-                    }
-                }
             }
-            else
-            { 
-                laser.SetActive(false);
-                canVibrate = false;
-                hasVibrated = false;
-            }
+
 
         } else
         {
@@ -130,7 +109,10 @@ public class LaserPointer : MonoBehaviour
                     Teleport();
                 }
             }
-        } 
+
+        }
+
+       
     }
 
     // Teleport player
@@ -148,6 +130,8 @@ public class LaserPointer : MonoBehaviour
         cameraRigTransform.position = hitPoint + difference;
     }
 
+
+
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -157,6 +141,8 @@ public class LaserPointer : MonoBehaviour
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
     }
+
+
 
     private void ShowLaser(RaycastHit hit)
     {
@@ -173,15 +159,5 @@ public class LaserPointer : MonoBehaviour
         // 4 Scale the laser so it fits perfectly between the two positions.
         laserTransform.localScale = new Vector3(laserTransform.localScale.x, laserTransform.localScale.y,
             hit.distance);
-    }
-
-    IEnumerator LongVibration(float length, ushort strength)
-    {
-        for (float i = 0; i < length; i += Time.deltaTime)
-        {
-            device.TriggerHapticPulse(strength);
-            yield return null; //every single frame for the duration of "length" you will vibrate at "strength" amount
-            hasVibrated = true;
-        }
     }
 }

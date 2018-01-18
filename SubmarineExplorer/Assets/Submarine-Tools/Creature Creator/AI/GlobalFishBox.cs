@@ -24,6 +24,11 @@ public class GlobalFishBox : MonoBehaviour {
             numFish = 1;
         }
 
+        if (fishProps.GenerateQuest)
+        {
+            gameObject.AddComponent<QuestSourceTag>();
+        }
+
         allFish = new GameObject[numFish];
     }
 

@@ -28,6 +28,8 @@ public class FishPropterties : ScriptableObject {
     private Color       swimAreaColor = new Color(1, 0, 0, 0.5f);
     [SerializeField]
     private Color       targetColor = new Color(0, 1, 0, 1);
+    [SerializeField]
+    private bool        generateQuest = true;
 
     public string       Type            { get { return type;                } }
     public string       Description     { get { return description;         } }
@@ -39,7 +41,8 @@ public class FishPropterties : ScriptableObject {
     public float        ReactionTime    { get { return positionInterval;    } }
     public GameObject   FishPrefab      { get { return fishPrefab;          } }
     public Color        SwimAreaColor   { get { return swimAreaColor;       } }
-    public Color        TargetColor     { get { return targetColor; } }
+    public Color        TargetColor     { get { return targetColor;         } }
+    public bool         GenerateQuest   { get { return generateQuest;       } }
     
     void OnInspectorGUI() {
         

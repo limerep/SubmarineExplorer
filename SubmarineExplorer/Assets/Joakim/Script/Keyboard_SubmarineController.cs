@@ -61,7 +61,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
             {
                 if (Mathf.Abs(accelerate) > 0.5f && device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
                 {
-                    navAgent.speed += Mathf.Round(accelerate * 4);
+                    navAgent.speed += Mathf.Round(accelerate);
                     navAgent.speed = Mathf.Min(navAgent.speed, maxSpeed);
                 }
 
@@ -69,7 +69,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
 
             if (Mathf.Abs(strafe) > 0.5f)
             {
-                submarine.transform.Rotate(Vector3.up * strafe * Time.deltaTime * 30, Space.Self);
+                submarine.transform.Rotate(Vector3.up * strafe * Time.deltaTime * 15, Space.Self);
             }
 
             // Always update targetdirection and position while we're in pilot mode.
@@ -83,8 +83,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
 
         Vector3 direction = heading / distanceToTarget;
 
-        //submarine.transform.rotation = Quaternion.Slerp(submarine.transform.rotation, Quaternion.LookRotation(direction), 0.1f * Time.deltaTime);
-        
+        submarine.transform.rotation = Quaternion.Slerp(submarine.transform.rotation, Quaternion.LookRotation(direction), 0.1f * Time.deltaTime);
         navAgent.destination = submarine.transform.position + submarine.transform.forward * 15;
 
         Vector3 navPlanePos = submarine.transform.position;

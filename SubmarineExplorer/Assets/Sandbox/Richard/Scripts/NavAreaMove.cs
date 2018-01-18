@@ -9,21 +9,13 @@ public class NavAreaMove : MonoBehaviour {
     [SerializeField]
     private float diveSpeed = 2.0f;
 
-    private float direction = 0.0f;
-
 	// Use this for initialization
 	void Start () {
 		
 	}
-
-    private void FixedUpdate()
-    {
-        GetComponent<Rigidbody>().velocity = Vector3.up * direction * diveSpeed;
-        direction = 0.0f;
-    }
-
-    // Update is called once per frame
-    void Update () {
+	
+	// Update is called once per frame
+	void Update () {
         Vector3 pos = transform.position;
         
         pos.x = submarine.position.x;
@@ -34,10 +26,9 @@ public class NavAreaMove : MonoBehaviour {
 
     public void Dive(float amount)
     {
-        /*Vector3 pos = transform.position;
+        Vector3 pos = transform.position;
 
         pos.y += amount * diveSpeed * Time.deltaTime;
-        transform.position = pos;*/
-        direction = amount;
+        transform.position = pos;
     }
 }

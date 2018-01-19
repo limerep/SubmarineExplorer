@@ -21,7 +21,7 @@ public class Keyboard_SubmarineController : MonoBehaviour {
     private Transform navigationPlane;
     private Vector3 targetPosition;
     private Vector3 targetDirection;
-    private float maxSpeed = 4;
+    private float maxSpeed = 10;
     private NavMeshAgent navAgent;
 
     // Use this for initialization

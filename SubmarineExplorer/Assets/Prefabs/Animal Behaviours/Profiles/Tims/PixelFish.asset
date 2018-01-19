@@ -8,18 +8,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Pixel
-  m_EditorClassIdentifier: Assembly-CSharp::FishNewProps
+  m_Script: {fileID: 11500000, guid: 3a62ed4658a606b4999fcb8de0cdeee7, type: 3}
+  m_Name: PixelFish
+  m_EditorClassIdentifier: 
   family: 1
-  type: Pixel
-  description: This fish is pixely
-  swimSpeed: 1
-  turnSpeed: 0.3
-  minAmount: 3
-  maxAmount: 20
-  positionInterval: 2
+  type: Pixelfish
+  description: This is actually a voxel fish.
+  swimSpeed: 2
+  turnSpeed: 0.2
+  minAmount: 5
+  maxAmount: 12
+  positionInterval: 19.2
   fishPrefab: {fileID: 1516759127567822, guid: da8aeeaf5e7a8764ca44ae0e9a738a33, type: 2}
-  swimAreaColor: {r: 1, g: 0.066176474, b: 0.9742396, a: 0.5}
+  swimAreaColor: {r: 1, g: 0, b: 0, a: 0.5}
   targetColor: {r: 0, g: 1, b: 0, a: 1}
-  generateQuest: 0
+  generateQuest: 1

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 9f29d6ec79b0de54f9b77efcc67b8946
-timeCreated: 1516289566
+guid: 690e517db7eaad34e8c3d8973f6b0868
+timeCreated: 1516353553
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -78,7 +78,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: BackPack
-    second: {fileID: 2100000, guid: 0ee205cdd731cd94985d8ecc382bde52, type: 2}
+    second: {fileID: 2100000, guid: f2d37e159ca7f9645b355cb5e69c7d4d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -88,22 +88,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Nose
-    second: {fileID: 2100000, guid: 450d9c57ee9aacf4cad4dad0c5a7f823, type: 2}
+    second: {fileID: 2100000, guid: 74af522b38fa99347b50a6c662ffb01d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: PlayerColor
-    second: {fileID: 2100000, guid: b5ab6dba7c7842749b9d1c65cd4461bb, type: 2}
+    second: {fileID: 2100000, guid: 6c990c2fb28b38a4498b6953550df814, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Shirt
-    second: {fileID: 2100000, guid: da2656a41c658c14ea7c3f2cbb7b441e, type: 2}
+    second: {fileID: 2100000, guid: 1e77e4cecbb3dc342a086d3464913b65, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Skin
-    second: {fileID: 2100000, guid: a04df836d2314a44981f308521b95452, type: 2}
+    second: {fileID: 2100000, guid: ab188cc1045c4064cac0ffe4b94629c3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

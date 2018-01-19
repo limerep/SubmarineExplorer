@@ -14,22 +14,22 @@ public class Science : GenericButton {
     public List<Quest> finishedQuest;
     Quest currentQuest;
 
-    List<string> questList;  
+    public static List<string> questList = new List<string>();  
+
+    enum  QuestState
+    {
+        Started,
+        Ongoing, 
+        Done,
+        Cancelled
+    };
+
 
 	// Use this for initialization
 	void Start ()
     {
-
         finishedQuest = new List<Quest>();
-        
-        questList = new List<string>();
-        questList.Add("BoomerangFish");
-        questList.Add("BulletFish");
-        
-
         CreateQuest("", "");
-
-
     }
 	
 	// Update is called once per frame
@@ -38,7 +38,7 @@ public class Science : GenericButton {
         
 	}
 
-    //Creates a quest from the mission pool
+
     public void QuestFromPool()
     {
         print("Quest From Pool");
@@ -51,11 +51,10 @@ public class Science : GenericButton {
 
     }
 
-    //Creates a quest from a creature in the background of the photo
     public void CreateQuest(string name, string description)
     {
       
-        //If the quest is null, create a new questList
+
         if (currentQuest == null)
         {
            
@@ -64,7 +63,6 @@ public class Science : GenericButton {
             questText.text = currentQuest.name; 
            
         }
-        //Use the description and name from a creature in the background to create a new quest
         else
         {
             currentQuest = new Quest(name, description);
@@ -79,7 +77,7 @@ public class Science : GenericButton {
         }
         
     }
-    //Function for turning in quests and 
+
     public void TurnInQuest(int photo)
     {
         Debug.Log("Tried to turn in photo");
@@ -102,7 +100,7 @@ public class Science : GenericButton {
                 
                 for (int i = 0; i < creatureList.Count; i++)
                 {
-                    string creatureName = creatureList[i].GetComponent<GenericCreature>().ReturnType();
+                    string creatureName = creatureList[i].GetComponent<GlobalFishBox>().fishProps.Type;
 
                     if (creatureName == finishedQuest[j].name)
                     {
@@ -132,8 +130,10 @@ public class Science : GenericButton {
 
             if (!questFromPool)
             {
-                
-                CreateQuest(creatureList[chosenQuest].GetComponent<GenericCreature>().ReturnType(), creatureList[chosenQuest].GetComponent<GenericCreature>().GetDescription());
+                GlobalFishBox fishbox = creatureList[chosenQuest].GetComponent<GlobalFishBox>();
+                var fishprops = fishbox.fishProps;
+
+                CreateQuest(fishprops.Type, fishprops.Description);
                 print("Quest from background creature!");
                 questText.text = currentQuest.name;
             }

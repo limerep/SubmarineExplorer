@@ -62,7 +62,7 @@ public class SubmarineCamControl : MonoBehaviour {
 
                 Debug.DrawLine(this.transform.position, hit.point, Color.red);
 
-                if (hit.collider.GetComponent<GenericCreature>())
+                if (hit.collider.GetComponent<GlobalFishBox>())
                 {
 
                     //Control animation speed of the loading circle
@@ -125,14 +125,14 @@ public class SubmarineCamControl : MonoBehaviour {
 
         for (int i = 0; i < colliders.Length; i++)
         {
-            if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GenericCreature>())
+            if (GeometryUtility.TestPlanesAABB(planes, colliders[i].bounds) && colliders[i].gameObject.GetComponent<GlobalFishBox>())
             {
                 creatures.Add(colliders[i].gameObject);
             }
         }
 
 
-        string fish = hit.collider.GetComponent<GenericCreature>().ReturnType();
+        string fish = hit.collider.GetComponent<GlobalFishBox>().fishProps.Type;
 
         photoManager.GetComponent<PhotoManager>().CreatePhoto(fish, screenShot, creatures);
 

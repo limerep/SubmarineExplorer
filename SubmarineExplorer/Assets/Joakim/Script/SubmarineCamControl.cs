@@ -76,6 +76,7 @@ public class SubmarineCamControl : MonoBehaviour {
                     //Capture Image
                     if (Input.GetMouseButtonDown(0))
                     {
+                        
                         StartCoroutine("TextureScreenshot", hit);
                     }
 

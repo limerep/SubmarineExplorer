@@ -10,7 +10,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: Whale
-  m_EditorClassIdentifier: Assembly-CSharp::FishPropterties
+  m_EditorClassIdentifier: Assembly-CSharp::FishNewProps
   family: 1
   type: Whale
   description: It's a big thing

@@ -3,7 +3,6 @@ using UnityEditor;
 
 public enum FishFamily { Loner, School, Shark, Shellfish };
 
-[CreateAssetMenu(fileName = "New Fish", menuName = "Sea Creatures/Fish")]
 public class FishPropterties : ScriptableObject {
     
     [SerializeField]

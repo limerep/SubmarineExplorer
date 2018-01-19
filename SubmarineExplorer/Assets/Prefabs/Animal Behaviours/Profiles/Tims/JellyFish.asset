@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a62ed4658a606b4999fcb8de0cdeee7, type: 3}
+  m_Name: JellyFish
+  m_EditorClassIdentifier: 
+  family: 1
+  type: Jellyfish
+  description: This fish is made of gel
+  swimSpeed: 3
+  turnSpeed: 0.1
+  minAmount: 3
+  maxAmount: 6
+  positionInterval: 21
+  fishPrefab: {fileID: 1020092091524086, guid: 7af0352366a7d2d4aaf4aec8bf65d6cd, type: 2}
+  swimAreaColor: {r: 1, g: 0, b: 0.972414, a: 0.5}
+  targetColor: {r: 0, g: 1, b: 0, a: 1}
+  generateQuest: 1

@@ -46,10 +46,10 @@ public class VRButtonControls : MonoBehaviour {
 
         if (inVehicle)
         {
-            StartCoroutine(LongVibration(0.01f, 400));
 
             if (device.GetPressDown(SteamVR_Controller.ButtonMask.Grip))
             {
+                StartCoroutine(LongVibration(0.1f, 2000));
                 //gameObject.transform.parent.gameObject.transform.parent = null;
                 gameObject.GetComponent<LaserPointer>().inVehicle = false;
                 inVehicle = false;
@@ -196,9 +196,9 @@ public class VRButtonControls : MonoBehaviour {
             }
         }
 
-        photoTest.GetComponent<Renderer>().material.EnableKeyword("_MainTex");
+        //photoTest.GetComponent<Renderer>().material.EnableKeyword("_MainTex");
 
-        photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", screenShot);
+        //photoTest.GetComponent<Renderer>().material.SetTexture("_MainTex", screenShot);
 
         string fish = hit.collider.GetComponent<GlobalFishBox>().fishProps.Type;
 

@@ -3,38 +3,6 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{B0593B31-4BE9-4BF0-9A51-3369C2385CC8}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Music" ID="{D497E6C0-EC83-41BA-86F5-AF148ECA0627}" ShortID="759620760">
-					<ChildrenList>
-						<Event Name="MenuMusic" ID="{ADA46256-2968-44EC-93F3-77C996803A0B}">
-							<ChildrenList>
-								<Action Name="" ID="{C569184B-7991-4CB6-AE09-9D6F4B15C324}" ShortID="740100958">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Submarine Explorer Menu Theme" ID="{D0AED8F8-AE17-4E9F-B20C-BCE214D572BB}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-						<Event Name="MainMusic" ID="{B5F0DFC9-50A3-40F4-B41C-0C5ECFDA7118}">
-							<ChildrenList>
-								<Action Name="" ID="{CDA6CB25-25E0-4113-994E-5F771A06796C}" ShortID="604130185">
-									<PropertyList>
-										<Property Name="ActionType" Type="int16" Value="1"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Target">
-											<ObjectRef Name="Layers" ID="{1A173BB6-DCAF-486E-9670-83B943FD4E4E}" WorkUnitID="{17AE3D98-ADF3-46CC-8242-05D937EAC513}"/>
-										</Reference>
-									</ReferenceList>
-								</Action>
-							</ChildrenList>
-						</Event>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="UI Sounds" ID="{3D1C292C-0312-4886-89CD-000B962F553F}" ShortID="767473500">
 					<ChildrenList>
 						<Event Name="ButtonsPress" ID="{18A6AFB9-9B60-42F9-85BC-F8F0A2442874}">
@@ -78,6 +46,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Whale sounds" ID="{6674E878-E3A3-45ED-96D9-01436718A4FF}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Fishes" ID="{25BD465D-5ED4-4956-BE6C-D3BB4D391C3B}">
+							<ChildrenList>
+								<Action Name="" ID="{3CFDE156-6D56-4C60-82E3-1586962C32B7}" ShortID="381294579">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Fishes" ID="{A048FD26-811A-4391-96E4-EEA8BB51C951}" WorkUnitID="{17AE3D98-ADF3-46CC-8242-05D937EAC513}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

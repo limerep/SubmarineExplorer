@@ -79,6 +79,16 @@ namespace AK
 
     } // namespace SWITCHES
 
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID BOOMERANGFISH = 3248363357U;
+        static const AkUniqueID BULLETFISH = 1357871167U;
+        static const AkUniqueID DEPTH = 681025064U;
+        static const AkUniqueID JELLYFISH = 2157962305U;
+        static const AkUniqueID TUBAFISH = 2804535085U;
+        static const AkUniqueID WHALE = 2774797848U;
+    } // namespace GAME_PARAMETERS
+
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;

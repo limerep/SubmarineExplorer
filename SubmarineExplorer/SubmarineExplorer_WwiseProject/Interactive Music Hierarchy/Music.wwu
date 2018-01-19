@@ -69,15 +69,7 @@
 				</MusicSegment>
 				<Folder Name="Fishes" ID="{58CBD2BD-C9C2-49CB-958F-D163B1E81086}" ShortID="590524712">
 					<ChildrenList>
-						<MusicSegment Name="SubmarineTheme_Bassfish" ID="{8DBD523C-D195-45C8-9479-57CD3523B5D7}" ShortID="652850387">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="53358.0045351474"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
+						<MusicPlaylistContainer Name="Fishes" ID="{A048FD26-811A-4391-96E4-EEA8BB51C951}" ShortID="519885927">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
@@ -87,474 +79,664 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<MusicTrack Name="SubmarineTheme_Bassfish" ID="{A9614C48-793A-4DDD-BA88-0985AFE0454A}" ShortID="252625512">
+								<MusicSegment Name="Fishes" ID="{767AF25D-9398-495A-9104-2B7ED830E3C0}" ShortID="1019196417">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="54047.1785383904"/>
+									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="SubmarineTheme_Bassfish" ID="{4256C542-2FCA-4C31-9082-A8487308B89C}" ShortID="272981503">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_Bassfish.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{D5EFD25F-A26A-4A20-9A35-C222D64D9327}">
+										<MusicTrack Name="SubmarineTheme_Bassfish" ID="{A9614C48-793A-4DDD-BA88-0985AFE0454A}" ShortID="252625512">
 											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{775BCCC3-FFE1-4718-849B-2FF3D1333AC6}" ShortID="291599407">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="BulletFish" ID="{3512639E-802F-4699-915D-B57CBE86CB28}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{F215C810-A356-4B36-BA4F-E79C47714C0D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
 											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{E2075A87-B6B2-47ED-9C52-495D46E5B154}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_Bassfish" ID="{241D50E4-1FC2-4411-B449-512C541F4C77}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53358.0045351474"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_Bassfish" ID="{4256C542-2FCA-4C31-9082-A8487308B89C}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{8CEDFAA0-0E61-45A1-AC60-878148946A56}"/>
-								<MusicCue Name="Exit Cue" ID="{0F1894AA-5727-4123-A4C0-CD19B7C4FD37}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="53358.0045351474"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-						<MusicSegment Name="SubmarineTheme_DrumFish" ID="{DD329E5C-FDC1-4150-883F-054341034C15}" ShortID="858949829">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="53352.1995464853"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-1</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="SubmarineTheme_DrumFish" ID="{F388E72A-58AB-43E7-9D81-2A3001CEC241}" ShortID="814473496">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SubmarineTheme_DrumFish" ID="{E37C4B10-5476-4D88-ABE8-E46EF9AA7FD3}" ShortID="548269080">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_DrumFish.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{718BE8BD-E33F-4062-A569-0AEE1A6F329C}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{0868AF41-72EA-430C-B385-58FE04190494}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_DrumFish" ID="{536B79CE-0D00-4283-9DFB-B5C3752D1083}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53352.1995464853"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_DrumFish" ID="{E37C4B10-5476-4D88-ABE8-E46EF9AA7FD3}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{571E42BE-367F-4AC7-985E-AEF52AA20920}"/>
-								<MusicCue Name="Exit Cue" ID="{D45137C1-1BA7-45EC-BE41-60127DBFB3EC}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="53352.1995464853"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-						<MusicSegment Name="SubmarineTheme_PIzzicatoFish" ID="{4289B70C-AD64-44A9-A962-C8A007A9872F}" ShortID="46269195">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="53343.4920634921"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="SubmarineTheme_PIzzicatoFish" ID="{C6CE8BB5-350E-4EE3-BC6C-9F2D407270C8}" ShortID="926686445">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SubmarineTheme_PIzzicatoFish" ID="{1E47ECDC-938B-4F08-A53D-2F75899A524C}" ShortID="324111648">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_PIzzicatoFish.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{E4C36728-8BC4-4333-B11D-96DEAC6C69A4}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{2F5661C6-9AB8-4807-BFF2-3613C90CC641}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_PIzzicatoFish" ID="{00DB065F-E8AC-47AF-BF4F-9CB15A8867D4}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53343.4920634921"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_PIzzicatoFish" ID="{1E47ECDC-938B-4F08-A53D-2F75899A524C}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{641F0FD1-FDFA-40AF-97C8-E0C41BAD86C0}"/>
-								<MusicCue Name="Exit Cue" ID="{D03E3345-2C39-4CCA-BE4D-FC98D7ACD666}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="53343.4920634921"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-						<MusicSegment Name="SubmarineTheme_SynthFish" ID="{FB4828B1-0D3E-4878-8F45-8064F4FEDA4A}" ShortID="765720559">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="53349.2970521542"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="SubmarineTheme_SynthFish" ID="{F0B3B008-9763-4D4D-903C-5FCA689DA7F8}" ShortID="173524778">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SubmarineTheme_SynthFish" ID="{207FDBCB-2348-440B-ACD6-4B76D9ABFCC1}" ShortID="779582595">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_SynthFish.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{76B612D5-ABE0-44DC-B7EF-E2D39A87B9D8}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{F2A516D3-C0B6-43D9-B3C7-4C306C8BEF83}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_SynthFish" ID="{B64A44E7-EBE3-4CCC-829A-C53B7239B2BD}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53349.2970521542"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_SynthFish" ID="{207FDBCB-2348-440B-ACD6-4B76D9ABFCC1}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{8C562536-AEDF-4C8F-9328-1B687F3E9DD7}"/>
-								<MusicCue Name="Exit Cue" ID="{AA925409-C8C4-490B-BF0C-DE4EDEADCD24}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="53349.2970521542"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-						<MusicSegment Name="SubmarineTheme_TubaFish" ID="{2A817C84-5638-4057-8B2A-DEFEDFA3D67A}" ShortID="767538170">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="53358.0045351474"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-1</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="SubmarineTheme_TubaFish" ID="{89BAB4D7-CFD7-47E6-B98C-6F79B97CABA5}" ShortID="699633896">
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SubmarineTheme_TubaFish" ID="{8F0D7A4C-DE03-4794-A9E0-5F6F587F97FE}" ShortID="887700381">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_TubaFish.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{D5C5E9B5-52B1-4BD3-9ECB-0BC4CA91D88F}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{1BA5AA66-E6AA-43C7-87D8-6A29C83DF0C7}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_TubaFish" ID="{AA6FC65E-ECEA-44C2-9EB3-95E8B5183990}">
-													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53358.0045351474"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
-													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_TubaFish" ID="{8F0D7A4C-DE03-4794-A9E0-5F6F587F97FE}"/>
-												</MusicClip>
-											</ClipList>
-										</MusicTrackSequence>
-									</SequenceList>
-								</MusicTrack>
-							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{FF3C2896-D94D-415D-B0A6-F3BF8B23AD03}"/>
-								<MusicCue Name="Exit Cue" ID="{692C22EB-49DD-4EC5-B869-B15F7D5923F0}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="53358.0045351474"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-					</ChildrenList>
-				</Folder>
-				<Folder Name="Layers" ID="{CB3712B7-8BA6-4662-82CC-CB27EA3FA2B2}" ShortID="457544571">
-					<ChildrenList>
-						<MusicSegment Name="Layers" ID="{1A173BB6-DCAF-486E-9670-83B943FD4E4E}" ShortID="1070060619">
-							<PropertyList>
-								<Property Name="EndPosition" Type="Real64" Value="66201.7543859649"/>
-								<Property Name="Tempo" Type="Real64" Value="144"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-7</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<MusicTrack Name="SubmarineTheme_Layer_1" ID="{2C4FE892-BA7A-4026-A2B9-BCA9DD390859}" ShortID="681730894">
-									<PropertyList>
-										<Property Name="MusicTrackType" Type="int16" Value="3"/>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="SubmarineTheme_Layer_1" ID="{64789157-C413-4C1F-A7D3-A6CEA397F6AE}" ShortID="472842757">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_Layer_1.wav</AudioFile>
-										</AudioFileSource>
-										<AudioFileSource Name="SubmarineTheme_Layer_2" ID="{542C4618-4F52-4696-9CFB-D09BECA8F5A1}" ShortID="763444961">
-											<Language>SFX</Language>
-											<AudioFile>SubmarineTheme_Layer_2.wav</AudioFile>
-										</AudioFileSource>
-									</ChildrenList>
-									<TransitionList>
-										<MusicTransition Name="Root" ID="{8CD35CA1-62B2-44EA-AD93-C667FA171248}">
-											<PropertyList>
-												<Property Name="IsFolder" Type="bool" Value="True"/>
-											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
 											<ChildrenList>
-												<MusicTransition Name="Transition" ID="{DA37682B-A213-403F-991D-BD2B55C536FD}">
-													<PropertyList>
-														<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
-														<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
-														<Property Name="ExitSourceAt" Type="int16" Value="0"/>
-													</PropertyList>
-													<TransitionInfo>
-														<SourceFadeOut>
-															<MusicFade Name="Source Fade-out" ID="{5986D869-88AF-4298-A327-C4F95775EAC6}">
-																<PropertyList>
-																	<Property Name="FadeOffset" Type="Real64" Value="0.3"/>
-																	<Property Name="FadeTime" Type="Real64" Value="3.9"/>
-																	<Property Name="FadeType" Type="int16" Value="1"/>
-																</PropertyList>
-															</MusicFade>
-														</SourceFadeOut>
-														<DestinationFadeIn>
-															<MusicFade Name="Destination Fade-in" ID="{D359633F-F72D-4CC6-BAB5-8BF70A27D10B}">
-																<PropertyList>
-																	<Property Name="FadeTime" Type="Real64" Value="2.7"/>
-																</PropertyList>
-															</MusicFade>
-														</DestinationFadeIn>
-													</TransitionInfo>
-												</MusicTransition>
+												<AudioFileSource Name="SubmarineTheme_Bassfish" ID="{4256C542-2FCA-4C31-9082-A8487308B89C}" ShortID="272981503">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_Bassfish.wav</AudioFile>
+												</AudioFileSource>
 											</ChildrenList>
-											<TransitionInfo/>
-										</MusicTransition>
-									</TransitionList>
-									<SequenceList>
-										<MusicTrackSequence Name="" ID="{53E064CC-D0E4-48AE-B397-51D0BDCED69B}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_Layer_1" ID="{3E078D9B-1902-4E89-BA92-BB5B0A353DBC}">
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{D5EFD25F-A26A-4A20-9A35-C222D64D9327}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53343.4920634921"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_Layer_1" ID="{64789157-C413-4C1F-A7D3-A6CEA397F6AE}"/>
-												</MusicClip>
-											</ClipList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{E2075A87-B6B2-47ED-9C52-495D46E5B154}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_Bassfish" ID="{241D50E4-1FC2-4411-B449-512C541F4C77}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53358.0045351474"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_Bassfish" ID="{4256C542-2FCA-4C31-9082-A8487308B89C}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="SubmarineTheme_DrumFish" ID="{F388E72A-58AB-43E7-9D81-2A3001CEC241}" ShortID="814473496">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{D674D283-83CC-4386-B0C9-9A183A463C64}" ShortID="529122416">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="BoomerangFish" ID="{271828D5-2085-4BF9-82EA-20954237DC1B}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{A9B389CB-0103-4535-BDCD-9ED643F6270A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="TrackSequenceSwitch">
-													<ObjectRef Name="Layer1" ID="{C96431CF-960C-4828-BD87-3B3BD36B447D}" WorkUnitID="{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}"/>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
 												</Reference>
 											</ReferenceList>
-										</MusicTrackSequence>
-										<MusicTrackSequence Name="" ID="{C7F41388-B0FE-4184-8A80-5060E4BA82CF}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_Layer_2" ID="{2D7C3FC6-FB45-4EB3-AAFF-1C589A1223ED}">
+											<ChildrenList>
+												<AudioFileSource Name="SubmarineTheme_DrumFish" ID="{E37C4B10-5476-4D88-ABE8-E46EF9AA7FD3}" ShortID="548269080">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_DrumFish.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{718BE8BD-E33F-4062-A569-0AEE1A6F329C}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53349.2970521542"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_Layer_2" ID="{542C4618-4F52-4696-9CFB-D09BECA8F5A1}"/>
-												</MusicClip>
-											</ClipList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{0868AF41-72EA-430C-B385-58FE04190494}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_DrumFish" ID="{536B79CE-0D00-4283-9DFB-B5C3752D1083}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53352.1995464853"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_DrumFish" ID="{E37C4B10-5476-4D88-ABE8-E46EF9AA7FD3}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="SubmarineTheme_PIzzicatoFish" ID="{C6CE8BB5-350E-4EE3-BC6C-9F2D407270C8}" ShortID="926686445">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{7D556A53-E766-4F38-8089-C5E83034FA1F}" ShortID="975147770">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="TubaFish" ID="{9A837880-F1F5-40C3-8D35-17161183B5EF}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{303476EC-9D2D-47A4-944B-625663089953}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="TrackSequenceSwitch">
-													<ObjectRef Name="Layer2" ID="{4BD6C1B9-7DE9-4E1C-B933-D349BF3FC353}" WorkUnitID="{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}"/>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
 												</Reference>
 											</ReferenceList>
-										</MusicTrackSequence>
-										<MusicTrackSequence Name="" ID="{E82E6243-C5A3-4FEF-A44B-397926947CEC}">
-											<ClipList>
-												<MusicClip Name="SubmarineTheme_Layer_1" ID="{1D163583-E751-40E3-9DEE-F75C527F2AA7}">
+											<ChildrenList>
+												<AudioFileSource Name="SubmarineTheme_PIzzicatoFish" ID="{1E47ECDC-938B-4F08-A53D-2F75899A524C}" ShortID="324111648">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_PIzzicatoFish.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{E4C36728-8BC4-4333-B11D-96DEAC6C69A4}">
 													<PropertyList>
-														<Property Name="EndTrimOffset" Type="Real64" Value="53343.4920634921"/>
-														<Property Name="FadeInMode" Type="int16" Value="0"/>
-														<Property Name="FadeOutMode" Type="int16" Value="0"/>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
 													</PropertyList>
-													<AudioSourceRef Name="SubmarineTheme_Layer_1" ID="{64789157-C413-4C1F-A7D3-A6CEA397F6AE}"/>
-												</MusicClip>
-											</ClipList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{2F5661C6-9AB8-4807-BFF2-3613C90CC641}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_PIzzicatoFish" ID="{00DB065F-E8AC-47AF-BF4F-9CB15A8867D4}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53343.4920634921"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_PIzzicatoFish" ID="{1E47ECDC-938B-4F08-A53D-2F75899A524C}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="SubmarineTheme_SynthFish" ID="{F0B3B008-9763-4D4D-903C-5FCA689DA7F8}" ShortID="173524778">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{243EBB76-B8C3-420F-AE34-6A04151D36AC}" ShortID="739302083">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Jellyfish" ID="{96F99761-C81C-4325-B43F-E0B6F7786AE7}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{CBAEB773-4C3C-4F75-AB03-CC1C3D12644A}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="TrackSequenceSwitch">
-													<ObjectRef Name="Layer2" ID="{4BD6C1B9-7DE9-4E1C-B933-D349BF3FC353}" WorkUnitID="{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}"/>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
 												</Reference>
 											</ReferenceList>
-										</MusicTrackSequence>
-										<MusicTrackSequence Name="" ID="{904DD8E6-9EA4-43CA-A699-ED3A6B14346C}">
+											<ChildrenList>
+												<AudioFileSource Name="SubmarineTheme_SynthFish" ID="{207FDBCB-2348-440B-ACD6-4B76D9ABFCC1}" ShortID="779582595">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_SynthFish.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{76B612D5-ABE0-44DC-B7EF-E2D39A87B9D8}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{F2A516D3-C0B6-43D9-B3C7-4C306C8BEF83}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_SynthFish" ID="{B64A44E7-EBE3-4CCC-829A-C53B7239B2BD}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53349.2970521542"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_SynthFish" ID="{207FDBCB-2348-440B-ACD6-4B76D9ABFCC1}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="SubmarineTheme_TubaFish" ID="{89BAB4D7-CFD7-47E6-B98C-6F79B97CABA5}" ShortID="699633896">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{7C654174-55B9-477D-9CAC-F4AB9B65069C}" ShortID="55245777">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Whale" ID="{B571095B-0B20-4FF3-BA84-A3C1CA8CCD1A}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{70AEF0B1-B6EB-42FA-8DA3-626FB973DC07}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
-												<Reference Name="TrackSequenceSwitch">
-													<ObjectRef Name="Layer_0" ID="{C0832F63-8835-47F6-8460-6DA0F497F12E}" WorkUnitID="{CACDA674-EDDF-4E6B-BA0E-16DB4D9E0B01}"/>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
 												</Reference>
 											</ReferenceList>
-										</MusicTrackSequence>
-									</SequenceList>
-									<TrackSwitch>
-										<SwitchGroupRef Name="Interactive_Music" ID="{3F5E858F-6D00-4BFC-A500-8079BEC968EA}"/>
-										<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
-									</TrackSwitch>
-								</MusicTrack>
+											<ChildrenList>
+												<AudioFileSource Name="SubmarineTheme_TubaFish" ID="{8F0D7A4C-DE03-4794-A9E0-5F6F587F97FE}" ShortID="887700381">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_TubaFish.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{D5C5E9B5-52B1-4BD3-9ECB-0BC4CA91D88F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{1BA5AA66-E6AA-43C7-87D8-6A29C83DF0C7}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_TubaFish" ID="{AA6FC65E-ECEA-44C2-9EB3-95E8B5183990}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53358.0045351474"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_TubaFish" ID="{8F0D7A4C-DE03-4794-A9E0-5F6F587F97FE}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{22B4E1F7-82E8-44E2-9647-B3A062F4BAA6}"/>
+										<MusicCue Name="Exit Cue" ID="{0C2D604A-D745-46D6-A5DB-0AE12C8B3ED6}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="53375"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
 							</ChildrenList>
-							<CueList>
-								<MusicCue Name="Entry Cue" ID="{0E62A342-6DD9-46B7-A3C6-AB553B3E342F}"/>
-								<MusicCue Name="Exit Cue" ID="{66988320-A8A0-482C-A007-C22D31363C1C}">
-									<PropertyList>
-										<Property Name="CueType" Type="int16" Value="1"/>
-										<Property Name="TimeMs" Type="Real64" Value="53333.3333333333"/>
-									</PropertyList>
-								</MusicCue>
-							</CueList>
-						</MusicSegment>
-						<MusicSwitchContainer Name="LayerSwitch" ID="{FF096CBF-5912-4345-8FAC-E30CF52FB199}" ShortID="20472941">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
-								</Reference>
-							</ReferenceList>
 							<TransitionList>
-								<MusicTransition Name="Root" ID="{A452800B-A21C-44A0-A1CB-9B56033F81B6}">
+								<MusicTransition Name="Root" ID="{C237ACCF-6D00-4C35-843E-AC67F76B10A7}">
 									<PropertyList>
 										<Property Name="IsFolder" Type="bool" Value="True"/>
 									</PropertyList>
 									<ChildrenList>
-										<MusicTransition Name="Transition" ID="{DD238632-EA44-488B-A333-08990B417EA7}">
+										<MusicTransition Name="Transition" ID="{AB94A19A-9787-4174-8B02-6FC8B13E6CDD}">
 											<TransitionInfo/>
 										</MusicTransition>
 									</ChildrenList>
 									<TransitionInfo/>
 								</MusicTransition>
 							</TransitionList>
-						</MusicSwitchContainer>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{045B1C42-5733-4F6E-B8CE-D83C0BC32CB1}" ShortID="916675716">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{A3F1C9E5-61AC-4221-BBD3-81712E1B5A2D}" ShortID="778181560">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Fishes" ID="{767AF25D-9398-495A-9104-2B7ED830E3C0}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="InteractiveMusic" ID="{7687B1B8-D4F6-42C5-B8F1-5C242A992A5B}" ShortID="703947714">
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Playlist" ID="{FB70F54C-39C7-458D-98CE-23016E3F19C1}" ShortID="168346792">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Playlist" ID="{9CB29B70-9AC2-4548-AF4C-A5828E5711E0}" ShortID="449699922">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="55308.973172988"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{F2165317-19EE-4160-A774-18827A0FDCA2}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="SubmarineTheme_Layer_1" ID="{D5085370-BF80-423A-B00A-35B198892D07}" ShortID="156291007">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{E67D7198-CE8C-4CFC-A1A8-14875F087120}" ShortID="525778273">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Depth" ID="{E6D3C82E-40AA-4075-80CA-27AE1ED99677}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{B6C2E757-883A-4A00-BB07-B263B8323A05}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-500</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-450.16797</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-249.50507</XPos>
+																		<YPos>0.20138</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-101.34377</XPos>
+																		<YPos>0.13358</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-16.8073</XPos>
+																		<YPos>-5.56144</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.1</XPos>
+																		<YPos>-185.09317</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SubmarineTheme_Layer_1" ID="{38D0B4E2-0F36-49FD-8926-FBA4BEE129ED}" ShortID="370016380">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_Layer_1.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="472842757"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{1D12B1CF-7B3E-4F0F-83DA-57D98F19B488}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{7BD73619-2FC5-4872-A803-776F1776D875}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_Layer_1" ID="{7EBD30A3-2670-4343-A917-A68EF0749CCE}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53343.4920634921"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_Layer_1" ID="{38D0B4E2-0F36-49FD-8926-FBA4BEE129ED}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="SubmarineTheme_Layer_2" ID="{228ACF73-F09E-4F7F-9AA4-A18619371C3E}" ShortID="83068437">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{A7A7DAB2-415C-4C19-9C11-B03115B760C5}" ShortID="272531189">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="Depth" ID="{E6D3C82E-40AA-4075-80CA-27AE1ED99677}" WorkUnitID="{8DAC5BAD-334A-4526-B5CB-9006C018914B}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{1029EE35-FB50-4670-B512-EBE614E3AC3D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>-500</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-449.72304</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-250.39493</XPos>
+																		<YPos>-0.02636</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-99.56405</XPos>
+																		<YPos>-3.55908</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>-50.17696</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{D8341183-8BB1-401C-A3F2-B7988ACCC341}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="SubmarineTheme_Layer_2" ID="{3F9487E7-80B5-4DA1-85DE-5C26C152C60D}" ShortID="113808940">
+													<Language>SFX</Language>
+													<AudioFile>SubmarineTheme_Layer_2.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="763444961"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{824056DE-6C56-4F60-98BB-94FE7513D48A}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{4A2530FE-2B47-48EC-846B-9F81B31AE193}">
+													<ClipList>
+														<MusicClip Name="SubmarineTheme_Layer_2" ID="{FB443BBF-830F-4040-BE63-A1CBDC3E1E6D}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="53349.2970521542"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SubmarineTheme_Layer_2" ID="{3F9487E7-80B5-4DA1-85DE-5C26C152C60D}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{154D61BC-343C-4A01-870A-2EEF23BF3B58}"/>
+										<MusicCue Name="Exit Cue" ID="{169A97C3-C0DE-4D36-8EEE-271BEF1CAEF8}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="53343.4920634921"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{E4839F47-AE58-46B8-87EE-DE28A47723B6}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{0D927E67-030E-49B9-B00B-827A44132550}">
+											<PropertyList>
+												<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+											</PropertyList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{C1299E45-D21F-46B5-B379-CA325CEB3D9D}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="3.1"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{AD4417B6-FF8E-4698-8C13-90326050892E}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="2.9"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{FFCF5724-2BEA-46F0-9328-976E84F169A1}" ShortID="542205773">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{213CF598-9091-4F67-BFED-B97CB807588E}" ShortID="868506195">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Playlist" ID="{9CB29B70-9AC2-4548-AF4C-A5828E5711E0}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

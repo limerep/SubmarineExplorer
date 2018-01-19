@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{43D1C32A-3724-4046-8B1D-4743FBCD58B9}" SchemaVersion="80">
 	<Events>
-		<WorkUnit Name="Music" ID="{43D1C32A-3724-4046-8B1D-4743FBCD58B9}" PersistMode="Standalone"/>
+		<WorkUnit Name="Music" ID="{43D1C32A-3724-4046-8B1D-4743FBCD58B9}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Music" ID="{D497E6C0-EC83-41BA-86F5-AF148ECA0627}" ShortID="759620760">
+					<ChildrenList>
+						<Event Name="MenuMusic" ID="{ADA46256-2968-44EC-93F3-77C996803A0B}">
+							<ChildrenList>
+								<Action Name="" ID="{C569184B-7991-4CB6-AE09-9D6F4B15C324}" ShortID="740100958">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Submarine Explorer Menu Theme" ID="{D0AED8F8-AE17-4E9F-B20C-BCE214D572BB}" WorkUnitID="{DBD5ABAD-7B62-4916-87CA-79B2D77281B7}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="MainMusic" ID="{B5F0DFC9-50A3-40F4-B41C-0C5ECFDA7118}">
+							<ChildrenList>
+								<Action Name="" ID="{10B10722-C8F9-4DCC-A0F3-5F7D554BD1EC}" ShortID="1013468964">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Playlist" ID="{FB70F54C-39C7-458D-98CE-23016E3F19C1}" WorkUnitID="{17AE3D98-ADF3-46CC-8242-05D937EAC513}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

@@ -619,6 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925876002}
   - component: {fileID: 925876001}
+  - component: {fileID: 925876003}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -644,12 +645,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 925876000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4795775, y: 8.808128, z: 11.187784}
+  m_LocalPosition: {x: -0.38, y: 1.23, z: 1.156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &925876003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925876000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 46.5, y: 27.99, z: 46.3}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1017633719
 GameObject:
   m_ObjectHideFlags: 0

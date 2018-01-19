@@ -8,7 +8,7 @@ public class MusicScript : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        //AkSoundEngine.PostEvent("MenuMusic", gameObject);
+        
 
         submarine = GameObject.FindGameObjectWithTag("Submarine");
         AkSoundEngine.PostEvent("MainMusic", gameObject);
@@ -17,17 +17,52 @@ public class MusicScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (submarine.transform.position.y >= 0)
+        AkSoundEngine.SetRTPCValue("Depth", submarine.transform.position.y);
+
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<GlobalFishBox>())
         {
-            AkSoundEngine.SetSwitch("Interactive_Music", "Layer_0", gameObject);
+            string fish = other.GetComponent<GlobalFishBox>().fishProps.Type;
+            StartCoroutine("RaiseVolume", fish);
         }
-        else if (submarine.transform.position.y < 0 && submarine.transform.position.y > -20)
+        
+
+       
+           
+            
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<GlobalFishBox>())
         {
-            AkSoundEngine.SetSwitch("Interactive_Music", "Layer1", gameObject);
+            string fish = other.GetComponent<GlobalFishBox>().fishProps.Type;
+            StartCoroutine("LowerVolume", fish);
         }
-        else if (submarine.transform.position.y < -20 && submarine.transform.position.y > -50)
+    }
+
+    public IEnumerator RaiseVolume(string fish)
+    {
+
+        for (int i = 0; i < 100; i++)
         {
-            AkSoundEngine.SetSwitch("Interactive_Music", "Layer2", gameObject);
+            yield return new WaitForSeconds(0.05f);
+            AkSoundEngine.SetRTPCValue(fish, i);
+        }
+        
+    }
+    public IEnumerator LowerVolume(string fish)
+    {
+
+        for (int i = 100; i > 0; i--)
+        {
+            yield return new WaitForSeconds(0.05f);
+            AkSoundEngine.SetRTPCValue(fish, i);
         }
 
     }

@@ -1,0 +1,183 @@
+fileFormatVersion: 2
+guid: 9f29d6ec79b0de54f9b77efcc67b8946
+timeCreated: 1516289566
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BackPack
+    100002: Body
+    100004: chest
+    100006: //RootNode
+    100008: foot_L
+    100010: foot_R
+    100012: forearm_L
+    100014: forearm_R
+    100016: hand_L
+    100018: hand_R
+    100020: Head
+    100022: head
+    100024: Head_001
+    100026: HealthBar
+    100028: hips
+    100030: HP_Tank
+    100032: metarig
+    100034: neck
+    100036: shin_L
+    100038: shin_R
+    100040: shoulder_L
+    100042: shoulder_R
+    100044: spine
+    100046: thigh_L
+    100048: thigh_R
+    100050: upper_arm_L
+    100052: upper_arm_R
+    400000: BackPack
+    400002: Body
+    400004: chest
+    400006: //RootNode
+    400008: foot_L
+    400010: foot_R
+    400012: forearm_L
+    400014: forearm_R
+    400016: hand_L
+    400018: hand_R
+    400020: Head
+    400022: head
+    400024: Head_001
+    400026: HealthBar
+    400028: hips
+    400030: HP_Tank
+    400032: metarig
+    400034: neck
+    400036: shin_L
+    400038: shin_R
+    400040: shoulder_L
+    400042: shoulder_R
+    400044: spine
+    400046: thigh_L
+    400048: thigh_R
+    400050: upper_arm_L
+    400052: upper_arm_R
+    4300000: Head_001
+    4300002: Head
+    4300004: HealthBar
+    4300006: HP_Tank
+    4300008: BackPack
+    4300010: Body
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: BackPack
+    13700002: Body
+    13700004: Head
+    13700006: Head_001
+    13700008: HealthBar
+    13700010: HP_Tank
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackPack
+    second: {fileID: 2100000, guid: 0ee205cdd731cd94985d8ecc382bde52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_004
+    second: {fileID: 2100000, guid: f68a9e8e2c010184cbac4479cb957a0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nose
+    second: {fileID: 2100000, guid: 450d9c57ee9aacf4cad4dad0c5a7f823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlayerColor
+    second: {fileID: 2100000, guid: b5ab6dba7c7842749b9d1c65cd4461bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shirt
+    second: {fileID: 2100000, guid: da2656a41c658c14ea7c3f2cbb7b441e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: a04df836d2314a44981f308521b95452, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

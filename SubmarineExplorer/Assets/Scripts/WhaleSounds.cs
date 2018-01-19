@@ -48,7 +48,7 @@ public class WhaleSounds : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Hej");
+       
         if (other.tag == "Submarine")
         {
             playerClose = true; 

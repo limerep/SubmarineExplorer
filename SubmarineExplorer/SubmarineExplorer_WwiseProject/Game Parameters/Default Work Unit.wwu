@@ -15,10 +15,26 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="BulletFish" ID="{3512639E-802F-4699-915D-B57CBE86CB28}"/>
-				<GameParameter Name="TubaFish" ID="{9A837880-F1F5-40C3-8D35-17161183B5EF}"/>
-				<GameParameter Name="Jellyfish" ID="{96F99761-C81C-4325-B43F-E0B6F7786AE7}"/>
-				<GameParameter Name="Whale" ID="{B571095B-0B20-4FF3-BA84-A3C1CA8CCD1A}"/>
+				<GameParameter Name="BulletFish" ID="{3512639E-802F-4699-915D-B57CBE86CB28}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="TubaFish" ID="{9A837880-F1F5-40C3-8D35-17161183B5EF}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Jellyfish" ID="{96F99761-C81C-4325-B43F-E0B6F7786AE7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Whale" ID="{B571095B-0B20-4FF3-BA84-A3C1CA8CCD1A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

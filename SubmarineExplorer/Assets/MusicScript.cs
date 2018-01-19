@@ -12,6 +12,7 @@ public class MusicScript : MonoBehaviour {
 
         submarine = GameObject.FindGameObjectWithTag("Submarine");
         AkSoundEngine.PostEvent("MainMusic", gameObject);
+        AkSoundEngine.PostEvent("Fishes", gameObject);
 	}
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class MusicScript : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        print("Inne");
         if (other.GetComponent<GlobalFishBox>())
         {
             string fish = other.GetComponent<GlobalFishBox>().fishProps.Type;
@@ -39,8 +41,10 @@ public class MusicScript : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
+        
         if (other.GetComponent<GlobalFishBox>())
         {
+
             string fish = other.GetComponent<GlobalFishBox>().fishProps.Type;
             StartCoroutine("LowerVolume", fish);
         }
@@ -51,19 +55,23 @@ public class MusicScript : MonoBehaviour {
 
         for (int i = 0; i < 100; i++)
         {
-            yield return new WaitForSeconds(0.05f);
+            
             AkSoundEngine.SetRTPCValue(fish, i);
+            yield return new WaitForSeconds(0.05f);
         }
+
         
+
     }
     public IEnumerator LowerVolume(string fish)
     {
 
         for (int i = 100; i > 0; i--)
         {
-            yield return new WaitForSeconds(0.05f);
+            
             AkSoundEngine.SetRTPCValue(fish, i);
+            yield return new WaitForSeconds(0.05f);
         }
-
+        
     }
 }

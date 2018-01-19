@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID BUTTONSPRESS = 3761115081U;
         static const AkUniqueID CAMERASHUTTERSINGLE = 1532263619U;
+        static const AkUniqueID FISHES = 2503175619U;
         static const AkUniqueID MAINMUSIC = 3479155863U;
         static const AkUniqueID MENUMUSIC = 679636833U;
         static const AkUniqueID SUBMARINE_CREAKING = 3476538210U;

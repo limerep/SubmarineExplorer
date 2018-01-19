@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: New Fish
+  m_EditorClassIdentifier: Assembly-CSharp::FishPropterties
+  family: 1
+  type: BoomerangFish
+  description: The mighty boomerang fish swishes it's way through the oceans
+  swimSpeed: 2
+  turnSpeed: 3
+  minAmount: 5
+  maxAmount: 20
+  positionInterval: 2
+  fishPrefab: {fileID: 100000, guid: 10ae5a8eaec2ce74faecb0251f80b6d7, type: 3}
+  swimAreaColor: {r: 1, g: 0, b: 0, a: 0.5}
+  targetColor: {r: 0, g: 1, b: 0, a: 1}
+  generateQuest: 1
